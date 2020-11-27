@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
 	<script src="js/jquery-2.0.3.min.js"></script>	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.5/js/min/perfect-scrollbar.jquery.min.js"></script>
 	<script src="js/slick.js"></script>
 	<script src="js/common.js"></script>
 </head>
@@ -62,29 +63,46 @@
 						<div class="h-layer alram">
 							<div class="inner">
 								<div class="layer-tit">
-									<p>알림</p>
-									<a href="#" class="btn-more">더보기</a>
-								</div>							
-								<a href="#" class="item">
-									<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
-									<p class="txt">김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
-									<span class="date">1개월전</span>		
-								</a>
-								<a href="#" class="item">
-									<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
-									<p class="txt">김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
-									<span class="date">1개월전</span>		
-								</a>
-								<a href="#" class="item">
-									<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
-									<p class="txt">김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
-									<span class="date">1개월전</span>		
-								</a>
-								<a href="#" class="item">
-									<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
-									<p class="txt">김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
-									<span class="date">1개월전</span>		
-								</a>			
+									<p>알림</p>								
+								</div>
+								<div class="scroll-area" id="scroll-area">
+									<a href="#" class="item">
+										<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
+										<p class="txt">1김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+										<span class="date">1개월전</span>		
+									</a>
+									<a href="#" class="item">
+										<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
+										<p class="txt">2김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+										<span class="date">1개월전</span>		
+									</a>
+									<a href="#" class="item">
+										<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
+										<p class="txt">3김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+										<span class="date">1개월전</span>		
+									</a>
+									<a href="#" class="item">
+										<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
+										<p class="txt">4김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+										<span class="date">1개월전</span>		
+									</a>
+									<a href="#" class="item">
+										<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
+										<p class="txt">5김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+										<span class="date">1개월전</span>		
+									</a>
+									<a href="#" class="item">
+										<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
+										<p class="txt">6김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+										<span class="date">1개월전</span>		
+									</a>
+									<a href="#" class="item">
+										<span class="img"><img src="images/temp/temp_lank1.jpg"></span>								
+										<p class="txt">7김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+										<span class="date">1개월전</span>		
+									</a>
+								</div>						
+											
 							</div>
 															
 						</div>
@@ -1086,7 +1104,7 @@
 	</div>
 </div>
 
-<!-- <div class="layer-pop">
+<div class="layer-pop main">
 	<div class="pop-cont">
 		<a href="#"><img src="images/temp/temp_pop.jpg" alt="creator video challenge"></a>
 	</div>
@@ -1094,7 +1112,7 @@
 		<button type="button" class="pop-close-today">24시간 이 창 열지 않기</button>
 		<button type="button" class="pop-close">닫기</button>
 	</div>
-</div> -->
+</div>
 
 
 
@@ -1102,7 +1120,7 @@
 
 
 $(document).ready(function() {
-	
+	//bg영상슬라이드
 	$('.slider-for').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -1113,6 +1131,7 @@ $(document).ready(function() {
 		autoplaySpeed:8000, 
 		asNavFor: '.slider-nav'
 	});
+	//text슬라이드
 	$('.slider-nav').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -1120,18 +1139,13 @@ $(document).ready(function() {
 		dots: true,
 		fade: true,
 		arrows: false,
-	//	infinite: true,
-	//	centerMode: true,
 		focusOnSelect: true
 	});
-
-	$('.slider-for').on('afterChange', function(event, slick, currentSlide) {	
-		
-		//var idx =$(this).find('.slick-active').attr('data-slick-index');		
+	//visual 영상 play
+	$('.slider-for').on('afterChange', function(event, slick, currentSlide) {			
 		$('.slider-for').find('video').get(0).pause();
 		$('.slider-for').find('video').get(0).currentTime = 0;
 		$(this).find('.slick-active').find('video').get(0).play();
-		
      });
 	 $('.slider-nav').find('.slick-active').find('.group').addClass('on');
 	 $('.slider-nav').on('afterChange', function(event, slick, currentSlide) {
@@ -1139,6 +1153,7 @@ $(document).ready(function() {
 		$(this).find('.slick-active').find('.group').addClass('on');
 	 });
 
+	//영상 list
 	 $('.video-list').slick({
 		speed:300,
 		slidesToShow:6,
@@ -1214,7 +1229,6 @@ $(document).ready(function() {
 					slidesToScroll: 1,	 
 				}
 			}]
-
 	});
 
 	//캠페인
@@ -1280,7 +1294,8 @@ $(document).ready(function() {
 		$(this).closest('.layer-pop').fadeOut();	
 	});
 
-
+	
+	
 	
 });
 

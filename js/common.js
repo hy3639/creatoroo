@@ -26,9 +26,11 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 */
 (function(e){"use strict";e.fn.counterUp=function(t){var n=e.extend({time:400,delay:10},t);return this.each(function(){var t=e(this),r=n,i=function(){var e=[],n=r.time/r.delay,i=t.text(),s=/[0-9]+,[0-9]+/.test(i);i=i.replace(/,/g,"");var o=/^[0-9]+$/.test(i),u=/^[0-9]+\.[0-9]+$/.test(i),a=u?(i.split(".")[1]||[]).length:0;for(var f=n;f>=1;f--){var l=parseInt(i/n*f);u&&(l=parseFloat(i/n*f).toFixed(a));if(s)while(/(\d+)(\d{3})/.test(l.toString()))l=l.toString().replace(/(\d+)(\d{3})/,"$1,$2");e.unshift(l)}t.data("counterup-nums",e);t.text("0");var c=function(){t.text(t.data("counterup-nums").shift());if(t.data("counterup-nums").length)setTimeout(t.data("counterup-func"),r.delay);else{delete t.data("counterup-nums");t.data("counterup-nums",null);t.data("counterup-func",null)}};t.data("counterup-func",c);setTimeout(t.data("counterup-func"),r.delay)};t.waypoint(i,{offset:"100%",triggerOnce:!0})})}})(jQuery);
 
+
 $(document).ready(function(){
 counting();
 header_fixed();
+
 /* ===========================================================================================================
 	공통
 =========================================================================================================== */
@@ -67,25 +69,38 @@ header_fixed();
 		$(this).toggleClass('active');
 	});
 
+	
+	/* 디자인 스크롤*/
+	$(function(){
+		$('#scroll-area').perfectScrollbar();
+	//	$('.full-pop').perfectScrollbar();
+	});
+
+
 
 
 
 	/* footer  관련사이트 */
-	$('.btn_select').click(function(){
-		if($(this).hasClass('on')){
-			$(this).removeClass('on').next('.layer').slideUp();	
-			$('.dimmed-transparent').remove();
-		}else{
-			$('.wrapper').append('<div class="dimmed-transparent"></div>');
-			$('.dimmed-transparent').fadeIn();
-			$(this).addClass('on').next('.layer').slideDown();
-		}		
-	});
+	// $('.btn_select').click(function(){
+	// 	if($(this).hasClass('on')){
+	// 		$(this).removeClass('on').next('.layer').slideUp();	
+	// 		$('.dimmed-transparent').remove();
+	// 	}else{
+	// 		$('.wrapper').append('<div class="dimmed-transparent"></div>');
+	// 		$('.dimmed-transparent').fadeIn();
+	// 		$(this).addClass('on').next('.layer').slideDown();
+	// 	}		
+	// });
 
-	$(document).on('click', '.dimmed-transparent',function(){
-		$('.dimmed-transparent').remove();
-		$('.layer_select .layer').hide();
-		$('.btn_select').removeClass('on');
+	// $(document).on('click', '.dimmed-transparent',function(){
+	// 	$('.dimmed-transparent').remove();
+	// 	$('.layer_select .layer').hide();
+	// 	$('.btn_select').removeClass('on');
+	// });
+
+	// 버튼 비활성화
+	$('[class^=btn-].disabled').click(function(e){
+		e.preventDefault();
 	});
 
 	/* ===========================================================================================================
@@ -93,41 +108,41 @@ header_fixed();
 	=========================================================================================================== */
 
 	/* 체크박스 */
-	$('input[type=checkbox].styled1').each(function(){			
-		if(this.checked){
-			$(this).parents('.checkbox').addClass('checked');
-		}
-		if(this.disabled){
-			$(this).parents('.checkbox').addClass('disabled');
-		}
-	});
-	$('input[type=checkbox].styled1').change(function(){
-		if(this.checked){
-			$(this).parents('.checkbox').addClass('checked');
-		}else{
-			$(this).parents('.checkbox').removeClass('checked');
-		}
-	});
+	// $('input[type=checkbox].styled1').each(function(){			
+	// 	if(this.checked){
+	// 		$(this).parents('.checkbox').addClass('checked');
+	// 	}
+	// 	if(this.disabled){
+	// 		$(this).parents('.checkbox').addClass('disabled');
+	// 	}
+	// });
+	// $('input[type=checkbox].styled1').change(function(){
+	// 	if(this.checked){
+	// 		$(this).parents('.checkbox').addClass('checked');
+	// 	}else{
+	// 		$(this).parents('.checkbox').removeClass('checked');
+	// 	}
+	// });
 
 
 	/* 라디오박스 */
-	$('input[type=radio].styled1').each(function(){
-		$(this).parents('label').addClass('check-radio');
-		$(this).wrap('<span class="radiobox">');
-		if(this.checked){
-			$(this).parents('.radiobox').addClass('checked');
-		}
-		if(this.disabled){
-			$(this).parents('.radiobox').addClass('disabled');
-		}
-	});
-	$('input[type=radio].styled1').change(function(){
-		var name = $(this).attr('name');
-		if(this.checked){
-			$('.radiobox input[name='+name+']').parents('.radiobox').removeClass('checked');
-			$(this).parents('.radiobox').addClass('checked');
-		}
-	});
+	// $('input[type=radio].styled1').each(function(){
+	// 	$(this).parents('label').addClass('check-radio');
+	// 	$(this).wrap('<span class="radiobox">');
+	// 	if(this.checked){
+	// 		$(this).parents('.radiobox').addClass('checked');
+	// 	}
+	// 	if(this.disabled){
+	// 		$(this).parents('.radiobox').addClass('disabled');
+	// 	}
+	// });
+	// $('input[type=radio].styled1').change(function(){
+	// 	var name = $(this).attr('name');
+	// 	if(this.checked){
+	// 		$('.radiobox input[name='+name+']').parents('.radiobox').removeClass('checked');
+	// 		$(this).parents('.radiobox').addClass('checked');
+	// 	}
+	// });
 
 	/*좋아요*/
 	$('.btn-like').click(function(){
@@ -143,20 +158,25 @@ header_fixed();
 			$(this).next('.share-area').hide();
 		}
 	});
+	$('.btn-layer-close').click(function(){
+		$('.btn-share').removeClass('on');
+		$(this).closest('.share-area').hide();
+		
+	});
 
 	/*파일첨부*/
-	var uploadFile = $('.fileBox .uploadBtn');
+	// var uploadFile = $('.fileBox .uploadBtn');
 
-	$('.fileBox .uploadBtn').each(function(){
-		uploadFile.on('change', function(){
-			if(window.FileReader){
-				var filename = $(this)[0].files[0].name;
-			} else {
-				var filename = $(this).val().split('/').pop().split('\\').pop();
-			}
-			$(this).siblings('.fileName').val(filename);
-		});
-	});
+	// $('.fileBox .uploadBtn').each(function(){
+	// 	uploadFile.on('change', function(){
+	// 		if(window.FileReader){
+	// 			var filename = $(this)[0].files[0].name;
+	// 		} else {
+	// 			var filename = $(this).val().split('/').pop().split('\\').pop();
+	// 		}
+	// 		$(this).siblings('.fileName').val(filename);
+	// 	});
+	// });
 
 	/*탭*/
 	$('.tab-list .item').click(function(){
@@ -190,22 +210,21 @@ header_fixed();
 	/* 레이어팝업 */
 	$('.btn-layer').click(function(){
 		var layer_no = $(this).attr('layer');
-		var popW= $('.pop-layer'+'.layer-'+layer_no).outerWidth();
-		var popH= $('.pop-layer'+'.layer-'+layer_no).outerHeight();
-
-		$('.wrapper').append('<div class="dimmed"></div>');
-		$('.dimmed').fadeIn();
-		$('.pop-layer'+'.layer-'+layer_no).show();
-		$('.pop-layer').css({'margin-left':-(popW/2), 'margin-top':-(popH)/2});
-
+		$('.layer-pop'+'.layer'+layer_no).show();
 		$('html, body').css({'overflow': 'hidden', 'height': '100%'});
 	});
-	$(document).on('click', '.pop-close, .dimmed',function(){
-		$('.dimmed').remove();
-		$('.pop-layer').hide();
-		$('html, body').removeAttr('style');
+	$(document).on('click', '.pop-close',function(){	
+	//	$('.layer-pop').hide();
+		$(this).closest('.layer-pop').hide();
+	$('html, body').removeAttr('style');
 	});
 
+});
+
+$(window).on('load', function(){
+	chkBox();
+
+//	$('.progress-bar').addClass('on');
 });
 
 $(window).resize(function(){
@@ -216,17 +235,30 @@ $(window).scroll(function(){
 	header_fixed();
 });
 
+/* =============
+	폼
+============= */
+/* 라디오/체크박스 */
+function chkBox(){
+	$('input[type=radio][class^=styled], input[type=checkbox][class^=styled]').each(function(){
+		if(!$(this).closest('span').hasClass('chkBox')){
+			$(this).wrap('<span class="chkBox"></span>');
+			$(this).closest('.chkBox').append('<span class="chk"></span>');
+		}
+	});
+}
+
 /* 레이어 출력시 스크롤 방지  */
-function scrollNo(){
-	var winTop = $(window).scrollTop();
-	$('html').addClass('no-scroll');
-	$('html').css({'top':-winTop}).attr('data', winTop);
-}
-function scrollOk(){
-	var winTop = $('html').attr('data');
-	$('html').removeClass('no-scroll').removeAttr('style');
-	$('body').scrollTop(winTop);
-}
+// function scrollNo(){
+// 	var winTop = $(window).scrollTop();
+// 	$('html').addClass('no-scroll');
+// 	$('html').css({'top':-winTop}).attr('data', winTop);
+// }
+// function scrollOk(){
+// 	var winTop = $('html').attr('data');
+// 	$('html').removeClass('no-scroll').removeAttr('style');
+// 	$('body').scrollTop(winTop);
+// }
 
 /* 헤더 fixed */
 function header_fixed() {
