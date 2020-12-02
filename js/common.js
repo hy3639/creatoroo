@@ -30,6 +30,9 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 $(document).ready(function(){
 counting();
 header_fixed();
+progress();
+progressCircle();
+progressCircle2();
 
 /* ===========================================================================================================
 	공통
@@ -78,8 +81,6 @@ header_fixed();
 
 
 
-
-
 	/* footer  관련사이트 */
 	// $('.btn_select').click(function(){
 	// 	if($(this).hasClass('on')){
@@ -102,6 +103,9 @@ header_fixed();
 	$('[class^=btn-].disabled').click(function(e){
 		e.preventDefault();
 	});
+
+	
+
 
 	/* ===========================================================================================================
 		서브
@@ -209,6 +213,10 @@ header_fixed();
 
 	/* 레이어팝업 */
 	$('.btn-layer').click(function(){
+		counting();
+		progress();
+		progressCircle();
+		
 		var layer_no = $(this).attr('layer');
 		$('.layer-pop'+'.layer'+layer_no).show();
 		$('html, body').css({'overflow': 'hidden', 'height': '100%'});
@@ -218,6 +226,8 @@ header_fixed();
 		$(this).closest('.layer-pop').hide();
 	$('html, body').removeAttr('style');
 	});
+
+
 
 });
 
@@ -290,3 +300,87 @@ function counting(){
 		}
 	});
 }
+
+/* progress bar */
+function progress(){
+	$(".progress-bar > .myBar").each(function() {
+		$(this)
+			.data("origWidth", $(this).width())
+			.width(0)
+			.animate({
+				width: $(this).data("origWidth")
+			}, 1000);
+	});
+}
+
+ /* circle procgess */
+ function progressCircle(){
+	$('.counting').each(function(){
+		var val = $(this).find('strong').attr('data');
+		
+		$(this).find('.type1').circleProgress({
+			startAngle: -Math.PI / 4 * 2,
+			size:58,
+			  value: val,
+			  thickness:3,
+			  lineCap: 'round',
+			  fill: {color: '#109cf2'}, 
+		}).on('circle-animation-progress', function(event, progress, stepValue) {
+			$(this).find('strong').html(Math.round(100 * stepValue) + '<i>%</i>');
+		});
+		$(this).find('.type2').circleProgress({
+			startAngle: -Math.PI / 4 * 2,
+			size:58,
+			  value: val,
+			  thickness:3,
+			  lineCap: 'round',
+			  fill: {color: '#e73594'}
+		}).on('circle-animation-progress', function(event, progress, stepValue) {
+			$(this).find('strong').html(Math.round(100 * stepValue) + '<i>%</i>');
+		});
+		$(this).find('.type3').circleProgress({
+			startAngle: -Math.PI / 4 * 2,
+			size:58,
+			  value: val,
+			  thickness:3,
+			  lineCap: 'round',
+			  fill: {color: '#888'}
+		}).on('circle-animation-progress', function(event, progress, stepValue) {
+			$(this).find('strong').html(Math.round(100 * stepValue) + '<i>%</i>');
+		});
+	  });
+ }
+
+ function progressCircle2(){
+	$('.graph').each(function(){
+		var val = $(this).find('strong').attr('data');
+		
+		$(this).find('.type1').circleProgress({
+			startAngle: -Math.PI / 4 * 2,
+			size:160,
+			thickness:5,
+			  value: val,
+			  lineCap: 'round',
+			  fill: {color: '#109cf2'}, 
+			  emptyFill: "rgba(44,45,51,1)"
+		});
+		$(this).find('.type2').circleProgress({
+			startAngle: -Math.PI / 4 * 2,
+			size:116,
+			  value: val,
+			  thickness:5,
+			  lineCap: 'round',
+			  fill: {color: '#e73594'},
+			  emptyFill: "rgba(44,45,51,1)"
+		});
+		$(this).find('.type3').circleProgress({
+			startAngle: -Math.PI / 4 * 2,
+			size:72,
+			thickness:5,
+			  value: val,
+			  lineCap: 'round',
+			  fill: {color: '#29c7b2'},
+			  emptyFill: "rgba(44,45,51,1)"
+		});
+	  });
+ }

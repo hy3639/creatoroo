@@ -7,9 +7,11 @@
 	<title>크리에이터링</title>
 	<link rel="stylesheet" type="text/css" href="../css/common.css">
 	<link rel="stylesheet" type="text/css" href="../css/slick.css">
+
 	<script src="../js/jquery-2.0.3.min.js"></script>	
 	<script src="../js/slick.js"></script>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.5/js/min/perfect-scrollbar.jquery.min.js"></script>
+	<script src="../js/circle-progress.js"></script>
 	<script src="../js/common.js"></script>
 </head>
 
@@ -82,7 +84,7 @@
 							</div>
 							<div class="btn-area">
 								<a href="#" class="btn-square blue btn-layer" layer="02">참가하기</a>
-								<a href="#" class="btn-square purple btn-layer">랭킹</a>
+								<a href="#" class="btn-square purple btn-layer" layer="07">랭킹</a>
 								<a href="#" class="btn-square pink btn-layer" layer="05">투표하기</a>
 								<a href="#" class="btn-square pink btn-layer" layer="04">투표결과</a> <!-- 버튼 비활성화 disabled 클래스추가-->
 							</div>
@@ -1094,7 +1096,7 @@
 						<a href="#" class="img"><img src="../images/temp/temp_ranking1.jpg"></a>
 						<p>
 							<span class="name">SAIDA사이다</span>
-							상금 : <span class="prize">25,000,000
+							상금 : <span class="prize counter">25,000,000
 							</span>						
 						</p>
 					</div>
@@ -1124,7 +1126,7 @@
 						<a href="#" class="img"><img src="../images/temp/temp_ranking1.jpg"></a>
 						<p>
 							<span class="name">SAIDA사이다</span>
-							상금 : <span class="prize">25,000,000
+							상금 : <span class="prize counter">25,000,000
 							</span>						
 						</p>
 					</div>
@@ -1152,7 +1154,7 @@
 						<a href="#" class="img"><img src="../images/temp/temp_ranking1.jpg"></a>
 						<p>
 							<span class="name">SAIDA사이다</span>
-							상금 : <span class="prize">25,000,000
+							상금 : <span class="prize counter">25,000,000
 							</span>						
 						</p>
 					</div>
@@ -1180,7 +1182,7 @@
 						<a href="#" class="img"><img src="../images/temp/temp_ranking1.jpg"></a>
 						<p>
 							<span class="name">SAIDA사이다</span>
-							상금 : <span class="prize">25,000,000
+							상금 : <span class="prize counter">25,000,000
 							</span>						
 						</p>
 					</div>
@@ -1208,8 +1210,7 @@
 						<a href="#" class="img"><img src="../images/temp/temp_ranking1.jpg"></a>
 						<p>
 							<span class="name">SAIDA사이다</span>
-							상금 : <span class="prize">25,000,000
-							</span>						
+							상금 : <span class="prize counter">25,000,000</span>						
 						</p>
 					</div>
 					<div class="count-list">
@@ -1294,7 +1295,7 @@
 </div>
 
 <!-- 투표결과 팝업 -->
-<div class="layer-pop full layer06" style="display:block">
+<div class="layer-pop full layer06">
 	<button type="button" class="pop-close"><span>닫기</span></button>
 	<div class="inner">	
 		<div class="title">
@@ -1314,7 +1315,7 @@
 						<div class="progress-bar">
 							<div class="myBar" style="width: 32%;"></div>
 						</div>
-						<span class="count counter">39,934</span>
+						<span class="count counter">129,934</span>
 						<span class="percent blue-txt"><em class="counter">32</em>%</span>
 					</div>
 				</li>
@@ -1327,8 +1328,8 @@
 						<div class="progress-bar">
 							<div class="myBar" style="width: 32%;"></div>
 						</div>
-						<span class="count">39,934</span>
-						<span class="percent blue-txt"><em>100</em>%</span>
+						<span class="count counter">29,934</span>
+						<span class="percent blue-txt"><em class="counter">32</em>%</span>
 					</div>
 				</li>
 				<li>
@@ -1338,10 +1339,10 @@
 					</div>
 					<div class="counting">
 						<div class="progress-bar">
-							<div class="myBar" style="width: 32%;"></div>
+							<div class="myBar" style="width: 21%;"></div>
 						</div>
-						<span class="count">39,934</span>
-						<span class="percent blue-txt"><em>100</em>%</span>
+						<span class="count counter">109,934</span>
+						<span class="percent blue-txt"><em class="counter">21</em>%</span>
 					</div>
 				</li>
 				<li>
@@ -1351,10 +1352,10 @@
 					</div>
 					<div class="counting">
 						<div class="progress-bar">
-							<div class="myBar" style="width: 32%;"></div>
+							<div class="myBar" style="width: 12%;"></div>
 						</div>
-						<span class="count counter">39,934</span>
-						<span class="percent blue-txt"><em>100</em>%</span>
+						<span class="count counter">1934</span>
+						<span class="percent blue-txt"><em class="counter">12</em>%</span>
 					</div>
 				</li>
 				<li>
@@ -1364,10 +1365,10 @@
 					</div>
 					<div class="counting">
 						<div class="progress-bar">
-							<div class="myBar" style="width: 32%;"></div>
+							<div class="myBar" style="width: 8%;"></div>
 						</div>
-						<span class="count">39,934</span>
-						<span class="percent blue-txt"><em>100</em>%</span>
+						<span class="count counter">234</span>
+						<span class="percent blue-txt"><em class="counter">8</em>%</span>
 					</div>
 				</li>
 				<li>
@@ -1377,10 +1378,10 @@
 					</div>
 					<div class="counting">
 						<div class="progress-bar">
-							<div class="myBar" style="width: 32%;"></div>
+							<div class="myBar" style="width: 50%;"></div>
 						</div>
-						<span class="count">39,934</span>
-						<span class="percent blue-txt"><em>100</em>%</span>
+						<span class="count counter">329,934</span>
+						<span class="percent blue-txt"><em class="counter">50</em>%</span>
 					</div>
 				</li>
 			</ul>
@@ -1393,6 +1394,274 @@
 	</div>
 </div>
 
+<!-- 랭킹 팝업 -->
+<div class="layer-pop full layer07">
+	<button type="button" class="pop-close"><span>닫기</span></button>
+	<div class="inner">	
+		<div class="title">
+			<p>랭킹 <span>-포트리스 배틀로얄 리뷰 챌린지-</span></p>			
+		</div>
+		
+		<div class="cont pdt">
+			<div class="graph-area" style="background-color:rgba(0, 0, 0, .4); height: 300px;">
+				<p style="font-size:50px; text-align:center; padding-top:80px">그래프영역</p>
+			</div>
+			<div class="rank-area">
+				<div class="left">
+					<p class="sub-tit">조회수 TOP</p>
+					<ul class="ranking-list">
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">마음의빛</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter blue-txt">129,934</span>
+								<div class="circle type1">
+									<strong data="0.65"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">오마이걸</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter blue-txt">89,321</span>
+								<div class="circle type1">
+									<strong data="0.32"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">크리엘</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter blue-txt">9,453</span>
+								<div class="circle type1">
+									<strong data="0.24"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">김경태</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">9,453</span>
+								<div class="circle type3">
+									<strong data="0.23"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">조영탁</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">6,455</span>
+								<div class="circle type3">
+									<strong data="0.20"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">Mike Johnson</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">6,350</span>
+								<div class="circle type3">
+									<strong data="0.16"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">에릭남</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">5,998</span>
+								<div class="circle type3">
+									<strong data="0.12"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">연두부 유튜브</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">5,321</span>
+								<div class="circle type3">
+									<strong data="0.08"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">M KOH</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">3,001</span>
+								<div class="circle type3">
+									<strong data="0.05"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name type3">염우순</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">1,200</span>
+								<div class="circle type3">
+									<strong data="0.03"></strong>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="right">
+					<p class="sub-tit">좋아요 TOP</p>
+					<ul class="ranking-list">
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">마음의빛</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter pink-txt">129,934</span>
+								<div class="circle type2">
+									<strong data="0.65"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">오마이걸</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter pink-txt">89,321</span>
+								<div class="circle type2">
+									<strong data="0.32"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">크리엘</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter pink-txt">9,453</span>
+								<div class="circle type2">
+									<strong data="0.24"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">김경태</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">9,453</span>
+								<div class="circle type3">
+									<strong data="0.23"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">조영탁</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">6,455</span>
+								<div class="circle type3">
+									<strong data="0.20"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">Mike Johnson</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">6,350</span>
+								<div class="circle type3">
+									<strong data="0.16"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">에릭남</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">5,998</span>
+								<div class="circle type3">
+									<strong data="0.12"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">연두부 유튜브</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">5,321</span>
+								<div class="circle type3">
+									<strong data="0.08"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name">M KOH</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">3,001</span>
+								<div class="circle type3">
+									<strong data="0.05"></strong>
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="user">
+								<span class="img"><img src="../images/temp/temp_ranking1.jpg"></span>
+								<span class="name type3">염우순</span>						
+							</div>
+							<div class="counting">
+								<span class="count counter">1,200</span>
+								<div class="circle type3">
+									<strong data="0.03"></strong>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
 
 <script>
 $(document).ready(function() {	

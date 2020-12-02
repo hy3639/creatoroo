@@ -7,13 +7,11 @@
 	<title>크리에이터링</title>
 	<link rel="stylesheet" type="text/css" href="css/common.css">
 	<link rel="stylesheet" type="text/css" href="css/slick.css">
-	<script src="js/jquery-2.0.3.min.js"></script>	
-	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.5/js/min/perfect-scrollbar.jquery.min.js"></script>
-	<script src="js/slick.js"></script>
-	<script src="js/common.js"></script>
+
 </head>
 
 <body>
+	
 <div class="slider-for">
 	<div><video class="myVideo" src="video/video1.mp4" preload="auto" autoplay muted controlslist="nodownload" type="video/mp4"></video></div>
 	<div><video class="myVideo" src="video/video2.mp4" preload="auto" muted controlslist="nodownload" type="video/mp4"></video></div>
@@ -152,12 +150,12 @@
 					<span>크리에이터링</span>
 					<a href="#" class="btn-go"><img src="images/btn/btn_play.png"></a>
 				</div>	
-			</div>
-			<!-- <div>슬라이드3</div> -->
+			</div>			
 		</div>	
 		<div class="content-wrap">
 			<div class="lank">
-				<p class="title">크리에이터 랭킹 <span>(누적상금순)</span></p>
+				<p class="title">크리에이터 랭킹 <span>(누적상금순)</span><a href="#" class="btn-more">더보기</a></p>
+				
 				<div class="slide_wrap">
 					<div class="lank-list">
 						<div class="item">
@@ -1116,9 +1114,13 @@
 
 
 
+<script src="js/jquery-3.3.1.js"></script>	
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.6.5/js/min/perfect-scrollbar.jquery.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/common.js"></script>
+
+
 <script>
-
-
 $(document).ready(function() {
 	//bg영상슬라이드
 	$('.slider-for').slick({
@@ -1142,11 +1144,18 @@ $(document).ready(function() {
 		focusOnSelect: true
 	});
 	//visual 영상 play
+	$('.slider-for').on('init', function(event, slick) {
+		
+		$(this).find('.slick-active').find('video').get(0).play();
+		
+	});
 	$('.slider-for').on('afterChange', function(event, slick, currentSlide) {			
 		$('.slider-for').find('video').get(0).pause();
 		$('.slider-for').find('video').get(0).currentTime = 0;
 		$(this).find('.slick-active').find('video').get(0).play();
      });
+	
+
 	 $('.slider-nav').find('.slick-active').find('.group').addClass('on');
 	 $('.slider-nav').on('afterChange', function(event, slick, currentSlide) {
 		$('.slider-nav').find('.group').removeClass('on');
@@ -1290,9 +1299,10 @@ $(document).ready(function() {
 
 
 	//메인팝업
-	$('.pop-close').click(function(){
+	$('.pop-close').on('click', '.pop-close',function(){	
 		$(this).closest('.layer-pop').fadeOut();	
-	});
+	});	
+
 
 	
 	
