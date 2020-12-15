@@ -1,5 +1,5 @@
 {
-  "$id": "17",
+  "$id": "19",
   "AutoRefresh": true,
   "AutoRefreshRemotes": true,
   "CommitTextLinks": null,
@@ -10,7 +10,8 @@
   "LogBranchFilterIndex": 0,
   "OutgoingSavedCount": 0,
   "SidebarExpandedItems": [
-    "브랜치"
+    "브랜치",
+    "원격"
   ],
   "SidebarWidth": 210.0,
   "SubtreeLinks": [],
