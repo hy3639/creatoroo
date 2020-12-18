@@ -823,6 +823,7 @@ body {background-color:#0e0f16}
 .purple {background-color:#6a52d8}
 .pink {background-color:#a0557d}
 .gray {background-color:#777}
+.green {background-color: #309b79;}
 
 .btn-blue{
 	display: inline-block;	
@@ -1513,39 +1514,99 @@ h2.tit {
 	캠페인
 ----------------------------------------------*/
 /*캠페인 목록*/
-.bg-gray {background-color:#1d1e24; }
-.sub .slide_wrap.campaign {line-height: 0;}
-.sub .campaign-list {width:1208px; margin:0 auto}
-.sub .campaign-list .slick-slide {position:relative; max-height: 471px;}
-.sub .campaign-list .slick-slide img {margin:0 auto; max-width: 100%;}
+.sub .slide_wrap.campaign {line-height: 0; overflow: hidden;}
+/* .sub .bg-color .bg-img {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+} */
+/* .sub .campaign-list {width:1208px; margin:0 auto} */
+.sub .campaign-list .slick-list {
+	overflow: visible;
+}
+.sub .campaign-list .slick-slide a{
+	position:relative; /*max-height: 49.5rem;*/
+	background:  url(../images/temp/temp_sub_camp1.png) no-repeat center top;
+}
+.sub .campaign-list .slick-slide a .bg {
+	width:100%;
+	height: 49.7rem; 
+	/* max-height: 49.4rem;  */
+	position: absolute; 
+	left: 0; 
+	top: 0;
+	z-index: -1;
+}
+/* .sub .campaign-list .slick-slide > div {background: url(../images/temp/temp_sub_camp1.png) no-repeat center top;} */
+/* .sub .campaign-list .slick-slide img {margin:0 auto; max-width: 100%;} */
 .sub .campaign-list .slick-slide .group {
-	position:absolute;
+	/* position:absolute;
     top:50%; left:50%;
-    transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%); */
+	display: flex;
 	width:1208px;
-	padding:10rem 0;
+	margin: 0 auto;
+	padding:0 0 0 0;
 	color:#fff;
+}
+.sub .campaign-list .slick-slide .group .banner {
+	margin-top: 5rem;
+	max-width: 59.6rem;
+}
+.sub .campaign-list .slick-slide .group .banner img {width: 100%;}
+.txt-box {
+	padding:10rem 0 0 6rem ;
 }
 .sub .campaign-list .group .tit{
 	font-size: 4.3rem;
     font-family: 'Black Han Sans';
-    line-height: 4.9rem;
+    line-height: 4.6rem;
 }
 .sub .campaign-list .group .txt {
 	display: block;
-	padding: 1.5rem 0 2.5rem;
-    font-size: 1.6rem;
+	padding: 1.5rem 0 4rem;
+    font-size: 1.8rem;
     line-height: 2.6rem;
 }
 .sub .campaign-list .group .total_count {
-	padding-left: 28px;
+	/* padding-left: 28px;
     font-size: 2.2rem;
 	background: url(../images/icon/icon_trophy.png) no-repeat left center;
-	background-size: 20px auto;
+	background-size: 20px auto; */
+	display: inline-block;
+	background: url(../images/icon/icon_trophy.png) no-repeat 2.5rem center;
+	background-color:#000; 
+	padding: 2.5rem 2.5rem 2.5rem 5.5rem; 
+	/* background-position: 4rem center;  */
+	border-radius: 8rem;
+	font-size: 2rem;
+	background-size: 21px auto;
+	
+}
+.sub .campaign-list .group .total_count em {font-size: 2.2rem;font-family: 'Lato';}
+.sub .campaign-list .slick-arrow {
+	background: url(../images/icon/thumb_arrow2.png) no-repeat center 50%;
+}
+.sub .campaign-list .slick-prev {
+	height: 3.5rem;
+	top: 41.5rem;
+	left: inherit;
+	right: calc( (100% - 1208px) / 2 + 3.5rem) ;
+}
+.sub .campaign-list .slick-next {
+	height: 3.5rem;
+	top: 41.5rem;
+	left: inherit;
+	right: calc( (100% - 1208px) / 2);
 }
 .sub .campaign-list  .slick-dots {
-	bottom:5rem
+
+	right: calc( (100% - 1208px) / 2 + 9rem);
+	bottom: 10.5rem;
+
 }
+.slick-dots li {margin-left: 7px;}
 
 .flag-list li {
 	font-size: 16px;
@@ -1584,6 +1645,7 @@ h2.tit {
 	margin-bottom:45px;
 	border-bottom:1px solid #2c2d33;
 }
+.list-top .flag-list {margin-top: 0;}
 .list-top .flag-list li {margin-top: 15px;}
 .list-top .flag-list li:first-child {margin-top: 0;}
 .list-top .flag-list li .flag {margin-right: 10px;}
@@ -1659,6 +1721,7 @@ h2.tit {
 .list-type1 .num-list li:first-child:before {display: none;}
 
 /*캠페인 상세*/
+.campaign.view .bg-gray {background-color:#1d1e24}
 .campaign.view .bg-gray > .inner {padding-bottom:6rem ;}
 .campaign.view .view-cont {display: flex;}
 .campaign.view .view-cont > div {flex: 1;margin-left: 20px; }
@@ -1777,26 +1840,30 @@ h2.tit {
 .view-count .slick-slide img {width:100%;border-radius: 21px;}
 .view-count .right button + button {margin-left: 3.5rem;}
 
-.campaign.view .video-wrap {background-color: transparent;}
-.campaign.view .video-wrap .sub-title {font-size: 2.4rem;}
-.campaign.view .video-wrap .video-list2 {padding:0}
 
+.campaign.view > .inner {display: flex;}
+
+.campaign.view .video-wrap {background-color: transparent; width: 63.6rem; padding-right: 4rem;}
+.campaign.view .video-wrap .sub-title {font-size: 2.4rem;}
+.campaign.view .video-wrap .video-list2 {padding:0; margin-left: 0; width: 100%;}
+.campaign.view .video-wrap .video-list2 .txt .tit {margin-bottom: 1rem;}
 .campaign.view .video-wrap .video-list2 .video-item {
-	width: calc(100% / 4 - 1.5rem);
+	width:100%;
+	margin-left: 0;
 }
 .video-list2.disabled .video-item:hover  {
 	transform: inherit;
 	background-color: transparent;
 }
 .video-list2.disabled .video-item:hover .txt { transform:inherit; }
-.video-list2.disabled .video-item:hover .txt .tit {color:#ccc}
+.video-list2.disabled .video-item:hover .txt .tit {color:#ccc;}
 
 .campaign.view .info-area {	
-	margin-top: 10rem;
-	padding:8rem;
+	width: calc(100% - 63.6rem);
+	padding:3rem 2.5rem;
 	background-color:#1d1e24;
 }
-.info-area .group {margin-top: 12rem; }
+.info-area .group {margin-top: 8rem; }
 .info-area .group.half {display: flex;}
 .info-area .group.half  > div {flex:1}
 .info-area .group.half  > div:nth-child(1){padding-right: 8px;}
@@ -1839,43 +1906,45 @@ h2.tit {
 	left:0;
 	top: 1.3rem;
 	display: block;
-	width:11rem;
+	width:12rem;
 	color:#888;
 }
 .info-area ul .txt {
 	display: block;
 	width:100%;
-	padding-left: 11rem;
+	padding-left: 12rem;
 	color:#ddd;
 	font-weight: 700;
 	box-sizing: border-box;
 	line-height: 28px;
 }
+.info-area .ty06 + ul .txt {color:#fff;}
 
 .info-area li a {color:#ddd;font-weight: 700;}
-.info-area li a.link-down {color:#1d98e3}
+.info-area li a.link-down {color:#1d98e3;text-decoration: underline;}
 .info-area .video li {position:relative;}
 .info-area .video li button{position:absolute;left:0; right: 0; top: 0;bottom:0; width: 100%;transition : all .2s;}
 .info-area .video li button:hover {transform: scale(1.2);}
 .info-area .video li:nth-child(odd) {padding-right: 8px;}
 .info-area .video li:nth-child(even) {padding-left: 8px;}
 .info-area li video {width: 100%;}
-.info-area .info-box {display: flex;}
-.info-area .info-box .type2 {flex: 1.3;}
+.info-area .info-box {}
+.info-area .info-box .type2 {}
 
-.info-area .info-box .type2 + .type2 {flex:1;margin-left: 10rem;}
-.info-area .type1{
+.info-area .info-box .type2 + .type2 {}
+/* .info-area .type1{
 	display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
-.info-area .type1 li{width:50%} 
-.info-area .type2 li {width: 100%;}
+.info-area .type1 li{width:50%}  */
+.info-area .type1 li {width: 100%;}
 
 .info-area .step-area {
 	padding:3rem;
 	background-color:#2c2d33
 }
+/* 
 .info-area .step-area ol{display: flex;}
 .info-area .step-area li {flex:1; padding-left: 20px;}
 .info-area .step-area li:first-child {padding-left: 0;}
@@ -1908,14 +1977,45 @@ h2.tit {
 	border-radius: 6px;
 	-webkit-transform : none;
 	transform : none;
+} */
+/* .info-area .step-area ol {display: inherit;} */
+.info-area .step-area li {display:flex; padding: 3rem 0 4rem 0;}
+.info-area .step-area .tit {
+	border-bottom: 0; font-size: 1.8rem; min-width:11rem;
+	font-family: 'Lato';
+	font-weight: bold;
+	font-size: 2.4rem;
+	color:#ddd;
+	font-style: italic;
 }
+.info-area .step-area .tit:before {display: none;}
+.info-area .step-area li:before{
+    content: '';
+	display: block;
+	width: 3rem;
+	height: 1.5rem;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -1.5rem;
+	background: url(../images/icon/step_arrow.png) no-repeat;
+
+
+}
+
+.info-area .step-area li:last-child:before{display: none;}
 .info-area .step-area .txt {
 	display:block;
-	padding-top: 20px;
+	/* padding-top: 20px; */
 	font-size: 14px;
 	color:#ddd;
 	line-height: 22px;
 	bottom : -3px;
+}
+.info-area .step-area .txt em {
+	display: block;
+	font-size: 13px;
+	color:#888;
 }
 
 .info-area .type3 li {
@@ -2259,7 +2359,8 @@ h2.tit {
 	position: absolute;
 	right: -1rem;
 	top:-1rem;
-	background: url(../images/icon/icon_badge2.png) no-repeat 0 0;
+	background: url(../images/icon/icon_badge3.png) no-repeat 0 0;
+	background-size: 41px 41px;
 }
 .result-list .user .img + p {
 	/* display: inline-block; */
@@ -2373,9 +2474,10 @@ h2.tit {
 	display: inline-flex;
 	justify-content: flex-end;
 	align-items: center;
+	width: 100%;
 }
 .vouting-list .counting .progress-bar {
-	width: 10.5rem;
+	/* width: 26rem; */
 	height: 4px;
 	border-radius: 10px;
 	background-color:#2c2d33;
@@ -2390,7 +2492,13 @@ h2.tit {
 .vouting-list .counting span em {font-family: 'Lato'; font-weight: bold; font-size: 15px;}
 .vouting-list .counting .count { min-width:65px; text-align: right;padding: 0 1rem; color:#fff;}
 .vouting-list .counting .percent {min-width: 35px;display:inline-block;text-align: right;}
-.vouting-list.result li {display: flex; justify-content: space-between;}
+.vouting-list.result li {display: flex; align-items: center;}
+.vouting-list.result .right {width: 100%; padding-left: 2rem;}
+.vouting-list.result .right .name {
+	display: block;
+	margin-left: 0;
+	margin-bottom: 1rem;
+}
 
 
 /*랭킹 팝업*/
@@ -3618,9 +3726,15 @@ h2.tit {
 
 	/*캠페인*/
 	.sub .campaign-list {width: 100%;}
-	.sub .campaign-list .slick-slide .group {width: 100%; padding: 10rem 5rem;}
+	.sub .campaign-list .slick-slide .group {width: 100%; padding: 0 5rem;}
+	.sub .campaign-list .slick-prev {right:9rem; bottom: 9.5rem; top: inherit;}
+	.sub .campaign-list .slick-next {right: 5rem; bottom: 9.5rem; top: inherit;}
+	.sub .campaign-list .slick-dots {right: 15rem; bottom: 10.5rem;}
+	.sub .campaign-list .slick-slide a {background-size: 100% 91%;}
+	.info-area .step-area li:before {background-size: 3rem 1.5rem;}
 
 	.view-cont .txt-area .date {padding: 1.5rem 0 2.7rem;}
+	
 
 	.detail-view > .left {width: 65%;}
 	.detail-view > .right {width: 34%; padding-left: 1%;}
@@ -3816,6 +3930,14 @@ h2.tit {
 	.gnb-layer.on {
 		/*display: block;*/
 		right: 0;
+	}
+	.gnb-layer > .fix {
+		position: sticky;
+		right: 0;
+		top: 0;
+		width: 100%;
+		background-color:#0e0f16;
+		z-index: 50768;
 	}
 	.gnb-layer .user-info {	
 		padding: 30px 25px;
@@ -4107,27 +4229,58 @@ h2.tit {
 	캠페인
 ----------------------------------------------*/
 /*리스트*/
+
 .sub .campaign-list .slick-slide {max-height: 100%;}
+.sub .campaign-list .slick-slide a {
+	background: url(../images/temp/temp_sub_camp1_mo.png) no-repeat center top;
+	background-size: cover;
+	min-height: 54.6rem;
+}
+.sub .campaign-list .slick-slide a .bg{max-height: 54.6rem;height: 54.6rem;} 
 .sub .campaign-list .slick-slide img {max-width: inherit; width: 100%;}
-.sub .campaign-list .slick-slide .group {padding:0; text-align: center; top: 60%;}
-.sub .campaign-list .group .tit {font-size: 5.2rem;  line-height: 5rem; }
-.sub .campaign-list .group .txt {font-size: 2.4rem; line-height: 3.6rem;padding:2rem 0 6rem}
+.sub .campaign-list .slick-slide .group .banner {margin-top: 0; max-width: inherit;}
+.sub .campaign-list .slick-slide .group {
+	display: inherit;
+
+	padding:12px; text-align: center; top: 60%;
+
+}
+.sub .campaign-list .txt-box {min-height:27rem;padding: 4rem 0 6rem 0;}
+.sub .campaign-list .group .tit {font-size: 2.5rem;  line-height: 2.9rem; }
+.sub .campaign-list .group .txt {font-size: 12px; line-height: 18px;padding:1.5rem 0 3rem}
 .sub .campaign-list .group .total_count {
+	font-size: 13px;
+	padding:1.5rem 2.5rem 1.5rem 4.5rem ;
+	background-size: 1.4rem  auto;
+	background-position: 2rem center;
+}
+
+.sub .campaign-list .group .total_count em {font-size: 15px;}
+/* .sub .campaign-list .group .total_count {
 	background-color:#000; 
 	padding: 0.8rem 4rem 0.8rem 8rem; 
 	background-position: 4rem center; 
 	border-radius: 8rem;
 	font-size: 3rem;
 	background-size: 3rem  auto;
-}
+} */
 /* .flag-list {margin-top: 0;}
 .sub .slide_wrap.campaign .slick-dots {display: none !important;}
 .flag-list li {font-size: 11px;}
 .list-top .flag-list li .flag {font-size: 12px;}
 
 .flag {line-height: 2.4rem; height: 2.4rem;font-size: 12px; min-width: 10rem;} */
-.sub .slide_wrap.campaign .slick-dots {display: none !important;}
-.sub .slide_wrap.campaign .slick-arrow {
+/* .sub .slide_wrap.campaign .slick-dots {display: none !important;} */
+.sub .campaign-list .slick-dots {
+	margin-left: -0.5rem;
+	bottom: 3rem;
+	left: 50%;
+	right: inherit;
+	-webkit-transform: translateY(-50%) ;
+    transform: translateY(-50%);
+}
+.sub .campaign-list .slick-dots li {width: 0.6rem; height: 0.6rem; margin-left:0.5rem;}
+/* .sub .slide_wrap.campaign .slick-arrow {
 	width:3.5rem; 
 	height:100%;  
 	font-size:0; 
@@ -4147,7 +4300,7 @@ h2.tit {
 	right:0; 
 	top:0;
 	z-index: 10; 
-}
+} */
 
 /*상세*/
 .campaign.view .view-cont > div:first-child {margin-bottom: 2.5rem;}
@@ -4173,6 +4326,11 @@ h2.tit {
 .view-count ul li span {font-size: 10px;}
 .view-count ul li .counter {font-size: 14px;}
 .view-count .right button + button {margin-left: 2.2rem;}
+
+.campaign.view > .inner {display: inherit;}
+.campaign.view .video-wrap {width: 100%; padding-right: 0;}
+.campaign.view .info-area {width: calc(100% + 24px);}
+
 .sub .contants .view-count .inner .right {padding-left: 0;}
 .campaign.view .video-wrap {margin-top: 4rem;}
 .tit-area.type2 {margin-bottom: 2rem;}
@@ -4181,19 +4339,21 @@ h2.tit {
 
 /* .sub .contants .view-count .inner {padding: 0 3rem;} */
 /* .campaign.view .video-wrap {margin-top: 9rem;} */
-.campaign.view .video-wrap .video-list2 {padding: 0; width: calc(100% + 1.5rem);}
-.campaign.view .video-wrap .video-list2 .video-item {width:calc(100% / 2 - 1.5rem);}
+.campaign.view .video-wrap .video-list2 {padding: 0; width: calc(100% + 1.5rem); margin-left: -1.5rem;}
+.campaign.view .video-wrap .video-list2 .video-item {width:calc(100% / 2 - 1.5rem); margin-left: 1.5rem;}
+
 .sub .video-list2 .txt li {line-height: 1.5rem;}
 /* .original + .video-wrap .video-list2 .txt li {line-height: 2.5rem;} */
 .video-list2 .txt {padding: 1.5rem 0 ;}
 .video-list2 .txt .tit {font-size: 1.4rem;}
 .video-list2 .txt .name {font-size: 11px;}
 .video-list2 .txt li {line-height: 1.5rem;}
-.video-list2 .txt li:first-child {margin-bottom: 0.5rem; line-height: inherit;}
+.video-list2 .txt li:first-child {margin-bottom:-0.5rem; line-height: inherit;}
 .video-list2 .txt li span {font-size: 11px;}
 
-.campaign.view .info-area {padding:5rem 2.4rem; margin: 5rem -12px;}
+.campaign.view .info-area {padding:5rem 12px; margin: 5rem -12px;}
 .info-area .info-box {display: initial;}
+
 .info-area .info-box .type2 + .type2 {margin-left: 0;}
 .info-area p.tit {font-size: 1.7rem; padding: 0 0 2.2rem 2.5rem; margin-bottom: 2.2rem;}
 .info-area p.tit:before {
@@ -4212,8 +4372,8 @@ h2.tit {
 .info-area .group {margin-top: 4.5rem;}
 .info-area li {padding: 0.5rem 0;}
 .info-area .type1 li {width: 100%;}
-.info-area ul .title {font-size: 12px; top: 0.6rem;}
-.info-area ul .txt {font-size: 12px; line-height:2rem;}
+.info-area ul .title {font-size: 12px; top: 0.6rem; width: 8.5rem;}
+.info-area ul .txt {font-size: 12px; line-height:2rem; padding-left: 8.5rem;}
 .info-area .group.half {display: initial;}
 .info-area .group.half .tit {margin-top: 4.5rem;}
 .list-top .flag-list li .flag {
@@ -4229,10 +4389,11 @@ h2.tit {
 .info-area .video li {padding: 0 !important;}
 .info-area .video li + li {margin-top: 2rem;}
 .info-area .type3 li { font-size: 12px; line-height: 21px;}
+.info-area .step-area {padding: 0 2rem;}
 .info-area .step-area ol {display: inherit;}
 .info-area .step-area li {display:flex;padding-left: 0; padding-bottom: 3rem; padding-top: 2rem;}
 .info-area .step-area .tit {border-bottom: 0; font-size: 1.8rem; min-width: 7rem;}
-.info-area .step-area .tit:before {display: none;}
+/* .info-area .step-area .tit:before {display: none;}
 .info-area .step-area li:before,
 .info-area .step-area li:after {
     content: '';
@@ -4252,7 +4413,9 @@ h2.tit {
     transform: translateY(-8px) rotate(135deg);
 }
 .info-area .step-area li:last-child:before,
-.info-area .step-area li:last-child:after {display: none;}
+.info-area .step-area li:last-child:after {display: none;} */
+.info-area .step-area li {padding-bottom: 2rem;}
+.info-area .step-area li:before {width:1.6rem; height:0.8rem;background: url(../images/mobile/step_arrow.png) no-repeat;background-size: 1.6rem 0.8rem;}
 .info-area .step-area .txt {padding-top: 0; padding-left: 1.5rem; font-size: 12px;}
 .info-area .step-area .txt em {color:#888}
 
@@ -4297,14 +4460,16 @@ h2.tit {
 .result-list > li .right {display: inherit;}
 .result-list > li .right .count-list {margin-bottom: 2.4rem;}
 .result-list > li {padding: 3.5rem 1.2rem;}
+
 .result-list .link a {width: 100%; height: auto;}
 .result-list .rank {font-size: 2.3rem; font-weight: 700;}
+.result-list .user .img img {width: 75px; height: 75px;}
+.result-list .user .img:before  {background-size: 31px 31px;}
 .result-list .user p .name {font-size: 1.3rem; line-height: 2rem;}
-
-.result-list .user p {font-size: 1.5rem !important;}
+.result-list .user p {font-size: 1.5rem !important; padding-left: 2.3rem !important;}
 .result-list .user p .prize {font-size: 1.7rem;}
 
-.count-list ul li {font-size: 10px;}
+.count-list ul li {font-size: 10px; flex: 1; min-width: inherit;}
 .count-list ul li span {font-size: 12px; margin-top: 0.5rem;}
 
 
@@ -4632,11 +4797,11 @@ h2.tit {
 /* =========================================================================================================
 	캠페인
 ========================================================================================================= */
-.sub .campaign-list .slick-slide {max-height: 100%;}
+/* .sub .campaign-list .slick-slide {max-height: 100%;}
 .sub .campaign-list .slick-slide img {max-width: inherit; width: 100%;}
 .sub .campaign-list .slick-slide .group {padding:0; text-align: center; top: 60%;}
 .sub .campaign-list .group .tit {font-size: 2.6rem;  line-height: 2.5rem; }
-.sub .campaign-list .group .txt {font-size: 12px; line-height: 18px;padding:1rem 0 3rem}
+.sub .campaign-list .group .txt {font-size: 12px; line-height: 18px;padding:1rem 0 3rem} 
 .sub .campaign-list .group .total_count {
 	background-color:#000; 
 	padding: 0.4rem 2rem 0.4rem 4rem; 
@@ -4645,8 +4810,9 @@ h2.tit {
 	font-size: 1.5rem;
 	background-size: 1.5rem  auto;
 }
+*/
 .flag-list {margin-top: 0;}
-.sub .slide_wrap.campaign .slick-dots {display: none !important;}
+/* .sub .slide_wrap.campaign .slick-dots {display: none !important;} */
 .flag-list li {font-size: 11px;}
 .list-top .flag-list li .flag {margin-top:1.5rem;font-size: 12px;}
 

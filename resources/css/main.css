@@ -547,7 +547,7 @@ align-items: stretch;
 	.main .campaign-wrap .txt-box {padding: 0 0 0 5rem;}
 	.main .campaign-wrap .btn-blue {position:initial; margin-top: 2rem !important;}
 	.main .campaign-wrap p.tit {font-size: 3.8rem; line-height: 4rem;}
-	.main .campaign-wrap .txt {}
+	.main .campaign-wrap .txt-box {padding:  0 4rem;}
 }
 
 /* Tablet Desktop (가로폭 1280px 까지) */
@@ -557,7 +557,7 @@ align-items: stretch;
 	/* .slider-for video {transform: scale(2.5); height: 100vmax;}
 	.slider-nav .txt {padding: 0 3rem 5rem 3rem} */
 	.slider-nav .txt {padding:  0 12px 45px 12px;}
-	.slider-for video {transform: scale(3.5); height: 100vmax;}
+	.slider-for video {transform: scale(3.5); height: 100vh;}
 	.slider-nav .txt {height:80vh;padding: 0 5rem 5rem 5rem;}
 	
 	.content-wrap {padding-bottom:7.5rem}
@@ -632,9 +632,22 @@ align-items: stretch;
 @media all and (max-width:1023px) {
 	html{font-size: 62.5%;}
 
+	.slider-nav .txt {padding: 0 12px 5rem 12px;}
+	.slider-nav .slick-dots {right: 12px;}
+
+	.lank {padding-left: 12px;}
+	.content-wrap > div:first-child > .title {padding-right: 12px;}
+	.content-wrap > div > .title {padding-left: 12px;}
+	.main .campaign .title {padding-left: 12px;}
+	.main .campaign .campaign-wrap .left {padding: 0 12px;}
+	.main .campaign .campaign-wrap .right {padding-left: 12px; margin-top: 3rem;}
+	.main .campaign .campaign-wrap .logo {height: inherit;}
+	.video-list2 {padding: 0 12px;}
 	.video-list2 .txt .tit {font-size: 14px;}
 	.video-list2 .txt .name {font-size: 12px;}
 	.video-list2 .txt li span {font-size: 12px;}
+
+	.original-wrap {padding: 0 12px !important;}
 
 	.lank-list .item > .img:before {font-size:8.5rem;right: -10%;}
 	.lank-list .item > .txt p:first-child {font-size: 12px; padding-top: 0.7rem;}
@@ -646,6 +659,8 @@ align-items: stretch;
 }
 @media all and (max-width:830px) {
 	.lank-list .item > .txt div {padding-left: 3rem;}
+	.main .campaign-wrap .btn-blue { position: initial;  margin-top: 2rem;}
+	.main .campaign-wrap .txt-box {padding: 0 2rem 0 3rem;}
 }
 /* Mobile Device (가로폭 767px 이하) */
 @media all and (max-width:767px) {

@@ -229,30 +229,44 @@
 		</div>
 	</div>
 	<div class="contants">
-		<div class="bg-color" style="background-color:#d29026">
+		
+			<!-- <div class="bg-img">
+				<img src="../../resources/images/temp/temp_sub_camp1.png" class="mo-hide">
+				<img src="../../resources/images/mobile/temp_sub_camp1.png" class="pc-hide">	
+			</div>			 -->
 			<div class="slide_wrap campaign">
 				<div class="campaign-list">
 					<a href="#">
-						<img src="../../resources/images/temp/temp_sub_camp1.png" class="mo-hide">
-						<img src="../../resources/images/mobile/temp_sub_camp1.png" class="pc-hide">
+						<div class="bg" style="background-color:#df941e"></div>					
 						<div class="group">
-							<p class="tit">포트리스 <br class="mo-hide">배틀로얄 <br>리뷰챌린지</p>
-							<span class="txt">인기 게임 크리에이터들의 맛깔나는<br>포트리스 배틀로얄 게임 리뷰 챌린지!</span>
-							<span class="total_count">총상금 : <em>16,100,000</em></span>									
+							<div class="banner">
+								<img src="../../resources/images/temp/sub_cam_list1.jpg">
+									
+							</div>
+							<div class="txt-box">
+								<p class="tit">포트리스 <br class="mo-hide">배틀로얄 <br>리뷰챌린지</p>
+								<span class="txt">인기 게임 크리에이터들의 맛깔나는<br>포트리스 배틀로얄 게임 리뷰 챌린지!</span>
+								<span class="total_count">총상금 : <em>16,100,000</em></span>
+							</div>					
 						</div>
 					</a>
-					<a href="#">
-						<img src="../../resources/images/temp/temp_sub_camp1.png" class="mo-hide">
-						<img src="../../resources/images/mobile/temp_sub_camp1.png" class="pc-hide">
+					<a href="#">			
+						<div class="bg" style="background-color:#df941e"></div>			
 						<div class="group">
-							<p class="tit">크리에이터와<br>함께 하는<br>콘텐츠 배틀로얄</p>
-							<span class="txt">인기 게임 크리에이터들의 맛깔나는<br>포트리스 배틀로얄 게임 리뷰 챌린지!</span>
-							<span class="total_count">총상금 : <em>16,100,000</em></span>									
+							<div class="banner">
+								<img src="../../resources/images/temp/sub_cam_list1.jpg">
+									
+							</div>
+							<div class="txt-box">
+								<p class="tit">크리에이터와 함께 하는<br class="mo-hide">콘텐츠 배틀로얄</p>
+								<span class="txt">인기 게임 크리에이터들의 맛깔나는<br>포트리스 배틀로얄 게임 리뷰 챌린지!</span>
+								<span class="total_count">총상금 : <em>16,100,000</em></span>
+							</div>					
 						</div>
 					</a>																
 				</div>
 			</div>
-		</div>		
+			
 		<div class="inner">
 			<div class="list-top">
 				<ul class="flag-list">
@@ -413,16 +427,16 @@ $(document).ready(function() {
 
 	 $('.campaign-list').slick({
 		speed:500,		
-		infinite: false,
+		infinite: true,
 		dots: true,
 		fade: true,
 	//	autoplay:true,
-		arrows: false,
+		arrows: true,
 		responsive: [ 
 			{ 
 				breakpoint: 1024, 
 				settings: { 
-					arrows: true,
+					arrows: false,
 					} 
 				}
 			]
