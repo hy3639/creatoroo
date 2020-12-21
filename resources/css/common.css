@@ -112,7 +112,7 @@ input[type=email],
 input[type=file],
 input[type=url],i
 input[type=number],
-input[type=date],textarea {width:100%; height:40px; line-height: normal; font-size:1.6rem; color:#ddd; border:1px solid #2c2d32; background:#2c2d32; text-indent:15px;  transition: all 0.5s; vertical-align:middle; box-sizing: border-box;-webkit-appearance: none;}
+input[type=date],textarea {width:100%; height:40px; line-height: normal; font-size:1.6rem; color:#ddd; border:1px solid #2c2d32; background:#2c2d32; text-indent:15px;  transition: all 0.5s; vertical-align:middle; box-sizing: border-box;-webkit-appearance: none; -webkit-border-radius: 0;}
 input::-webkit-input-placeholder{color:#777; font-size:1.6rem;} 
 .search-area input::-webkit-input-placeholder{color:#fff; font-size:1.6rem;} 
 textarea { padding:5px 0; }
@@ -125,13 +125,13 @@ input[type=tel][readonly],
 input[type=text][readonly],
 input[type=password][readonly],
 input[type=email][readonly], 
-input[type=search][readonly]{background:#fff; border-color:#ccc; color:#ddd; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
+input[type=search][readonly]{background:#17181f; border-color:#17181f; color:#888; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
 
 input[type=tel][disabled],
 input[type=text][disabled],
 input[type=password][disabled],
 input[type=search][disabled],
-input[type=email][disabled]{background:#fafafa; border-color:#eee; color:#ddd; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
+input[type=email][disabled]{background:#17181f; border-color:#17181f; color:#888; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
 textarea[readonly],
 textarea[disabled]{padding:11px; font-size:1.6rem; color:#666; font-weight:normal; line-height:140%; height:78px; background:#eaeaea;border:1px solid #c0c0c0;}
 input[type="number"]::-webkit-outer-spin-button,
@@ -139,7 +139,7 @@ input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
+input.style2 {background-color:#fff; border: 1px solid #ccc; color:#666;}
 .clear {clear:both;}
 .clear:after { content:""; display:block; clear:both;}
 .hide {
@@ -774,6 +774,7 @@ body {background-color:#0e0f16}
 ----------------------------------------------*/
 .red {color:#fc5358 !important}
 .blue-txt {color:#1d98e3 !important}
+.blue-txt2 {color:#4289bc !important}
 .pink-txt {color:#e73594 !important}
 /* --------------------------------------------
 	정렬
@@ -820,10 +821,10 @@ body {background-color:#0e0f16}
 }
 
 .blue {background-color:#1d98e3}
-.purple {background-color:#6a52d8}
+.purple {background-color:#6a52d8 !important}
 .pink {background-color:#a0557d}
 .gray {background-color:#777}
-.green {background-color: #309b79;}
+.green {background-color: #309b79 !important;}
 
 .btn-blue{
 	display: inline-block;	
@@ -1048,6 +1049,7 @@ input[type=radio] {
 .chkBox input[type=checkbox].styled3:checked + .chk {background-color:#40b7ff}
 .chkBox input[type=checkbox].styled3 + .chk:before {
 	background: url(../images/icon/icon_check2.png) no-repeat 0 0 ;
+	background-size: 1.4rem 1rem;
 } 
 
 .chkBox input[type=radio][class^=styled]:disabled + .chk,
@@ -1255,6 +1257,27 @@ input[type=radio] {
 .layer-pop .title + .cont {
 	padding: 6rem 0 8rem;
 }
+.layer-pop .title + .cont .txt.only{
+	padding-top: 0;
+}
+.layer-pop .title + .cont .txt.only p {
+	font-size: 1.6rem;
+	color:#666;
+	font-family: 'Noto Sans KR';
+	padding: 4rem 0 3rem;
+	font-weight: 700;	
+}
+.layer-pop .title + .cont .txt.only .form li {
+	display: flex;
+	align-items: center;
+}
+.layer-pop .title + .cont .txt.only .form label {margin-right: 1rem; font-size: 1.6rem; color:#666; font-weight: 700;}
+.layer-pop .title + .cont .txt.only .form + span {margin-top: 5rem; display: block;}
+.layer-pop .title + .cont .txt.only span {
+	font-size: 1.4rem;
+	color:#666;
+	font-weight: 700;
+}
 .layer-pop .pop-close {
 	width:1.6rem;
 	height:1.6rem;
@@ -1281,14 +1304,13 @@ input[type=radio] {
 }
 .layer-pop.sm .btn-area {margin-top: 3.5rem;}
 .layer-pop.sm .btn-area .btn-square {min-width:103px; box-sizing: border-box;}
-
+.layer-pop.sm .btn-area .btn-square.ty2 {min-width: 21rem;}
 
 /*참가완료 팝업*/
 .layer-pop .title + .cont .type1 {text-align: center;}
 .layer-pop .title + .cont .txt{
 	padding-top: 14rem;
 	text-align: center;
-
 }
 .layer-pop .title + .cont .txt p {
 	font-size: 3.8rem;
@@ -3472,6 +3494,7 @@ h2.tit {
 	width: 2.6rem;
 	height: 2.4rem;
 	background: url(../images/btn/btn_kakao.png) no-repeat left center; 
+	background-size: 2.6rem 2.4rem;
 }
 
 
@@ -3675,10 +3698,77 @@ h2.tit {
 }
 .notice-area.view .cont-area img {max-width: 100%;}
 
+/* --------------------------------------------
+	내정보
+----------------------------------------------*/
+.info .mgt0 {margin-top: 0 !important;}
+.join.info {background-image: none;}
+.sub .join.info .inner {padding-bottom: 15rem;}
+.info .inner .tit span {
+	display: block;
+	font-size: 2rem;
+	color:#fff;
+	font-family: 'Noto Sans KR';
+}
+.info .inner .tit span .type1 {color:#109cf2}
+.info .cont .btn-square {min-width: 20rem;}
+.profile-img .cont {display: flex;}
+.profile-img .img  {
+	position: relative;
+	margin-right: 2rem;
+	display: block;
+	width: 10rem;
+	height: 10rem;	
+	border-radius: 5rem;
+	background-color:#ef8d0f;
+	text-align: center;
+	line-height: 10rem;
+}
+.profile-img.creator .img {background-color:#2681e7}
+.profile-img.advertiser .img {background-color:#0fb9ab}
+.profile-img .img-area .name {
+	font-size: 4rem;
+	color:#fff;
+}
+.profile-img .img-area .btn-refresh {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 2.8rem;
+	height: 2.8rem;
+	background: url(../images/btn/btn_refresh.png) no-repeat center; 
+	background-size: 2.8rem 2.8rem;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+}
+.profile-img .cont .input-area {
+	display: flex;
+	width: calc(100% - 12rem);
+}
+.profile-img .cont .input-area .input-wrap {flex: 1;}
+.profile-img .cont .input-area .btn-square {width: 14rem; min-width: 14rem; margin-left: 1rem;}
 
+.layer-pop.sm .title + .cont.mem-out {padding-top: 5.5rem;}
+.layer-pop .mem-out .btn-area {margin-top: 2rem;}
 
+.attach .cont .input-area{display: flex;}
+.attach .cont .input-area .input-wrap {flex: 1;}
+.attach .cont .btn-square {width: 14rem; margin-left: 1rem; min-width: 14rem;}
 
-
+.attach .attach-area {
+	margin-top: 2rem;
+	padding: 3rem 0;
+	height: 100%;
+	 /* max-height: 55rem;  */
+	background-color: #17181f;
+	text-align: center;
+	overflow: hidden;
+}
+.attach .attach-area img {	max-width: 50%;}
+.business-num .cont {display: flex;}
+.business-num .cont .input-wrap {flex: 1;}
+.business-num .cont .btn-square {width: 14rem; min-width: 14rem; margin-left: 1rem;}
 
 /************************미디어쿼리************************************************************************/
 
@@ -3775,7 +3865,21 @@ h2.tit {
 
 	input::-webkit-input-placeholder{font-size:12px;} 
 	.search-area input::-webkit-input-placeholder{color:#888; font-size: 12px;} 
-	input[type=tel], input[type=time], input[type=text], input[type=password], input[type=search], input[type=email], input[type=file], input[type=url], i input[type=number], input[type=date], textarea {text-indent: 1rem;}
+	input[type=tel], input[type=time], input[type=text], input[type=password], input[type=search], input[type=email], input[type=file], input[type=url], i input[type=number], input[type=date], textarea {text-indent: 1rem; font-size: 12px;}
+	input[type=tel][readonly],
+	input[type=text][readonly],
+	input[type=password][readonly],
+	input[type=email][readonly], 
+	input[type=search][readonly]{font-size: 12px;}
+
+	input[type=tel][disabled],
+	input[type=text][disabled],
+	input[type=password][disabled],
+	input[type=search][disabled],
+	input[type=email][disabled]{background:#17181f; border-color:#17181f; color:#888; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
+	textarea[readonly],
+	textarea[disabled]{font-size: 12px;}
+
 	select {font-size: 12px;}
 	/* select:before {
 		content: '';
@@ -3790,6 +3894,7 @@ h2.tit {
 		background-size: 0.9rem 0.6rem;
 
 	} */
+	.chkBox input[type=checkbox].styled3 + .chk:before {background-size: 1.5rem 1.1rem;}
 
 	.mo-hide {display: none !important;}
 	.pc-hide {display: block !important;}	
@@ -4120,7 +4225,7 @@ h2.tit {
 		height: 4.9rem;
 		line-height: 4.9rem;
 		font-size: 1.7rem;
-		padding: 0;
+		padding: 0 1rem;
 		min-width: 11.5rem;
 	}
 	.btn-square.sm {
@@ -4711,7 +4816,7 @@ h2.tit {
 
 	/* 회원가입*/
 	.form-list label {font-size: 14px;}
-	.form-list input {font-size: 14px;}
+	.form-list input {font-size: 12px;}
 	.join .form-list .cont select {font-size: 12px;}
 	.join .join-box > p {font-size: 1.7rem; }
 	.join .join-box p span {font-size: 1.2rem;margin-top: 1rem;}
@@ -4735,6 +4840,8 @@ h2.tit {
 	
 	.join-area.advertiser .form-list .num .cont button {width: 100%;}
 	.join-area.advertiser .form-list .num.type2 .cont button {width: 100%;}
+	.join-box.agree .form-list .num button.kakao span {padding-left: 2.5rem;}
+	.join-box.agree .form-list .num button.kakao span:before {background-size:2.2rem 2rem;}
 
 	/*이용약관*/
 	.join .term {
@@ -4787,6 +4894,33 @@ h2.tit {
 }
 .notice-area.view .right  {margin-top: 0; align-self: flex-end; margin-bottom: -1rem;}
 .notice-area.view .right button + button {margin-left: 2rem;}
+
+/* --------------------------------------------
+	내정보
+----------------------------------------------*/
+.info .inner .tit span {font-size: 1.5rem;}
+.join.info .join-box {margin-top: 4rem;}
+.profile-img .cont {display: inherit;}
+.profile-img .cont .input-area {display: inherit; width: 100%;}
+.profile-img .img-area {padding: 1.5rem 0; background-color:#17181f;margin-bottom: 1rem;}
+.profile-img .img-area .img{ width: 7.5rem; height: 7.5rem;  line-height: 7.5rem; margin: 0 auto;}
+.profile-img .img-area .name {font-size: 3rem;}
+.profile-img .img-area img {width: 100%; height: 100%;}
+.info .join-box .form-list .btn-square {
+	width: 100%;
+    margin-left: 0;
+    margin-top: 0;
+    height: 4.5rem;
+    line-height: 4.5rem;
+    font-size: 12px;
+}
+.profile-img .cont .input-area .btn-square {margin-top: 1rem;}
+
+.business-num .cont,
+.attach .cont .input-area {display: inherit;}
+
+.info .business-num .cont .btn-square,
+.attach .cont .input-area .btn-square {margin-top: 1rem;}
 
 }
 
