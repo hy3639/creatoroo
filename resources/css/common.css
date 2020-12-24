@@ -376,7 +376,7 @@ body {background-color:#0e0f16}
 	content: '';
 	display: block;
 	position: absolute;
-	bottom: -3.7rem;
+	bottom: -3.8rem;
 	left:50%;
     transform: translateX(-50%);
 	width:100%;
@@ -400,6 +400,7 @@ body {background-color:#0e0f16}
 .header .h-layer {
 	display: none;
 	min-width:145px;
+	height: auto !important;
 	position:absolute;
 	left:15px;
 	top: 20px;
@@ -420,10 +421,21 @@ body {background-color:#0e0f16}
 	-webkit-transition: background-color .5s;	
 	transition: background-color .5s;
 } 
+.header .h-layer:before {
+	content: '';
+	display: block;
+	background-color:rgba(0,0,0,.8);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: calc(100% - 30px);
+	/* opacity: 0; */
 
+}
 .header .h-layer:not(.alram) a:hover{
 	background-color:rgba(255, 255, 255, .2);
-	opacity: 1;
+	/* opacity: 1; */
 }
 
 .header .util {/*float: right; margin-top: -5px;*/}
@@ -491,7 +503,7 @@ body {background-color:#0e0f16}
 	display:inline-block;
 	/* padding-bottom:28px; */
 }
-.header .menu:before {
+/* .header .menu:before {
 	content: '';
 	display:block;
 	width:1px;
@@ -500,7 +512,7 @@ body {background-color:#0e0f16}
 	left:0;
 	top:14px;
 	background-color: rgba(255, 255, 255, .3);
-}
+} */
 .header .menu li > a {margin-left:8px; padding:0}
 .header .menu li > a:not(.btn-profile) {
 	display:inline-block;
@@ -2690,7 +2702,7 @@ h2.tit {
 	padding: 2.5rem 0;
 	display: flex;
     justify-content: space-between;
-	align-items: center;
+	align-items: flex-end;
 	border-bottom: 1px solid #3b3c43;
 }
 .detail-view .info-area .left {flex: 2; padding-right:1rem}
@@ -4029,7 +4041,7 @@ h2.tit {
 	top: -6px;
 	right: 15px;
 }
-.video-list3 .item .img {
+.mychannel .video-list3 .item .img {
 	width: 59.6rem;
 	height: 33.8rem;
 }
@@ -4923,9 +4935,13 @@ h2.tit {
 .detail-view {display: initial;}
 .detail-view > .left {width: 100%;}
 .detail-view > .right {width: 100%; padding-left: 0;}
-
-
-
+.detail-view .detail-tit {
+	font-size: 12px;
+	margin: 2rem 0 2rem 1rem;
+}
+.detail-view .count-wrap {margin:0 12px;}
+.detail-view .count-wrap .item {background-size: 2.4rem 2.4rem;}
+.detail-view .sns-wrap {margin-top: 3rem;}
 
 /* .video-list2 {width: 100%;} */
 
@@ -4957,9 +4973,9 @@ h2.tit {
 .detail-view .txt-area {padding: 2rem 12px;}
 .detail-view .txt-area .user .name {font-size: 14px;}
 .detail-view .txt-area .txt {font-size: 12px; line-height: 17px; height: 6.5rem;}
-.detail-view .reply-area {padding: 0 12px ;}
-.detail-view.content .reply-area .input-area {padding-top: 2.5rem;}
-
+.detail-view .reply-area {padding: 0 ;}
+.detail-view .reply-area .input-area {padding: 2.5rem 12px 0 12px;}
+.detail-view .reply-area .list-area {padding: 0 12px;}
 .tag-wrap a {font-size: 12px;}
 .detail-view .info-area .info-tit {font-size: 1.6rem; line-height: inherit;}
 .detail-view .info-area .etc-area li {font-size: 11px; padding-top: 0;}
@@ -4973,7 +4989,7 @@ h2.tit {
 .list-area .item .txt-area .name .date {font-size: 11px;}
 
 .detail-view > .right {padding: 2.5rem 12px 0 12px; margin-top: 2.5rem; border-top: 1px solid #25262d;}
-.detail-view > .right .sub-tit {font-size: 12px;}
+/* .detail-view > .right .sub-tit {font-size: 12px;} */
 .detail-view .video-list3 .item .img {width: 13.1rem; height: auto;}
 .detail-view .video-list3 .item .img img {width: 100%; height: auto;}
 .detail-view .video-list3 .item .txt {width: calc(100% - 13.1rem);}
@@ -5013,7 +5029,7 @@ h2.tit {
 
 .wrapper.sub .search-result .video-list2 .video-item{    width: calc(100% / 2 - 1.5rem);}
 
-.count-wrap .hide-cont {display: block; height: 64.5rem;}
+.count-wrap .hide-cont {display: block; height: 45.5rem;}
 .count-wrap .item {width: 100%;}
 .count-wrap .item:nth-child(even) {margin-left: 0;}
 .sns-wrap .tit {width:4.5rem;}
@@ -5181,7 +5197,7 @@ h2.tit {
 
 	/*이용약관*/
 	.join .term {
-		padding: 1.5rem 1rem;
+		padding: 1.5rem 0;
 		font-size: 14px;
 	}
 	.join .term p {font-size: 12px;}
@@ -5327,7 +5343,7 @@ h2.tit {
 .mychannel .sns-list li a span {font-size: 14px;}
 .mychannel .info-list .counting {width: calc(100% - 5rem);}
 
-.mychannel .sns-list li a {padding-left: 3rem; padding-right: 1rem;}
+.mychannel .sns-list li a {padding-left: 3rem; padding-right: 1.5rem;}
 
 .mychannel .info-box + .video-wrap {margin-top: 4rem;}
 .mychannel .tit-area {margin-bottom: 2rem;}

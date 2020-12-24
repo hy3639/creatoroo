@@ -44,14 +44,14 @@ responsive(); //해상도분기
 	
 	/* 웹 header layer */
 	$('.pc .gnb li').mouseenter(function(){
-		$(this).find('.h-layer').stop().slideDown(500);
+		$(this).find('.h-layer').stop().fadeIn(300);
 	});
 	$('.header .gnb-layer li, .util.mo-hide li').mouseleave(function(){
-		$(this).find('.h-layer').stop().slideUp(300);
+		$(this).find('.h-layer').stop().fadeOut(300);
 	});
 
 	$('.pc .menu li').click(function(){
-		$(this).find('.h-layer').stop().slideDown();
+		$(this).find('.h-layer').stop().fadeIn();
 	});
 
 	
