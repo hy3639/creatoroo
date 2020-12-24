@@ -133,6 +133,30 @@ $('.multiLine').dotdotdot();
 /* ===========================================================================================================
 	서브
 =========================================================================================================== */
+//썸네일 5초 play
+$('.video-item').each(function(){
+	$(this).find('.videoTag').remove();
+	var video = $(this).find('.video-area').html();
+	$(this).append('<textarea class="videoTag" style="display:none;">' + video + '</textarea>');
+});
+
+$('.video-item').mouseenter(function(){
+	var videoVal = $(this).find('.videoTag').val();		
+	$(this).find('.video-area').html(videoVal);
+
+	var $video = $(this).find('.video-area video');
+	setTimeout(function(){
+		$video.fadeOut(300, function(){
+			$video.hide();
+		});
+	}, 5000);
+});
+$('.video-item').mouseleave(function(){	
+	$(this).find('.video-area video').fadeOut(300, function(){
+		$(this).remove();
+	});
+});
+
 
 /*좋아요*/
 $('.btn-like, .btn-like2').click(function(){
@@ -186,6 +210,15 @@ $(document).on('click', '.faq-list .item .faq-tit', function(){
 	}else{	
 		$item.addClass('on').find('.faq-layer').addClass('on').slideDown(200);
 		$item.siblings().removeClass('on');		
+	}
+});
+
+//툴팁
+$(".btn-tooltip").on("mouseenter mouseleave", function () {
+	if($(this).hasClass('on')){
+		$(this).removeClass('on').next().removeClass('on');
+	}else{
+		$(this).addClass('on').next().addClass('on');
 	}
 });
 
@@ -260,13 +293,9 @@ function counting(){
 
 /* progress bar */
 function progress(){
-	$(".progress-bar > .myBar").each(function() {
-		$(this)
-			.data("origWidth", $(this).width())
-			.width(0)
-			.animate({
-				width: $(this).data("origWidth")
-			}, 1000);
+	$(".progress-bar .myBar").each(function() {
+		var progressW = $(this).attr('data');
+		$(this).data("progressW", $(this).width()).width(0).animate({width: progressW + '%' }, 1000);	
 	});
 }
 

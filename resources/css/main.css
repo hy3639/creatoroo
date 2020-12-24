@@ -398,6 +398,8 @@ align-items: stretch;
 .video-list .cont {overflow: hidden;}
 .video-list .cont img {width: 100%;}
 .video-list .txt li {position:relative;padding-left:60px;}
+.video-list .txt li:first-child {margin-bottom: 1rem; }
+
 .video-list .txt {padding: 20px 0; }
 .video-list .txt a {}
 .video-list .txt li span {
@@ -646,6 +648,8 @@ align-items: stretch;
 	.video-list2 .txt .tit {font-size: 14px;}
 	.video-list2 .txt .name {font-size: 12px;}
 	.video-list2 .txt li span {font-size: 12px;}
+	.video-list2 .txt li {line-height: 1.5rem;}
+	.video-list2 .txt li:first-child{margin-bottom: 0.5rem; line-height: inherit;}
 
 	.original-wrap {padding: 0 12px !important;}
 

@@ -1000,7 +1000,7 @@
 									<li class="img process">
 										<span class="txt">처리중...</span>
 										<div class="progress-bar">
-											<div class="myBar" style="width: 60%;"></div>
+											<div class="myBar" data="60"></div>
 										</div>
 									</li>
 								</ul>
@@ -1017,7 +1017,7 @@
 							<li>
 								<span class="tit">업로드 상태</span>
 								<div class="progress-bar">
-									<div class="myBar" style="width: 100%;"></div>
+									<div class="myBar" data="100"></div>
 								</div>
 								<span class="percent"><em>100</em>%</span>
 								<button type="button" class="btn-cancel">업로드 취소</button>
@@ -1025,7 +1025,7 @@
 							<li>
 								<span class="tit">동영상 정보 추출중</span>
 								<div class="progress-bar">
-									<div class="myBar" style="width: 45%;"></div>
+									<div class="myBar" data="40"></div>
 								</div>
 								<span class="percent"><em>45</em>%</span>
 								<button type="button" class="btn-cancel">업로드 취소</button>
@@ -1399,7 +1399,7 @@
 						<span class="name">SAIDA사이다</span>
 						<div class="counting">
 							<div class="progress-bar">
-								<div class="myBar" style="width: 2%;"></div>
+								<div class="myBar" data="2"></div>
 							</div>
 							<span class="count counter">9,934</span>
 							<span class="percent blue-txt"><em class="counter">2</em>%</span>
@@ -1414,7 +1414,7 @@
 						<span class="name">SAIDA사이다</span>
 						<div class="counting">
 							<div class="progress-bar">
-								<div class="myBar" style="width: 32%;"></div>
+								<div class="myBar" data="32"></div>
 							</div>
 							<span class="count counter">129,934</span>
 							<span class="percent blue-txt"><em class="counter">32</em>%</span>
@@ -1429,7 +1429,7 @@
 						<span class="name">SAIDA사이다</span>
 						<div class="counting">
 							<div class="progress-bar">
-								<div class="myBar" style="width: 32%;"></div>
+								<div class="myBar" data="32"></div>
 							</div>
 							<span class="count counter">129,934</span>
 							<span class="percent blue-txt"><em class="counter">32</em>%</span>
@@ -1444,7 +1444,7 @@
 						<span class="name">SAIDA사이다</span>
 						<div class="counting">
 							<div class="progress-bar">
-								<div class="myBar" style="width: 52%;"></div>
+								<div class="myBar" data="52"></div>
 							</div>
 							<span class="count counter">229,934</span>
 							<span class="percent blue-txt"><em class="counter">52</em>%</span>
@@ -1459,7 +1459,7 @@
 						<span class="name">SAIDA사이다</span>
 						<div class="counting">
 							<div class="progress-bar">
-								<div class="myBar" style="width: 32%;"></div>
+								<div class="myBar" data="32"></div>
 							</div>
 							<span class="count counter">129,934</span>
 							<span class="percent blue-txt"><em class="counter">32</em>%</span>
@@ -1778,28 +1778,28 @@ $(document).ready(function() {
 	});
 
 	//썸네일 5초 play
-	$('.video-item').each(function(){
-		$(this).find('.videoTag').remove();
-		var video = $(this).find('.video-area').html();
-		$(this).append('<textarea class="videoTag" style="display:none;">' + video + '</textarea>');
-	});
+	// $('.video-item').each(function(){
+	// 	$(this).find('.videoTag').remove();
+	// 	var video = $(this).find('.video-area').html();
+	// 	$(this).append('<textarea class="videoTag" style="display:none;">' + video + '</textarea>');
+	// });
 
-	$('.video-item').mouseenter(function(){
-		var videoVal = $(this).find('.videoTag').val();		
-		$(this).find('.video-area').html(videoVal);
+	// $('.video-item').mouseenter(function(){
+	// 	var videoVal = $(this).find('.videoTag').val();		
+	// 	$(this).find('.video-area').html(videoVal);
 
-		var $video = $(this).find('.video-area video');
-		setTimeout(function(){
-			$video.fadeOut(300, function(){
-				$video.hide();
-			});
-		}, 5000);
-	});
-	$('.video-item').mouseleave(function(){	
-		$(this).find('.video-area video').fadeOut(300, function(){
-			$(this).remove();
-		});
-	});
+	// 	var $video = $(this).find('.video-area video');
+	// 	setTimeout(function(){
+	// 		$video.fadeOut(300, function(){
+	// 			$video.hide();
+	// 		});
+	// 	}, 5000);
+	// });
+	// $('.video-item').mouseleave(function(){	
+	// 	$(this).find('.video-area video').fadeOut(300, function(){
+	// 		$(this).remove();
+	// 	});
+	// });
 
 });
 
