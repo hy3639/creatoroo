@@ -215,9 +215,9 @@
 .main .campaign .campaign-wrap {
 display: flex;
 justify-content: space-between;
-align-items: flex-start;
+/*align-items: flex-start;*/
 /* align-content: stretch; */
-align-items: stretch;
+/*align-items: stretch;*/
 	width:100%;
 	max-height:51.7rem;
 	height: 100%;
@@ -477,13 +477,16 @@ align-items: stretch;
 ----------------------------------------------*/
 /*메인용*/
  .layer-pop.main {
-	position:absolute;
+	position:fixed;
 	right:50px;
-	top: 185px;
+	top: 100px;
 	padding-bottom:50px;
 	background-color:#fff;
+	z-index: 500;
 }
-
+.layer-pop.main .pop-cont img{
+	width: 100%;
+}
  .layer-pop.main .bottom {
 	overflow: hidden;
 	position:absolute;
@@ -515,7 +518,7 @@ align-items: stretch;
 }
 /* Desktop (가로폭1280px~1500px 까지) */
 @media all and (min-width:1280px) and (max-width:1750px) {
-	.main .campaign .campaign-wrap {align-items: flex-start; max-height: inherit;align-items:stretch}
+	.main .campaign .campaign-wrap {/*align-items: flex-start;*/ max-height: inherit;/*align-items:stretch*/}
 	.main .campaign-list .slick-list {padding-right: 10%;}
 	.main .campaign-wrap .left {width: 50%;}
 	.main .campaign-wrap .txt-box { /*width: inherit;*/ padding: 0 0 0 2rem;width: 35rem;}
@@ -745,6 +748,11 @@ align-items: stretch;
 	.lank-list .item > .txt div {padding-left: 2rem;top: 60%;}
 	.lank-list .item > .img:before {margin-top: -6.5rem;}
 	.lank-list .item > .txt p:first-child:before {top: -20px;}
+
+	.layer-pop.main {
+		right: 12px;
+		left: 12px;
+	}
 	
 }
 

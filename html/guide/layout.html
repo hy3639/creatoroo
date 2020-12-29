@@ -7,15 +7,17 @@
 	<meta name="format-detection" content="telephone=no">
 	<title>크리에이터링</title>
 	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../resources/css/main.css">
 </head>
 
 <body>
-<div class="wrapper sub">
-	<div class="header fixed">
+
+<div class="wrapper main">
+	<div class="header">
 		<h1 class="logo"><a href="#">로고</a></h1>
 		<ul class="util pc-hide">
 			<li>
-				<a href="#" class="btn-search"><span>검색</span></a>
+				<a href="#" class="btn-search mo"><span>검색</span></a>
 				<div class="h-layer search">
 					<div class="inner">
 						<div class="search-area">
@@ -43,7 +45,7 @@
 				</div>
 			</li>
 			<li>
-				<a href="#" class="btn-noti"><span>알림</span><em>12</em></a>
+				<a href="#" class="btn-noti mo"><span>알림</span><em>12</em></a>
 				<div class="h-layer alram">
 					<div class="inner">
 						<div class="layer-tit">
@@ -170,7 +172,7 @@
 		</ul>
 		<button type="button" class="btn-gnb"><span></span><span></span><span></span></button>
 		<div class="gnb-layer">
-			<div class="pc-hide">
+			<div class="pc-hide fix">
 				<div class="user-info type2"> <!--(폰트색상) type2:크리에이터 / type3:광고주 -->
 					<div class="user">
 						<span class="img-area"><img src="../../resources/images/temp/temp_lank1.jpg"></span>
@@ -187,7 +189,7 @@
 			<ul class="gnb">
 				<li><a href="#">홈</a></li>
 				<li><a href="#">캠페인</a></li>
-				<li class="on"><a href="#">콘텐츠</a></li>
+				<li><a href="#">콘텐츠</a></li>
 				<li><a href="#">크리에이터</a></li>
 				<li><a href="#" class="btn-more mo-hide">더보기</a>
 					<div class="h-layer">
@@ -208,7 +210,7 @@
 				<div class="search-area">
 					<div class="search">
 						<input class="input" type="text" placeholder="검색어를 입력해주세요">
-						<button type="button" class="btn-search"><span>검색</span></button>
+						<button type="button" class="btn-search pc"><span>검색</span></button>
 					</div>
 					
 					<dl class="lst">
@@ -222,276 +224,120 @@
 						</dd>
 					</dl>
 				</div>
-				<ul class="menu mo-hide">
-					<li><a href="#" class="btn-login"><span>로그인</span></a></li>
+				<ul class="menu">
+					<li><a href="#" class="btn-noti"><span>알림</span><em>12</em></a>
+						<div class="h-layer alram">
+							<div class="inner">
+								<div class="layer-tit">
+									<p>알림</p>
+									<div class="layer-area">
+										<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+										<ul class="btn-layer-list">
+											<li><button type="button" class="btn-set"><span class="switch">off</span>알림설정</button></li>	
+											<li><button type="button" class="btn-del">전체삭제</button></li>										
+										</ul>
+									</div>
+								</div>
+								<div class="scroll-area" id="scroll-area">
+									<div class="item">
+										<a href="#">
+											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
+											<p class="txt">1김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+											<span class="date">1개월전</span>
+										</a>									
+										<div class="layer-area">
+											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+											<ul class="btn-layer-list">												
+												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
+											</ul>
+										</div>
+									</div>
+									<div class="item">
+										<a href="#">
+											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
+											<p class="txt">2덴마크 모델 </p>						
+											<span class="date">1개월전</span>
+										</a>									
+										<div class="layer-area">
+											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+											<ul class="btn-layer-list">												
+												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
+											</ul>
+										</div>
+									</div>
+									<div class="item">
+										<a href="#">
+											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
+											<p class="txt">1김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+											<span class="date">1개월전</span>
+										</a>									
+										<div class="layer-area">
+											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+											<ul class="btn-layer-list">												
+												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
+											</ul>
+										</div>
+									</div>
+									<div class="item">
+										<a href="#">
+											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
+											<p class="txt">4김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+											<span class="date">1개월전</span>
+										</a>									
+										<div class="layer-area">
+											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+											<ul class="btn-layer-list">												
+												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
+											</ul>
+										</div>
+									</div>
+									<div class="item">
+										<a href="#">
+											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
+											<p class="txt">33333김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+											<span class="date">1개월전</span>
+										</a>									
+										<div class="layer-area">
+											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+											<ul class="btn-layer-list">												
+												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
+											</ul>
+										</div>
+									</div>
+									<div class="item">
+										<a href="#">
+											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
+											<p class="txt">1김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
+											<span class="date">1개월전</span>
+										</a>									
+										<div class="layer-area">
+											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+											<ul class="btn-layer-list">												
+												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
+											</ul>
+										</div>
+									</div>
+								</div>						
+											
+							</div>
+															
+						</div>
+					</li>
+					<li><a href="#" class="btn-movie"><span>영상업로드</span></a></li>
+					<li><a href="#" class="btn-profile"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
+						<div class="h-layer">
+							<a href="#">내 정보</a>
+							<a href="#">내 채널</a>
+							<a href="#">마이페이지</a>
+							<a href="#">로그아웃</a>				
+						</div>
+					</li>
 				</ul>
 	
 			</div>
 		</div>
 	</div>
-	<div class="contants">
-		<div class="search-result">
-			<p><span class="blue-txt">#김치</span> 에 대한 통합검색 결과입니다.</p>
-			<div class="list-bottom">
-				<div class="tit-area">
-					<p class="sub-title">크리에이터</p>					
-				</div>
-				<div class="creator-list">
-					<a href="#" class="user">
-						<span class="img-area"><img src="../../resources/images/temp/temp_lank1.jpg"></span>
-						<span class="name">연두부 유튜브</span>
-					</a>
-					<a href="#" class="user">
-						<span class="img-area"><img src="../../resources/images/temp/temp_lank2.jpg"></span>
-						<span class="name">크리에이터링</span>
-					</a>
-					<a href="#" class="user">
-						<span class="img-area"><img src="../../resources/images/temp/temp_lank1.jpg"></span>
-						<span class="name">마네모네재미나네</span>
-					</a>					
-				</div>				
-			</div>
-			<div class="list-bottom">
-				<div class="tit-area">
-					<p class="sub-title">캠페인</p>					
-				</div>
-				<div class="list-type1">
-					<a href="#">
-						<div class="img-area"><img src="../../resources/images/temp/sub_cam_list1.jpg"></div>						
-						<div class="txt-wrap">
-							<div class="flag-area">
-								<span class="flag ty01">인비테이션형</span>
-								<span class="flag ty03 status">진행</span>
-							</div>
-							<div class="txt-area">
-								<p class="tit">포트리스 배틀로얄 리뷰챌린지 포트리스 배틀로얄 리뷰챌린지 포트리스 배틀로얄 리뷰챌린지</p>
-								<span class="date">2020-09-01 ~ 2020-09-30 (63일 남음)</span>								
-							</div>
-						</div>
-					</a>
-					<a href="#">
-						<div class="img-area"><img src="../../resources/images/temp/sub_cam_list2.jpg"></div>						
-						<div class="txt-wrap">
-							<div class="flag-area">
-								<span class="flag ty02">오디션형</span>
-								<span class="flag ty03 status">진행</span>
-							</div>
-							<div class="txt-area">
-								<p class="tit">포트리스 배틀로얄 리뷰챌린지</p>
-								<span class="date">2020-09-01 ~ 2020-09-30 (63일 남음)</span>								
-							</div>
-						</div>
-					</a>					
-				</div>
-			</div>
-			<div class="list-bottom">
-				<div class="tit-area">
-					<p class="sub-title">영상</p>					
-				</div>
-				<div class="video-list2 disabled">
-					<div class="video-item">
-						<div class="cont">
-							<a href="#">
-								<img src="../../resources/images/temp/temp_thumb.jpg">
-								<div class="video-area">
-									<video autoplay loop muted playsinline>
-										<source src="../../resources/video/video2.mp4">
-									</video>
-								</div>
-							</a>
-						</div>
-						<div class="txt">
-							<ul>
-								<li>
-									<a href="#" class="user"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
-									<a href="#"  class="tit">김치만 먹고 3일동안 살아본 덴마크 모델?김치만 먹고 3일동안 살아본 덴마크 모델?</a>
-								</li>
-								<li><a href="#" class="name">크리에이터링</a></li>
-								<li>
-									<span class="hits">조회수 2,524회</span>
-									<span class="date">1개월 전</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="video-item">
-						<div class="cont">
-							<a href="#">
-								<img src="../../resources/images/temp/temp_thumb.jpg">
-								<div class="video-area">
-									<video autoplay loop muted playsinline>
-										<source src="../../resources/video/video2.mp4">
-									</video>
-								</div>
-							</a>
-						</div>
-						<div class="txt">
-							<ul>
-								<li>
-									<a href="#" class="user"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
-									<a href="#"  class="tit">김치만 먹고 3일동안 살아본 덴마크 모델?김치만 먹고 3일동안 살아본 덴마크 모델?</a>
-								</li>
-								<li><a href="#" class="name">크리에이터링</a></li>
-								<li>
-									<span class="hits">조회수 2,524회</span>
-									<span class="date">1개월 전</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="video-item">
-						<div class="cont">
-							<a href="#">
-								<img src="../../resources/images/temp/temp_thumb.jpg">
-								<div class="video-area">
-									<video autoplay loop muted playsinline>
-										<source src="../../resources/video/video2.mp4">
-									</video>
-								</div>
-							</a>
-						</div>
-						<div class="txt">
-							<ul>
-								<li>
-									<a href="#" class="user"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
-									<a href="#"  class="tit">김치만 먹고 3일동안 살아본 덴마크 모델?김치만 먹고 3일동안 살아본 덴마크 모델?</a>
-								</li>
-								<li><a href="#" class="name">크리에이터링</a></li>
-								<li>
-									<span class="hits">조회수 2,524회</span>
-									<span class="date">1개월 전</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="video-item">
-						<div class="cont">
-							<a href="#">
-								<img src="../../resources/images/temp/temp_thumb.jpg">
-								<div class="video-area">
-									<video autoplay loop muted playsinline>
-										<source src="../../resources/video/video2.mp4">
-									</video>
-								</div>
-							</a>
-						</div>
-						<div class="txt">
-							<ul>
-								<li>
-									<a href="#" class="user"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
-									<a href="#"  class="tit">김치만 먹고 3일동안 살아본 덴마크 모델?김치만 먹고 3일동안 살아본 덴마크 모델?</a>
-								</li>
-								<li><a href="#" class="name">크리에이터링</a></li>
-								<li>
-									<span class="hits">조회수 2,524회</span>
-									<span class="date">1개월 전</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="video-item">
-						<div class="cont">
-							<a href="#">
-								<img src="../../resources/images/temp/temp_thumb.jpg">
-								<div class="video-area">
-									<video autoplay loop muted playsinline>
-										<source src="../../resources/video/video2.mp4">
-									</video>
-								</div>
-							</a>
-						</div>
-						<div class="txt">
-							<ul>
-								<li>
-									<a href="#" class="user"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
-									<a href="#"  class="tit">김치만 먹고 3일동안 살아본 덴마크 모델?김치만 먹고 3일동안 살아본 덴마크 모델?</a>
-								</li>
-								<li><a href="#" class="name">크리에이터링</a></li>
-								<li>
-									<span class="hits">조회수 2,524회</span>
-									<span class="date">1개월 전</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="video-item">
-						<div class="cont">
-							<a href="#">
-								<img src="../../resources/images/temp/temp_thumb.jpg">
-								<div class="video-area">
-									<video autoplay loop muted playsinline>
-										<source src="../../resources/video/video2.mp4">
-									</video>
-								</div>
-							</a>
-						</div>
-						<div class="txt">
-							<ul>
-								<li>
-									<a href="#" class="user"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
-									<a href="#"  class="tit">김치만 먹고 3일동안 살아본 덴마크 모델?김치만 먹고 3일동안 살아본 덴마크 모델?</a>
-								</li>
-								<li><a href="#" class="name">크리에이터링</a></li>
-								<li>
-									<span class="hits">조회수 2,524회</span>
-									<span class="date">1개월 전</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="video-item">
-						<div class="cont">
-							<a href="#">
-								<img src="../../resources/images/temp/temp_thumb.jpg">
-								<div class="video-area">
-									<video autoplay loop muted playsinline>
-										<source src="../../resources/video/video2.mp4">
-									</video>
-								</div>
-							</a>
-						</div>
-						<div class="txt">
-							<ul>
-								<li>
-									<a href="#" class="user"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
-									<a href="#"  class="tit">김치만 먹고 3일동안 살아본 덴마크 모델?김치만 먹고 3일동안 살아본 덴마크 모델?</a>
-								</li>
-								<li><a href="#" class="name">크리에이터링</a></li>
-								<li>
-									<span class="hits">조회수 2,524회</span>
-									<span class="date">1개월 전</span>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="video-item">
-						<div class="cont">
-							<a href="#">
-								<img src="../../resources/images/temp/temp_thumb.jpg">
-								<div class="video-area">
-									<video autoplay loop muted playsinline>
-										<source src="../../resources/video/video2.mp4">
-									</video>
-								</div>
-							</a>
-						</div>
-						<div class="txt">
-							<ul>
-								<li>
-									<a href="#" class="user"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
-									<a href="#"  class="tit">김치만 먹고 3일동안 살아본 덴마크 모델?김치만 먹고 3일동안 살아본 덴마크 모델?</a>
-								</li>
-								<li><a href="#" class="name">크리에이터링</a></li>
-								<li>
-									<span class="hits">조회수 2,524회</span>
-									<span class="date">1개월 전</span>
-								</li>
-							</ul>
-						</div>
-					</div>					
-				</div>
-			</div>
-		</div>		
+	<div class="contants" style="min-height: 700px;">		
 	
 	</div>
 	<div class="footer">
@@ -527,11 +373,34 @@
 	</div>
 </div>
 
+<!-- 메인 팝업 -->
+<div class="layer-pop main">
+	<div class="pop-cont">
+		<a href="#"><img src="../../resources/images/temp/temp_pop.jpg" alt="creator video challenge"></a>
+	</div>
+	<div class="bottom">
+		<button type="button" class="pop-close-today">24시간 이 창 열지 않기</button>
+		<button type="button" class="pop-close">닫기</button>
+	</div>
+</div>
+
+
 
 <script src="../../resources/js/jquery-2.0.3.min.js"></script>	
 <script src="../../resources/js/perfect-scrollbar.min.js"></script>
 <script src="../../resources/js/slick.js"></script>
+
 <script src="../../resources/js/common.js"></script>
+<script>
+$(document).ready(function() {
+	
+	//메인팝업
+	$('.pop-close').on('click', '.pop-close',function(){	
+		$(this).closest('.layer-pop').fadeOut();	
+	});	
+});
+
+</script>
 
 </body>
 </html>

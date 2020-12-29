@@ -1397,13 +1397,7 @@ $(document).ready(function() {
 		arrows: false,
 		focusOnSelect: true
 	});
-	//visual 영상 play	
-	// $('.slider-for').on('afterChange', function(event, slick, currentSlide) {			
-	// 	$('.slider-for').find('video').get(0).pause();
-	// 	$('.slider-for').find('video').get(0).currentTime = 0;
-	// 	$(this).find('.slick-active').find('video').get(0).play();
-    //  });	
-
+	
 	 $('.slider-nav').find('.slick-active').find('.group').addClass('on');
 	 $('.slider-nav').on('afterChange', function(event, slick, currentSlide) {
 		$('.slider-nav').find('.group').removeClass('on');
@@ -1460,16 +1454,7 @@ $(document).ready(function() {
 					//infinite: true, 
 					dots: true 
 					} 
-				}, 
-			// { 
-			// 	breakpoint: 1280, 
-			// 	settings: { 
-			// 		slidesToShow: 3, 
-			// 		slidesToScroll: 1,	
-			// 	//	infinite: true, 
-			// 		dots: true 
-			// 		} s
-			// 	}, 
+				}, 		
 			{ 
 				breakpoint: 1280, 
 				settings: { 
@@ -1479,15 +1464,7 @@ $(document).ready(function() {
 					dots: true 
 					} 
 				}, 
-				// { 
-				// breakpoint: 1024, 
-				// settings: { 
-				// 	slidesToShow:2, 
-				// 	slidesToScroll: 1,	 
-				// //	infinite: true, 
-				// 	dots: true 
-				// 	} 
-				// }, 
+			
 			{ 
 				breakpoint: 660, 
 				settings: { 
@@ -1525,56 +1502,14 @@ $(document).ready(function() {
 				//	dots: true 
 					} 
 				}
-			// 	{ 
-			// 	breakpoint: 570, 
-			// 	settings: { 
-			// 		slidesToShow: 1, 
-			// 		slidesToScroll: 1,	
-			// 		//infinite: true, 
-			// 	//	dots: true 
-			// 		} 
-			// 	}
-				
-				
 			]		
 	});
-
-
-//썸네일 5초 play
-	// $('.video-item').each(function(){
-	// 	$(this).find('.videoTag').remove();
-	// 	var video = $(this).find('.video-area').html();
-	// 	$(this).append('<textarea class="videoTag" style="display:none;">' + video + '</textarea>');
-	// });
-
-	// $('.video-item').mouseenter(function(){
-	// 	var videoVal = $(this).find('.videoTag').val();		
-	// 	$(this).find('.video-area').html(videoVal);
-
-	// 	var $video = $(this).find('.video-area video');
-	// 	setTimeout(function(){
-	// 		$video.fadeOut(300, function(){
-	// 			$video.hide();
-	// 		});
-	// 	}, 5000);
-	// });
-
-	// $('.video-item').mouseleave(function(){	
-	// 	$(this).find('.video-area video').fadeOut(300, function(){
-	// 		$(this).remove();
-	// 	});
-	// });
-
 
 	//메인팝업
 	$('.pop-close').on('click', '.pop-close',function(){	
 		$(this).closest('.layer-pop').fadeOut();	
 	});	
 });
-
-
-
-
 
 </script>
 

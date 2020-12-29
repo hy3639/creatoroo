@@ -92,7 +92,7 @@ hr{display:none;}
 main,header,section,nav,footer,aside,article,figure{display:block;}
 a{color:#000;text-decoration:none;}
 button{border:0 none;background-color:transparent;cursor:pointer}
-a.disabled,button.disabled {cursor: default;}
+a.disabled,button.disabled {cursor: default; opacity: .5;}
 /* html.no-scroll {
 	position:fixed;
 	left:0;right:0;top:0;
@@ -400,7 +400,7 @@ body {background-color:#0e0f16}
 .header .h-layer {
 	display: none;
 	min-width:145px;
-	height: auto !important;
+	/* height: auto !important; */
 	position:absolute;
 	left:15px;
 	top: 20px;
@@ -476,7 +476,7 @@ body {background-color:#0e0f16}
 	width:100%;
 	margin-top: 15px;
 	padding:25px;
-	background-color:rgba(20, 20, 20, .5);
+	background-color:rgba(20, 20, 20, .9);
 	box-sizing: border-box;
 }
 
@@ -810,12 +810,15 @@ body {background-color:#0e0f16}
 	min-width: 134px;
 	height: 50px;
 	line-height: 50px;
+	padding: 0 2rem;
 	color:#fff;
 	font-size: 1.8rem;
 	font-weight: 700;
+	box-sizing: border-box;
 }
+
 .btn-square.disabled {
-	background-color:#2c2d33;
+	background-color:#2c2d33 !important;
 	color:#555;
 }
 .btn-square.lg {
@@ -824,6 +827,7 @@ body {background-color:#0e0f16}
 	padding: 0 4.8rem;
 	font-size: 2.2rem;
 	font-weight: bold;
+	min-width: 20rem;
 }
 .btn-square.sm {
 	padding: 0 2rem;
@@ -867,8 +871,10 @@ body {background-color:#0e0f16}
 	transform: rotate(-90deg);
 }
 
-.btn-area a {margin-left: 5px;}
-.btn-area a:first-child {margin-left: 0;}
+.btn-area a,
+.btn-area button {margin-left: 5px;}
+.btn-area a:first-child,
+.btn-area button:first-child {margin-left: 0;}
 
 .btn-like {
 	position:relative;
@@ -1211,45 +1217,6 @@ input[type=radio] {
 /* --------------------------------------------
 	레이어팝업
 ----------------------------------------------*/
-/*메인용*/
- .layer-pop.main {
-	position:absolute;
-	right:50px;
-	top: 185px;
-	padding-bottom:50px;
-	background-color:#fff;
-}
-
- .layer-pop.main .bottom {
-	overflow: hidden;
-	position:absolute;
-	bottom:0;
-	left:0;
-	right:0;
-	padding:17px 20px;
-	background-color:#e5e5e5;
-	box-sizing: border-box;
-}
-.layer-pop.main .bottom .pop-close-today {
-	float:left;
-	background: url(../images/icon/icon_check_pop.png) no-repeat left center;
-	padding-left:25px;
-	font-size:1.4rem;
-	color:#333;
-}
- .layer-pop.main .bottom .pop-close {
-	width:16px;
-	height:16px;
-	float:right;
-	background: url(../images/icon/icon_close_pop.png) no-repeat left center;
-	font-size: 0;
-	transform: rotate(0);
-	transition: all 0.5s;
-}
- .layer-pop.main .bottom .pop-close:hover {
-	transform: rotate(180deg);
-}
-
 
 /*기본팝업*/
 .layer-pop:not(.main) {
@@ -3195,6 +3162,8 @@ h2.tit {
 ----------------------------------------------*/
 .login,
 .join {background: url(../images/layout/bg_login.png) no-repeat center bottom; background-size: contain;}
+.join .btn-area a,
+.join .btn-area button{min-width: 20rem;}
 .sub .contants.login .inner {
 	width: 44.5rem;
 	padding: 5.5rem 0 34.5rem;
@@ -3267,8 +3236,7 @@ h2.tit {
 	color:#888;
 	margin-bottom: 1.5rem;
 }
-.login .left .form-list .important:before,
-.join-box .form-list .important:before {
+.form-list .important:before{
 	content: '*';
 	color:#fc5358;
 	position: absolute;
@@ -3452,8 +3420,8 @@ h2.tit {
 	font-weight: normal;	
 
 }
-.join .join-box .term {height: 17rem;}
-.join  .terms-area .box {
+.join-box .term {height: 17rem;}
+.join-box .terms-area .box {
 	border-top: 0;
 	padding-top: 0;
 	margin-bottom: 5rem;
@@ -4087,6 +4055,181 @@ h2.tit {
 .layer-pop .form-wrap .input-area .btn-square {min-width:9.1rem;margin-left:7px; font-size: 14px;}
 .layer-pop .form-wrap .bullet-list {margin-top: 1rem;}
 .layer-pop .form-wrap + .btn-area .btn-square {min-width: 10.5rem; box-sizing: border-box;}
+
+/* --------------------------------------------
+	광고주문의
+----------------------------------------------*/
+.advertiser .inner {
+	width: 100% !important;
+	padding: 12.5rem 0 14.5rem;
+}
+.advertiser .bg-area{
+	display: flex;
+	flex-wrap: wrap;
+	min-height: 76.7rem;
+	padding: 14rem 0 14.5rem;
+	background: url(../images/img/bg_advertiser.jpg) no-repeat center;
+	background-size: cover;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+}
+.advertiser .bg-area .tit {
+	width: 100%;
+	font-size: 6.4rem;
+	line-height: 7rem;
+}
+.advertiser .bg-area .tit span {
+	display: block;
+	margin-top: 2rem;
+	font-size: 2.1rem;
+	line-height: 3.5rem;
+	color:#ddd;
+	font-family: 'Noto Sans KR';
+}
+.advertiser .btn-area {margin-top: 10rem;}
+.advertiser .bg-area .btn-square {margin-top: 5rem;}
+.advertiser .step-area {margin-top: 7rem;}
+.advertiser .step-area  .slick-list {/*padding: 0 33%!important;*/}
+ .advertiser .step-area .slick-slide {/*width: 33.3% !important; */margin: 0 3rem; opacity: .3;} 
+ .advertiser .step-area .slick-slide.slick-current {opacity: 1;}
+/* .advertiser .step-area {padding: 0 55rem;} */
+.advertiser .step-area .slick-slide { text-align: center;/*width: 70rem !important;*/}
+.advertiser .step-area .group {max-width: 70rem;}
+.advertiser .step-area .group .txt {
+	text-align: left;
+	padding-left: 13.5rem;
+	margin-bottom: 6rem;
+	min-height: 16.5rem;
+}
+.advertiser .step-area .group .txt p:before {
+	content: 'CREATORING';
+	display: block;
+	color:#1d98e3;
+	font-size: 1.6rem;
+	font-family: 'Lato';
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+.advertiser .step-area .group .txt p {font-size: 5rem; font-weight: 700;}
+.advertiser .step-area .group .txt span {
+	display: block;
+	margin-top: 1.5rem;
+	font-size: 1.8rem;
+	line-height: 2.8rem;
+}
+.advertiser .step-area .group:nth-child(1) .txt {	background: url(../images/img/step_num1.png) no-repeat 1.8rem 0;}
+.advertiser .step-area .img {
+	display: block;
+	max-width: 70rem;
+	width: 100%;
+	margin: 0 auto;
+	background-color:#1d98e3;
+}
+
+.advertiser .step-area .img img {width: 100%;}
+.advertiser .slick-dots {
+	position: static;
+	text-align: center;
+	width: 56rem;
+	margin: 8rem auto 0 ;
+
+	display: flex !important;
+	justify-content: space-between;
+	
+}
+.advertiser .slick-dots li{
+	position: relative;
+	/* margin-left: 4rem; */
+	margin-left: 0;
+	flex: 1;
+	width: inherit;
+	height: inherit;
+	border-radius: 0;
+	background-color: transparent;
+	opacity: 1;
+
+}
+.advertiser .slick-dots li:before {
+	content: '';
+	width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: #56575b;
+    display: inline-block;
+	transition: all 1s;
+}
+/* .advertiser .slick-dots li.on:after{background-color:#1d98e3;} */
+.advertiser .slick-dots li:first-child {margin-left: 0;}
+.advertiser .slick-dots li:after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	top: 1rem;
+	left: 0;
+	background-color:#56575b;
+	z-index: -1;
+}
+.advertiser .slick-dots li:first-child:after {width: 50%; left: inherit;right: 0;}
+.advertiser .slick-dots li:last-child:after {width: 50%; left: inherit;}
+/* .advertiser .slick-dots li:before {
+	content: '';
+	display: block;
+	width: ;
+} */
+.progress-wrap {
+	width: 56rem;
+	margin: -2px auto 0;
+	padding: 0 4rem;
+}
+.pro-bar{
+   position: relative;
+	width: 0;
+	height:1px;
+	/* margin: 0 auto; */
+    background: #1d98e3;
+}
+/* .pro-bar:before {
+	content: '';
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 1px;
+	background-color:#ddd;
+} */
+
+.pager__item{
+	/* padding: 0 12px; */
+	display: block;
+	margin-top: 1.5rem;
+	width: 8rem;
+	color:#56575b;
+	transition: all 1s;
+  }
+  .advertiser .slick-dots li.slick-active .pager__item,
+  .advertiser .slick-dots li.on .pager__item {color:#ddd}
+  .advertiser .slick-dots li.slick-active:before,
+  .advertiser .slick-dots li.on:before { background-color:#1d98e3}
+ 
+  .advertiser .slick-arrow {background: url(../images/icon/icon_arrow3.png) no-repeat center 50%; width: 4.5rem;}
+  .advertiser .slick-arrow.slick-next {right: 5rem;}
+  .advertiser .slick-arrow.slick-prev {left: 5rem;}
+
+  .advertiser .bg-gray {
+	  background-color:#1d1e24;
+	 margin-top:7rem;
+  }
+  .advertiser .terms-area {padding-top: 2rem;}
+  .advertiser .terms-area .term{background-color:#2c2d33}
+
+  .advertiser .form-list .enquiry .cont label {color:#fff;}
+  .advertiser .form-list .enquiry label + label {margin-left: 3rem;}
+  .advertiser .form-list .budget .cont {display: flex; align-items: center;}
+  .advertiser .form-list .budget .cont input {margin-right: 1.8rem;}
+  .advertiser .form-list .budget .cont {color:#777; font-size: 1.6rem;}
 /************************미디어쿼리************************************************************************/
 
 
@@ -4165,6 +4308,9 @@ h2.tit {
 	.creator-wrap .creator-list {width: 100%;}
 	.creator-wrap .creator-list .img + span {display: block;}
 	.creator-wrap .tit-area.pd0 {padding-left: 0;padding-top: 0;}
+
+	/*광고주문의*/
+	.sub .advertiser .inner {padding: 0 0 7rem;}
 }
 
 /* =======================================************************=================================================================
@@ -4262,6 +4408,7 @@ h2.tit {
 		height: calc(100% - 54px );
 	}
 	.util .h-layer {
+		/* height: initial !important; */
 		position: fixed;
 		top:50px;
 		left: 0;
@@ -4275,6 +4422,7 @@ h2.tit {
 		padding : 0 13px 50px 13px;
 		background-color: #0f0f17;
 	}
+	
 	/* .util .h-layer.alram{padding-top: 50px;} */
 	.util .h-layer.alram .layer-tit {font-size: 20px; font-weight: 700;border-bottom:1px solid rgba(255, 255, 255, .1)}
 	.util .h-layer.alram a{
@@ -4297,7 +4445,7 @@ h2.tit {
 	.util .h-layer.alram .switch {margin-top: 0;}
 	.btn-layer-list li + li {margin-top: -2px;}
 	
-	.util .h-layer.search {bottom: inherit; top: 0;z-index: 100;}
+	.util .h-layer.search {top: 0;z-index: 100;}
 	.util .search-area {display: flex; padding-top: 10px; float: inherit;}
 	.util .search-area input[type="text"] {
 		width: calc(100% - 80px);
@@ -4333,7 +4481,7 @@ h2.tit {
 		padding: 0;
 		border-top: 1px solid #151519;
 	}
-	.util .h-layer.search .lst dd a:hover {}
+	.header .h-layer:before {opacity:0;}
 
 	.btn-gnb.active {z-index: 100;}
 	.gnb-layer {
@@ -4530,7 +4678,7 @@ h2.tit {
 /* =========================================================================================================
 	공통
 ========================================================================================================= */
-	
+.join .btn-area a, .join .btn-area button {min-width: 11.5rem;}
 	/*버튼*/
 	.btn-square {
 		height: 3.9rem;
@@ -5375,6 +5523,62 @@ h2.tit {
 .bullet-list.st1 li {font-size: 12px; line-height: 18px;}
 .layer-pop .form-wrap .input-area .btn-square {min-width: 6.8rem;width: 6.8rem; font-size: 12px;padding: 0 1rem;}
 .layer-pop .cont .btn-area {margin-top: 2.5rem;}
+
+
+/* --------------------------------------------
+	광고주문의
+----------------------------------------------*/
+.sub .advertiser .inner {padding: 0 0 7rem;}
+.advertiser .bg-area {
+	background: url(../images/img/bg_advertiser_m.jpg) no-repeat center top;
+	padding: 9.5rem 0 10.5rem;
+	min-height: 47.7rem;
+	background-size: cover;
+}
+.advertiser .bg-area .tit {
+	font-size: 3.2rem;
+	line-height: 3.5rem;
+}
+.advertiser .bg-area .tit span {
+	font-size: 12px;
+	line-height: 2rem;
+}
+.advertiser .slick-list {padding: 0 3.5rem!important;}
+.advertiser .step-area .slick-slide {width: 90vw; margin:0 0.8rem;}
+
+.advertiser .step-area .group {
+	/* max-width: calc(100% - 6.6rem); */
+	width: 100%;
+}
+.advertiser .step-area .img {max-width: 100%;}
+
+.advertiser .step-area .group .txt{
+	padding-left: 5.8rem; min-height: 11rem; margin-bottom: 3.5rem;
+}
+.advertiser .step-area .group:nth-child(1) .txt {background-position: 0.8rem 0;}
+.advertiser .step-area .group .txt p {
+	font-size: 2.5rem;
+	line-height: 3.2rem;
+}
+
+.advertiser .step-area .group .txt span {
+	font-size: 12px;
+	line-height: 1.7rem;
+}
+.advertiser .step-area .group .txt p:before {font-size: 8px; line-height: 1;}
+.advertiser .step-area .group:nth-child(1) .txt {background-size: auto 8.2rem;}
+.advertiser .slick-dots{width: 100%; margin-top: 4rem;}
+.advertiser .slick-dots li {width: 4.5rem;}
+.advertiser .slick-dots li:before {margin-left: 0;}
+.pager__item {font-size: 8px;width: 4.5rem; margin: 0 auto; letter-spacing: -1px;}
+.progress-wrap {/*width:calc(100vw - 7rem); padding:0;*/width: 100%;}
+.advertiser .btn-area {margin-top:8rem}
+
+.layer-pop.full .advertiser {padding: 4rem 0 7.5rem ;}
+.layer-pop.full .advertiser .bg-gray {margin-top: 5rem; padding: 4rem 12px 5rem 12px;}
+.advertiser .form-list .enquiry .cont label {display: inline-block; width: 32%; margin-left: 0; margin-bottom: 0.5rem;}
+.advertiser .form-list .budget .cont {font-size: 12px;}
+.advertiser .form-list .budget .cont input {margin-right: 1.2rem;}
 }
 
 

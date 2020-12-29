@@ -84,7 +84,7 @@ responsive(); //해상도분기
 	});
 	$('.btn-prev').click(function(){
 		$(this).removeClass('on').closest('li').find('.h-layer').stop().slideUp();
-		$(this).removeClass('on').closest('li').find('.btn-search.mo').removeClass('on');
+		$('.mo .btn-search').removeClass('on');
 		$('.header').removeClass('on');
 	});
 
@@ -271,10 +271,10 @@ function chkBox(){
 
 /* 헤더 fixed */
 function header_fixed() {
-	var headerPos = $('.slider-nav .txt').outerHeight();
+//	var headerPos = $('.slider-nav .txt').outerHeight();
 	var window = $(this).scrollTop();		
 //	console.log(headerPos);
-	if(headerPos <= window) {
+	if(100 < window) {
 		$(".header").addClass("fixed");
 	} else {
 		$(".header").removeClass("fixed");
@@ -376,7 +376,8 @@ function progress(){
 
  /* 반응형 헤더 */
 function responsive(){
-	var w = $(window).width();
+	var w = $(window).outerWidth();
+	console.log(w);
 	if(w >= 1024){
 		$('.header').removeClass('mo on').addClass('pc');
 		$('.header .util a').removeClass('on');
