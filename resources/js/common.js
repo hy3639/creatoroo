@@ -377,7 +377,6 @@ function progress(){
  /* 반응형 헤더 */
 function responsive(){
 	var w = $(window).outerWidth();
-	console.log(w);
 	if(w >= 1024){
 		$('.header').removeClass('mo on').addClass('pc');
 		$('.header .util a').removeClass('on');

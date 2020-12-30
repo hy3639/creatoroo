@@ -14,7 +14,7 @@
 	background-color:#0e0f16; 
 	color:#fff;
 }
-.content-wrap > div > .title {padding:8rem 0 0 5rem; font-size:3rem; margin-bottom:2rem; color:#fff;}
+.content-wrap > div > .title {padding:8rem 0 0 5rem; font-size:3rem; margin-bottom:2rem; color:#fff; font-weight: 700;}
 .content-wrap > div:first-child > .title {padding-top: 0;padding-right:5rem; }
 .content-wrap > div:first-child > .title .btn-more {float: right; line-height: 4.5rem;}
 .content-wrap > div > .title span {font-size:1.6rem; color:#aaa}
@@ -566,7 +566,7 @@ justify-content: space-between;
 	.slider-nav .txt {height:80vh;padding: 0 5rem 5rem 5rem;}
 	
 	.content-wrap {padding-bottom:7.5rem}
-	.content-wrap > div > .title {padding:8rem 0 0 5rem; font-weight: bold;}
+	.content-wrap > div > .title {padding:8rem 0 0 5rem;}
 	.video-wrap .slick-list {padding: 0 5rem;}
 	 .content-wrap > div:first-child > .title { padding-left: 0;}
 	.sub .content-wrap > div:first-child > .title {padding:8rem 0 0 3rem}
@@ -661,7 +661,7 @@ justify-content: space-between;
 	.lank-list .item > .txt p.counter {font-size: 16px;}
 	.lank-list .item > .img {flex: 1;}
 	.lank-list .item > .txt div {padding-left: 4rem;}
-
+	.main .campaign-list .slick-slide {padding-bottom: 3rem;}
 	
 }
 @media all and (max-width:830px) {

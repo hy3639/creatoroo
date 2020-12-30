@@ -253,79 +253,67 @@
 						</span>
 					</div>					
 					<span class="img">
-						<img src="../../resources/images/img/img_ad_step1.png">
+						<img src="../../resources/images/img/card1_on.gif"> <!--img src를 활성화된 슬라이드만 _on 비활성화 _off로 replace시켜주세요. -->
 					</span>
 				</div>
 				<div class="group"  data-title="컨설팅">
 					<div class="txt">						
 						<p>컨설팅</p>
 						<span>
-							브랜드 및 상품 홍보를 원하는 마케터가 어떠한 홍보가 필요한지 
-							구체적으로 문의서를 작성합니다.
+							접수된 문의 내용을 바탕으로 캠페인 매니저가
+							킥오프미팅을 진행하여 맞춤형 컨설팅을 진행합니다.
 						</span>
 					</div>					
 					<span class="img">
-						<img src="../../resources/images/img/img_ad_step1.png">
+						<img src="../../resources/images/img/card2_off.gif">
 					</span>
 				</div>
 				<div class="group"  data-title="계약체결">
 					<div class="txt">						
 						<p>계약체결</p>
-						<span>
-							브랜드 및 상품 홍보를 원하는 마케터가 어떠한 홍보가 필요한지 
-							구체적으로 문의서를 작성합니다.
-						</span>
+						<span>확정된 캠페인 내용을 바탕으로 계약서를 작성합니다.</span>
 					</div>					
 					<span class="img">
-						<img src="../../resources/images/img/img_ad_step1.png">
+						<img src="../../resources/images/img/card3_off.gif">
 					</span>
 				</div>
 				<div class="group"  data-title="캠페인 생성">
 					<div class="txt">						
 						<p>캠페인 생성</p>
-						<span>
-							브랜드 및 상품 홍보를 원하는 마케터가 어떠한 홍보가 필요한지 
-							구체적으로 문의서를 작성합니다.
-						</span>
+						<span>마케터가 의뢰한 내용을 바탕으로 영상 캠페인이 시작됩니다.</span>
 					</div>					
 					<span class="img">
-						<img src="../../resources/images/img/img_ad_step1.png">
+						<img src="../../resources/images/img/card4_off.gif">
 					</span>
 				</div>
 				<div class="group"  data-title="캠페인 진행">
 					<div class="txt">						
 						<p>캠페인 진행</p>
 						<span>
-							브랜드 및 상품 홍보를 원하는 마케터가 어떠한 홍보가 필요한지 
-							구체적으로 문의서를 작성합니다.
+							사전 검수를 통한 다양한 장르의 크리에이터들이 영상이 등록되며,
+							영상의 조회수, 투표수가 랭킹으로 집계됩니다.
 						</span>
 					</div>					
 					<span class="img">
-						<img src="../../resources/images/img/img_ad_step1.png">
+						<img src="../../resources/images/img/card5_off.gif">
 					</span>
 				</div>
 				<div class="group"  data-title="수상작 선정">
 					<div class="txt">						
 						<p>수상작 선정</p>
-						<span>
-							브랜드 및 상품 홍보를 원하는 마케터가 어떠한 홍보가 필요한지 
-							구체적으로 문의서를 작성합니다.
-						</span>
+						<span>마케터는 설정한 상금 구조에 맞는 수상작품을 선정합니다.</span>
 					</div>					
 					<span class="img">
-						<img src="../../resources/images/img/img_ad_step1.png">
+						<img src="../../resources/images/img/card6_off.gif">
 					</span>
 				</div>
 				<div class="group"  data-title="결과 리포트">
 					<div class="txt">						
 						<p>결과 리포트</p>
-						<span>
-							브랜드 및 상품 홍보를 원하는 마케터가 어떠한 홍보가 필요한지 
-							구체적으로 문의서를 작성합니다.
-						</span>
+						<span>캠페인의 성과를 수집하여 리포팅하여 마케터에게 제공합니다.</span>
 					</div>					
 					<span class="img">
-						<img src="../../resources/images/img/img_ad_step1.png">
+						<img src="../../resources/images/img/card7_off.gif">
 					</span>
 				</div>
 			</div>
@@ -454,6 +442,9 @@
 <script src="../../resources/js/slick.js"></script>
 <script src="../../resources/js/common.js"></script>
 <script>
+	$(document).ready(function() {	
+		
+	});
 	$('.step-area').slick({
 		speed:300,
 		centerMode: true,
@@ -502,6 +493,8 @@ $(".step-area").on('afterChange', function(event, slick, currentSlide, nextSlide
 	$(".pro-bar").animate({
 		"width": (itemW * (curIdx))+"px"
 	},300);
+
+	
 });
 </script>
 </body>
