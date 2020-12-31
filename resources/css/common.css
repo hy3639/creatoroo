@@ -5504,7 +5504,7 @@ h2.tit {
 ----------------------------------------------*/
 .mychannel .info-area {margin: 2rem 0 2.5rem;}
 .mychannel .bg-area {height: 12rem; min-height: inherit;}
-.mychannel .bg-area img { height: 100%;}
+.mychannel .bg-area img { height: 100%; min-width: 100%;}
 .mychannel .bg-area .btn-round {right: 1.5rem; top: 1.5rem;}
 .btn-round {
 	width: 3rem;
