@@ -274,7 +274,7 @@ function header_fixed() {
 //	var headerPos = $('.slider-nav .txt').outerHeight();
 	var window = $(this).scrollTop();		
 //	console.log(headerPos);
-	if(100 < window) {
+	if(0 < window) {
 		$(".header").addClass("fixed");
 	} else {
 		$(".header").removeClass("fixed");

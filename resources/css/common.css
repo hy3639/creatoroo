@@ -347,6 +347,7 @@ body {background-color:#0e0f16}
 	background: url(../images/layout/logo.png) no-repeat 0 0;
 	font-size: 0;
 }
+.header .logo a{display: block;height: 100%}
 
 .header h1 {display:inline-block;}
 
@@ -1057,7 +1058,8 @@ input[type=radio] {
 	background-color:transparent;
 	opacity:1;
 }
-
+.chkBox input[type=checkbox].styled1 + .chk:before,
+.chkBox input[type=checkbox].styled2 + .chk:before {margin: -6px 0 0 -8px;}
 .chkBox input[type=checkbox].styled2 + .chk {border-radius:50%;}
 
 
@@ -3659,15 +3661,15 @@ h2.tit {
 
 }
 /* .board-list li a:hover {background-color: #21222f;} */
-.board-list .flag-area .flag {
+ .flag-area .flag.sm {
 	height: 2.4rem;
 	line-height: 2.4rem;
 	min-width: 5.3rem;
 	font-size: 12px;
 }
-.board-list .flag-area .flag + .flag {margin-left: 0.2rem;}
-.board-list .flag-area .noti,
-.board-list .flag-area .alram {
+ .flag-area .flag.sm + .flag.sm {margin-left: 0.2rem;}
+ .flag-area .sm.noti,
+ .flag-area .sm.alram {
 	min-width: 4rem;
 }
 .board-list li .img-wrap {
