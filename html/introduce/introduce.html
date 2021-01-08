@@ -748,13 +748,9 @@ function motion(){
 		var top = $('.movBox').eq(index).offset().top;
 
 		if(winTop + winH > top){
-			if(winTop > top + hei){
-				$('.movBox').eq(index).removeClass('move');
-			}else{
-				if(winTop + winH > top + hei/2){
+			if(winTop + winH > top + hei/2){
 					$('.movBox').eq(index).addClass('move');
 				}
-			}
 		}else{
 			$('.movBox').eq(index).removeClass('move');
 		}
