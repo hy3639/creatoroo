@@ -231,7 +231,7 @@
 	</div>
 	<div class="contants introduce">
 			<!-- 첫번째 컨텐츠 -->
-			<!-- <section class="section1 movBox">			
+			<section class="section1 movBox">			
 				<div class="content">
 					<div class="inner">
 						<div class="txt-wrap">
@@ -260,7 +260,7 @@
 				</div>
 				
 			</section>
-	 -->
+	
 			<!-- 두번째 컨텐츠 -->
 			<section class="section2">
 				<div class="inner">
@@ -749,7 +749,7 @@ function motion(){
 
 		if(winTop + winH > top){
 			if(winTop > top + hei){
-				$('.movBox').eq(index).removeClass('move');
+			//	$('.movBox').eq(index).removeClass('move');
 			}else{
 				if(winTop + winH > top + hei/2){
 					$('.movBox').eq(index).addClass('move');
