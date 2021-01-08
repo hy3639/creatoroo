@@ -6277,8 +6277,12 @@ h2.tit {
 .introduce .section5 .tab-lst {text-align: center;}
 .introduce .section5 .tab-lst p {font-size: 1.4rem;  padding-bottom: 2.5rem;}
 .introduce .section5 .tab-lst ul{display: flex; justify-content: space-around;}
-.introduce .section5 .tab-lst li {width: 6.5rem; margin-top:0; padding: 4rem 0 0 0; background-position: center top !important; font-size: 12px;}
+.introduce .section5 .tab-lst li {width: 6.5rem; margin-top:0; padding: 3.5rem 0 0 0; background-position: center top !important; font-size: 12px;}
 .introduce .section5 .tab-lst li.on:before {display: none;}
+.introduce .section5 .tab-lst li:nth-child(1) {background: url(../images/mobile/icon_intro1.png) no-repeat left center; background-size: 2.2rem 2.5rem;}
+.introduce .section5 .tab-lst li:nth-child(2) {background: url(../images/mobile/icon_intro2.png) no-repeat left center; background-size: 2.1rem 2.4rem;}
+.introduce .section5 .tab-lst li:nth-child(3) {background: url(../images/mobile/icon_intro3.png) no-repeat left center; background-size: 1.9rem 2.2rem;}
+.introduce .section5 .tab-lst li:nth-child(4) {background: url(../images/mobile/icon_intro4.png) no-repeat left center; background-size: 2.1rem 2.1rem;}
 
 .introduce .section6 {padding: 5rem 0;}
 .introduce .section6 .brand-wrap {margin-top: 5rem; padding: 6rem 1.5rem;}
