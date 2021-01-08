@@ -7,17 +7,15 @@
 	<meta name="format-detection" content="telephone=no">
 	<title>크리에이터링</title>
 	<link rel="stylesheet" type="text/css" href="../../resources/css/common.css">
-	<link rel="stylesheet" type="text/css" href="../../resources/css/main.css">
 </head>
 
 <body>
-
-<div class="wrapper main">
-	<div class="header">
+<div class="wrapper sub">
+	<div class="header fixed">
 		<h1 class="logo"><a href="#">로고</a></h1>
 		<ul class="util pc-hide">
 			<li>
-				<a href="#" class="btn-search mo"><span>검색</span></a>
+				<a href="#" class="btn-search"><span>검색</span></a>
 				<div class="h-layer search">
 					<div class="inner">
 						<div class="search-area">
@@ -45,7 +43,7 @@
 				</div>
 			</li>
 			<li>
-				<a href="#" class="btn-noti mo"><span>알림</span><em>12</em></a>
+				<a href="#" class="btn-noti"><span>알림</span><em>12</em></a>
 				<div class="h-layer alram">
 					<div class="inner">
 						<div class="layer-tit">
@@ -172,20 +170,14 @@
 		</ul>
 		<button type="button" class="btn-gnb"><span></span><span></span><span></span></button>
 		<div class="gnb-layer">
-			<div class="pc-hide fix">
+			<div class="pc-hide">
 				<div class="user-info type2"> <!--(폰트색상) type2:크리에이터 / type3:광고주 -->
 					<div class="user">
 						<span class="img-area"><img src="../../resources/images/temp/temp_lank1.jpg"></span>
 						<span class="name"><em>크리에이터 회원</em>연두부 유튜브</span>
 					</div>
-					<!-- 로그아웃 상태 -->
-					<div class="user no-user">
-						<a href="#">로그인을 해주세요.</a>
-					</div>
-					<!--//로그아웃 상태 -->
 				</div>
-				
-				<div class="link-area"> <!-- 유저별 필요한 링크 노출시 자동 정렬 / 비회원일경우 비노출 -->
+				<div class="link-area"> <!-- 유저별 필요한 링크 노출시 자동 정렬 -->
 					<a href="#" class="link1">내정보</a>
 					<!--<a href="#" class="link2">크리에이터 신청</a> -->
 					 <a href="#" class="link3">내 채널</a>
@@ -216,7 +208,7 @@
 				<div class="search-area">
 					<div class="search">
 						<input class="input" type="text" placeholder="검색어를 입력해주세요">
-						<button type="button" class="btn-search pc"><span>검색</span></button>
+						<button type="button" class="btn-search"><span>검색</span></button>
 					</div>
 					
 					<dl class="lst">
@@ -230,121 +222,222 @@
 						</dd>
 					</dl>
 				</div>
-				<ul class="menu">
-					<li><a href="#" class="btn-noti"><span>알림</span><em>12</em></a>
-						<div class="h-layer alram">
-							<div class="inner">
-								<div class="layer-tit">
-									<p>알림</p>
-									<div class="layer-area">
-										<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
-										<ul class="btn-layer-list">
-											<li><button type="button" class="btn-set"><span class="switch">off</span>알림설정</button></li>	
-											<li><button type="button" class="btn-del">전체삭제</button></li>										
-										</ul>
-									</div>
-								</div>
-								<div class="scroll-area" id="scroll-area">
-									<div class="item">
-										<a href="#">
-											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
-											<p class="txt">1김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
-											<span class="date">1개월전</span>
-										</a>									
-										<div class="layer-area">
-											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
-											<ul class="btn-layer-list">												
-												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
-											</ul>
-										</div>
-									</div>
-									<div class="item">
-										<a href="#">
-											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
-											<p class="txt">2덴마크 모델 </p>						
-											<span class="date">1개월전</span>
-										</a>									
-										<div class="layer-area">
-											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
-											<ul class="btn-layer-list">												
-												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
-											</ul>
-										</div>
-									</div>
-									<div class="item">
-										<a href="#">
-											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
-											<p class="txt">1김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
-											<span class="date">1개월전</span>
-										</a>									
-										<div class="layer-area">
-											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
-											<ul class="btn-layer-list">												
-												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
-											</ul>
-										</div>
-									</div>
-									<div class="item">
-										<a href="#">
-											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
-											<p class="txt">4김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
-											<span class="date">1개월전</span>
-										</a>									
-										<div class="layer-area">
-											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
-											<ul class="btn-layer-list">												
-												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
-											</ul>
-										</div>
-									</div>
-									<div class="item">
-										<a href="#">
-											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
-											<p class="txt">33333김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
-											<span class="date">1개월전</span>
-										</a>									
-										<div class="layer-area">
-											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
-											<ul class="btn-layer-list">												
-												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
-											</ul>
-										</div>
-									</div>
-									<div class="item">
-										<a href="#">
-											<span class="img"><img src="../../resources/images/temp/temp_campaign1.png"></span>								
-											<p class="txt">1김치만 먹고 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델 3일동안 살아본 덴마크 모델</p>						
-											<span class="date">1개월전</span>
-										</a>									
-										<div class="layer-area">
-											<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
-											<ul class="btn-layer-list">												
-												<li><button type="button" class="btn-hide">이 알림 숨기기</button></li>										
-											</ul>
-										</div>
-									</div>
-								</div>						
-											
-							</div>
-															
-						</div>
-					</li>
-					<li><a href="#" class="btn-movie"><span>영상업로드</span></a></li>
-					<li><a href="#" class="btn-profile"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
-						<div class="h-layer">
-							<a href="#">내 정보</a>
-							<a href="#">내 채널</a>
-							<a href="#">마이페이지</a>
-							<a href="#">로그아웃</a>				
-						</div>
-					</li>
+				<ul class="menu mo-hide">
+					<li><a href="#" class="btn-login"><span>로그인</span></a></li>
 				</ul>
 	
 			</div>
 		</div>
 	</div>
-	<div class="contants" style="min-height: 700px;">		
-	
+	<div class="contants mypage">
+		<div class="menu-area">
+			<div class="user-info">
+				<div class="user">
+					<span class="img-area"><img src="../../resources/images/temp/temp_lank1.jpg"></span>
+					<span class="name creator">연두부 유튜브<em>크리에이터 회원</em></span>
+				</div>
+			</div>
+			<div class="menu"> 
+				<a href="#" class="link1"><span>대시보드</span></a>
+				<a href="#" class="link2 on"><span>영상관리</span></a> <!--active메뉴일경우 on클래스 추가-->
+				<a href="#" class="link3"><span>1:1비즈매칭</span></a>
+				<a href="#" class="link4"><span>채널분석</span></a>
+				<a href="#" class="link5"><span>정산관리</span></a>
+			</div>
+		</div>
+		<div class="cont-area">
+			<div class="tit-area">
+				<div class="left">
+					<h2 class="tit">영상관리</h2>
+					<div class="tool-box">
+						<button type="button" class="btn-tooltip">툴팁</button>
+						<div class="tooltip">
+							내정보에서 URL 입력한 개인 SNS 채널의 구독자수가 표시 됩니다.
+						</div>
+					</div>
+				</div>
+				
+				<div class="right">
+					<button type="button" class="btn-square blue mo-hide">영상 업로드</button>
+					<button type="button" class="btn-square purple">캠페인 참여하기</button>
+					<button type="button" class="btn-order on">정렬</button> <!-- 버튼클릭시 on클래스 추가 및 하단 btn-layer-list에 on 추가 -->
+					<ul class="btn-layer-list on">										
+						<li><button type="button">캠페인영상</button></li>
+						<li><button type="button">일반영상</button></li>
+						<li><button type="button">최신순</button></li>
+						<li><button type="button">조회수순</button></li>
+						<li><button type="button">좋아요순</button></li>
+						<li><button type="button">댓글수순</button></li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="notice-area">
+				<div class="board-list">
+					<ul>
+						<li class="th mo-hide">							
+							<div class="txt-wrap">
+								<span>동영상</span>
+							</div>
+							<div class="count-wrap">
+								<span>일자</span>
+								<span>조회수</span>
+								<span>좋아요</span>
+								<span>댓글</span>
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<img src="../../resources/images/temp/sub_cam_list1.jpg">
+								<span class="time">15:23</span>
+							</div>
+							<div class="txt-wrap">
+								<div class="flag-area">									
+									<span class="flag sm ty05">캠페인</span>
+									<span class="stat stat1">접수중</span>								
+								</div>
+								<div class="txt-area">
+									<p class="tit">포트리스 배틀로얄 리뷰챌린지</p>										
+									<span>2020 새로운 트렌드를 소개하는 셀럽파이브 메이크업 영상 입니다.</span>
+								</div>
+								<div class="layer-area">
+									<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+									<ul class="btn-layer-list">										
+										<li><button type="button" class="btn-modify">수정하기</button></li>
+										<li><button type="button" class="btn-download btn-layer" layer="01">다운로드</button></li>
+										<li><button type="button" class="btn-delete btn-layer" layer="02">삭제하기</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="count-wrap mo-hide">
+								<span>2020.11.12</span>
+								<span>1,234</span>
+								<span>123</span>
+								<span>15</span>
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<img src="../../resources/images/temp/sub_cam_list1.jpg">
+								<span class="time">15:23</span>
+							</div>
+							<div class="txt-wrap">
+								<div class="flag-area">									
+									<span class="flag sm ty06">일반</span>								
+									<span class="stat stat2">게시중</span>									
+								</div>
+								<div class="txt-area">
+									<p class="tit">포트리스 배틀로얄 리뷰챌린지</p>										
+									<span>2020 새로운 트렌드를 소개하는 셀럽파이브 메이크업 영상 입니다.</span>
+								</div>
+								<div class="layer-area">
+									<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+									<ul class="btn-layer-list">										
+										<li><button type="button" class="btn-modify">수정하기</button></li>
+										<li><button type="button" class="btn-download">다운로드</button></li>
+										<li><button type="button" class="btn-delete">삭제하기</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="count-wrap mo-hide">
+								<span>2020.11.12</span>
+								<span>1,234</span>
+								<span>123</span>
+								<span>15</span>
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<img src="../../resources/images/temp/sub_cam_list1.jpg">
+								<span class="time">15:23</span>
+							</div>
+							<div class="txt-wrap">
+								<div class="flag-area">									
+									<span class="flag sm ty06">일반</span>								
+									<button type="button" class="stat stat3">삭제됨</button>
+									<ul class="btn-layer-list">										
+										<li>유해한 위험 행위</li>
+									</ul>									
+								</div>
+								<div class="txt-area">
+									<p class="tit">포트리스 배틀로얄 리뷰챌린지</p>										
+									<span>2020 새로운 트렌드를 소개하는 셀럽파이브 메이크업 영상 입니다.</span>
+								</div>
+								<div class="layer-area">
+									<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+									<ul class="btn-layer-list">										
+										<li><button type="button" class="btn-modify">수정하기</button></li>
+										<li><button type="button" class="btn-download">다운로드</button></li>
+										<li><button type="button" class="btn-delete">삭제하기</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="count-wrap mo-hide">
+								<span>2020.11.12</span>
+								<span>1,234</span>
+								<span>123</span>
+								<span>15</span>
+							</div>
+						</li>
+						<li>
+							<div class="img-wrap">
+								<img src="../../resources/images/temp/sub_cam_list1.jpg">
+								<span class="time">15:23</span>
+							</div>
+							<div class="txt-wrap">
+								<div class="flag-area">									
+									<span class="flag sm ty06">일반</span>								
+									<button type="button" class="stat stat3 on">삭제됨</button> <!-- 클릭시 버튼과 하단 btn-layer-list에 on클래스 추가 -->
+									<ul class="btn-layer-list on">										
+										<li>유해한 위험 행위</li>
+									</ul>									
+								</div>
+								<div class="txt-area">
+									<p class="tit">포트리스 배틀로얄 리뷰챌린지</p>										
+									<span>2020 새로운 트렌드를 소개하는 셀럽파이브 메이크업 영상 입니다.</span>
+								</div>
+								<div class="layer-area">
+									<button type="button" class="btn-more layer"><span class="hide">메뉴</span></button>
+									<ul class="btn-layer-list">										
+										<li><button type="button" class="btn-modify">수정하기</button></li>
+										<li><button type="button" class="btn-download">다운로드</button></li>
+										<li><button type="button" class="btn-delete">삭제하기</button></li>
+									</ul>
+								</div>
+							</div>
+							<div class="count-wrap mo-hide">
+								<span>2020.11.12</span>
+								<span>1,234</span>
+								<span>123</span>
+								<span>15</span>
+							</div>
+						</li>
+						<li class="no-list">
+							<div class="no-data type2">
+								<p>올리신 영상이 없습니다.<br>영상을 올려보세요</p>
+								<button type="button" class="btn-square blue">영상업로드</button>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="pagenation">
+					<a href="#" class="btn-first page">처음</a>
+					<a href="#" class="btn-prev page">이전</a>
+					<span class="page now">1</span>
+					<a href="#" class="page">2</a>
+					<a href="#" class="page">3</a>
+					<a href="#" class="page">4</a>
+					<a href="#" class="page">5</a>
+					<a href="#" class="page mo-hide">6</a>
+					<a href="#" class="page mo-hide">7</a>
+					<a href="#" class="page mo-hide">8</a>
+					<a href="#" class="page mo-hide">9</a>
+					<a href="#" class="page mo-hide">10</a>
+					<a href="#" class="btn-next page">다음</a>
+					<a href="#" class="btn-last page">마지막</a>
+				</div>
+			</div>
+		</div>		
 	</div>
 	<div class="footer">
 		<ul class="link-list">
@@ -379,34 +472,55 @@
 	</div>
 </div>
 
-<!-- 메인 팝업 -->
-<div class="layer-pop main">
-	<div class="pop-cont">
-		<a href="#"><img src="../../resources/images/temp/temp_pop.jpg" alt="creator video challenge"></a>
+<!-- 영상 다운로드 -->
+<div class="layer-pop sm layer01">
+	<div class="title">
+		<p>다운로드</p>		
+		<button type="button" class="pop-close"><span>닫기</span></button>
 	</div>
-	<div class="bottom">
-		<button type="button" class="pop-close-today">24시간 이 창 열지 않기</button>
-		<button type="button" class="pop-close">닫기</button>
+	<div class="cont">
+		<div class="txt only">
+			<p>영상을 다운로드 하시겠습니까?</p>		
+		</div>
+		<div class="btn-area center">
+			<a href="#" class="btn-square gray">취소</a>
+			<a href="#" class="btn-square blue">확인</a>
+		</div>
 	</div>
 </div>
 
-
+<!-- 삭제 -->
+<div class="layer-pop sm layer02">
+	<div class="title">
+		<p>삭제</p>		
+		<button type="button" class="pop-close"><span>닫기</span></button>
+	</div>
+	<div class="cont">
+		<div class="txt only">
+			<p class="pd">이 영상을 완전히 삭제하시겠습니까?</p>
+			<div class="preview">
+				<div class="img-wrap">
+					<img src="../../resources/images/temp/sub_cam_list1.jpg">
+					<span class="time">15:23</span>
+				</div>
+				<div class="txt-wrap">
+					<p>[뷰티]셀럽파이브 메이크업</p>
+					<span>업로드 날짜 : 2020-12-30</span>
+				</div>
+			</div>
+			<label><input type="checkbox" class="styled3" checked> 크리에이터링에서 영구 삭제됩니다.</label>
+		</div>
+		<div class="btn-area center">
+			<a href="#" class="btn-square gray">취소</a>
+			<a href="#" class="btn-square blue">확인</a>
+		</div>
+	</div>
+</div>
 
 <script src="../../resources/js/jquery-2.0.3.min.js"></script>	
 <script src="../../resources/js/perfect-scrollbar.min.js"></script>
 <script src="../../resources/js/slick.js"></script>
-
 <script src="../../resources/js/common.js"></script>
-<script>
-$(document).ready(function() {
-	
-	//메인팝업
-	$('.pop-close').on('click', '.pop-close',function(){	
-		$(this).closest('.layer-pop').fadeOut();	
-	});	
-});
-
-</script>
 
 </body>
 </html>
