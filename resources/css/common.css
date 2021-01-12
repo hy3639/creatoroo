@@ -92,7 +92,7 @@ hr{display:none;}
 main,header,section,nav,footer,aside,article,figure{display:block;}
 a{color:#000;text-decoration:none;}
 button{border:0 none;background-color:transparent;cursor:pointer}
-a.disabled,button.disabled {cursor: default; opacity: .5;}
+a.disabled,button.disabled {cursor: default; opacity: .3;}
 /* html.no-scroll {
 	position:fixed;
 	left:0;right:0;top:0;
@@ -110,7 +110,7 @@ input[type=password],
 input[type=search],
 input[type=email],
 input[type=file],
-input[type=url],i
+input[type=url],
 input[type=number],
 input[type=date],textarea {width:100%; height:40px; line-height: normal; font-size:1.6rem; color:#ddd; border:1px solid #2c2d32; background:#2c2d32; text-indent:15px;  transition: all 0.5s; vertical-align:middle; box-sizing: border-box;-webkit-appearance: none; -webkit-border-radius: 0;}
 input::-webkit-input-placeholder{color:#777; font-size:1.6rem;} 
@@ -820,7 +820,7 @@ body {background-color:#0e0f16}
 
 .btn-square.disabled {
 	background-color:#2c2d33 !important;
-	color:#555;
+	/* color:#555; */
 }
 .btn-square.lg {
 	height: 72px;
@@ -844,6 +844,7 @@ body {background-color:#0e0f16}
 .pink {background-color:#a0557d}
 .gray {background-color:#777}
 .light-gray{background-color:#8d8f9a}
+.dark-gray {background-color:#444348;}
 .green {background-color: #309b79 !important;}
 .black {background-color: #000 !important;}
 
@@ -1229,7 +1230,7 @@ input[type=radio] {
 	top:50%; left:50%;
     transform: translate(-50%, -50%);
 	background-color:#fff;
-	z-index: 10;
+	z-index: 15;
 /*	overflow: hidden;*/
 }
 .layer-pop > .title {
@@ -1320,6 +1321,11 @@ input[type=radio] {
 .layer-pop:not(.full) .title + .cont .type2  {
 	background:url(../images/img/bg_join.png) no-repeat center top;	
 	background-size: 9.8rem 9.2rem;
+}
+.layer-pop:not(.full) .title + .cont .type3 {
+	padding-top: 12rem;
+	background:url(../images/img/bg_movie_modify.png) no-repeat center top;	
+	background-size:11.6rem 6.9rem;
 }
 .layer-pop:not(.full, .sm) .title + .cont span{
 	display: block;
@@ -2181,8 +2187,8 @@ h2.tit {
 	position:relative;
 	padding: 0 0 0 16px;
 	color: #888;
-	font-size: 14px;
-	line-height: 26px;
+	font-size: 1.4rem;
+	line-height: 2.6rem;
 }
 .list-style1 li:before {
 	content: '※';
@@ -2201,13 +2207,32 @@ h2.tit {
 .layer-pop.full .cont .bg-gray {padding:5rem; background-color:#1d1e23}
 .upload-area .list-style1 {margin-top: 2rem;}
 .upload-area {display: flex;}
-.upload-area .left {width: 675px; padding-right: 15px;}
+.upload-area .left {width: 67.5rem; padding-right: 1.5rem; overflow: hidden;}
+.upload-area .left .video-area {position: relative;}
+.upload-area .left .video-area video{width:100%;}
+.upload-area .left .video-area .btn-play{
+	content: '';
+	display: block;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin: -3rem 0 0 -3rem;
+	width: 6rem;
+	height: 6rem;
+	background: url(../images/btn/btn_thum_play.png) no-repeat 0 0;
+	background-size: 6rem 6rem;
+	transition: all .2s;
+	font-size: 0;
+}
+.upload-area .left .video-area:hover .btn-play {
+	transform: scale(1.2);
+}
 .upload-area .tit {font-size: 16px; color:#777;padding-bottom: 20px;}
 .upload-area .btn-upload {
 	position:relative;
 	display: block;
 	width: 100%;
-	height: 373px;
+	height: 37.3rem;
 	background-color:#2c2d33
 }
 .upload-area .btn-upload input[type="file"]{
@@ -2237,7 +2262,7 @@ h2.tit {
 	padding-top: 5px;
 }
 .upload-area .right {
-	width: 430px;
+	width: 43rem;
 	
 	padding-left: 15px;
 	
@@ -4274,6 +4299,100 @@ h2.tit {
 /* --------------------------------------------
 	마이페이지
 ----------------------------------------------*/
+/*대시보드*/
+.contants.mypage .dashboard-cont {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -1.5rem;
+
+}
+.contants.mypage .dashboard-cont .item {
+	 /* flex: 1;   */
+	/* margin-left: 1.5rem; */
+	/* padding: 3rem; */
+
+	padding-left: 1.5rem;
+	margin-bottom: 1.5rem;
+	/* background-color:#1d1e24; */
+	width:25%;
+
+}
+
+/* .contants.mypage .dashboard-cont .item:first-child {padding-left: 0;} */
+.contants.mypage .dashboard-cont .item dl { background-color:#1d1e24;	padding: 3rem;}
+.contants.mypage .dashboard-cont .item dt {font-size: 1.4rem; padding-left: 4rem; color:#888; margin-bottom: 4.5rem; min-height: 2.8rem; line-height: 2.8rem; font-weight: 700;}
+.contants.mypage .dashboard-cont .item.youtube dt {background: url(../images/icon/icon_sns1.png) no-repeat left center;	background-size: 2.8rem 2.8rem;}
+.contants.mypage .dashboard-cont .item.insta dt {background: url(../images/icon/icon_sns2.png) no-repeat left center;	background-size: 2.8rem 2.8rem;}
+.contants.mypage .dashboard-cont .item.tictok dt {background: url(../images/icon/icon_mypage_sns1.png) no-repeat left center;	background-size: 2.5rem 2.7rem;}
+.contants.mypage .dashboard-cont .item.africa dt {background: url(../images/icon/icon_mypage_sns2.png) no-repeat left center;	background-size: 2.7rem 2.9rem;}
+.contants.mypage .dashboard-cont .item dd {font-size: 3rem; 	font-family: 'Lato'; font-weight: bold; text-align: right;}
+.contants.mypage .dashboard-cont .item dd span {	display: inline-block;	font-family: 'Noto Sans KR';font-size: 1.4rem;padding-left: 1.5rem;	margin-left: 2rem;}
+.contants.mypage .dashboard-cont .item dd .down {
+	color:#1d98e3;	
+	background: url(../images/icon/icon_down.png) no-repeat left center;
+	background-size: 1.3rem 1.5rem;
+	
+	
+}
+.contants.mypage .dashboard-cont .item dd .up {
+	color:#fc5358;	
+	background: url(../images/icon/icon_up.png) no-repeat left center;
+	background-size: 1.3rem 1.5rem;
+	
+}
+.contants.mypage .dashboard-cont .item dd .equal {
+	color:#fff;	
+	background: url(../images/icon/icon_equal.png) no-repeat left center;
+	background-size: 1.3rem 1.5rem;
+	
+}
+
+.contants.mypage .group-area {display: flex; margin-top: 8rem;overflow: hidden;}
+.contants.mypage .group-area .tit-area {display: inherit}
+.contants.mypage .group-area .item {
+	flex: 1;	
+	margin-left: 1.5rem;
+
+}
+.contants.mypage .group-area .item:last-child ul {margin-top: 0;}
+.contants.mypage .group-area .item:first-child {margin-left: 0;}
+
+.contants.mypage .group-area .list-area {
+	background-color:#1d1e24;
+	padding: 3rem;
+	height: 100%;
+}
+.contants.mypage .group-area .list-area ul {margin-top: 2rem;}
+.contants.mypage .group-area .list-area li {
+	display: flex;
+	justify-content: space-between;
+	height: 5.8rem;
+	line-height: 5.8rem;
+	border-top: 1px solid #3b3c43; 
+	margin-top: 0;
+}
+.contants.mypage .group-area .list-area li .tit {font-size: 1.6rem; color:#888; font-weight: 700;}
+.contants.mypage .group-area .list-area li .cont{font-family: 'Lato'; font-size: 2.4rem; font-weight: 700;}
+.contants.mypage .group-area .list-area li:first-child {border-top: 0;}
+.contants.mypage .group-area .list-area .img-area img {width: 100%;}
+.contants.mypage .group-area .list-area .img-area {position: relative;}
+.contants.mypage .group-area .list-area .img-area:hover:before {transform: scale(1.2);}
+.contants.mypage .group-area .list-area .img-area:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -3rem 0 0 -3rem;
+    width: 6rem;
+    height: 6rem;
+    background: url(../images/btn/btn_thum_play.png) no-repeat 0 0;
+    background-size: 6rem 6rem;
+    transition: all .2s;
+}
+
+
+
 .contants.mypage {display: flex;}
 .mypage .tit-area .left {position: relative;}
 .mypage .tit-area .left .tool-box {right: -3rem;}
@@ -4314,6 +4433,7 @@ h2.tit {
 .mypage .menu-area .menu .link3 span {background: url(../images/icon/icon_my_menu3.png) no-repeat left center; background-size: 2.1rem 2.1rem;}
 .mypage .menu-area .menu .link4 span {background: url(../images/icon/icon_my_menu4.png) no-repeat left center; background-size: 1.7rem 1.7rem;}
 .mypage .menu-area .menu .link5 span {background: url(../images/icon/icon_my_menu5.png) no-repeat left center; background-size: 1.7rem 1.8rem;}
+.mypage.advertiser .menu-area .menu .link2 span {background: url(../images/icon/icon_my_menu6.png) no-repeat left center; background-size: 1.8rem 2.1rem;}
 .mypage .right {position:relative}
 .mypage .right .btn-square {
 	min-width: 19rem;
@@ -4443,6 +4563,7 @@ h2.tit {
 	/* transform: rotate(180deg); */
 }
 .mypage .flag-area .stat.stat3.on:before {transform: rotate(180deg);}
+.mypage .flag-area .stat.stat4 { position:relative; padding-right:2rem;background: url(../images/icon/icon_my_stat4.png) no-repeat 0 0; background-size: 2.4rem;}
 .mypage .flag-area .btn-layer-list {
 	display: none;
 	position: absolute;
@@ -4478,6 +4599,42 @@ h2.tit {
 .layer-pop .only .preview .txt-wrap p + span {display:block;padding: 1rem 0 0 0 !important; color:#888; font-size: 1.4rem; font-weight: normal !important;}
 .layer-pop .only .preview + label {display:block;color:#666; font-size: 1.6rem;text-align: left; line-height: 2.1rem;margin-top: 1.5rem;}
 .layer-pop .only .preview + label .chkBox {vertical-align: top;}
+
+/*광고주*/
+.mypage .right .btn-square.plus {background: url(../images/btn/btn_plus.png) no-repeat calc(100% - 1.2rem ) center;}
+.mypage.advertiser .user-info .advertiser em{color:#f49517}
+.mypage.advertiser .board-list .th .count-wrap {width: 70.5rem;}
+.mypage.advertiser .board-list .th span {font-size: 1.4rem; color: #888;}
+.mypage.advertiser  .cont-area .board-list .img-wrap {flex-shrink: 0;}
+.mypage.advertiser .cont-area .board-list .img-wrap:before{display:none}
+.mypage.advertiser .cont-area .board-list .txt-wrap {width: calc(100% - 70.5rem);}
+.mypage.advertiser .board-list .count-wrap {width: 70.5rem;}
+
+.mypage.advertiser .flag-area .flag.sm {min-width: 8.5rem;}
+
+
+.mypage.advertiser  .board-list .count-wrap .btn-square {
+	min-width: 10rem;
+    padding: 0 1.5rem;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    background: url(../images/btn/btn_arrow.png) no-repeat calc(100% - 1.2rem ) center;
+    text-align: left;
+    font-size: 1.4rem;
+}
+
+
+
+.mypage.advertiser .cont-area .count-wrap span {flex: 2;}
+
+
+
+
+
+
+
+
+
 
 /* --------------------------------------------
 	서비스소개
@@ -4719,9 +4876,22 @@ h2.tit {
  .introduce .section1 .content .tit {font-size: 5.3rem; line-height:6rem}
  .introduce .section1 .content .sub {font-size: 2rem; padding: 3rem 0 5rem;}
  /* .introduce .section1 .thumb-area .thumb2 {width: 40%;}	 */
- 
+
+ /*광고주*/
+
+.mypage.advertiser .board-list .th .count-wrap {width: 50%;}
+.mypage.advertiser .cont-area .board-list .txt-wrap {width: calc(100% - 50%);}
+.mypage.advertiser .board-list .count-wrap {width: 50%;}
+.mypage.advertiser .board-list .count-wrap .btn-square {min-width: inherit; padding: 0 1.5rem 0 0.5rem;  font-size: 12px; background-position: calc(100% - 0.5rem) center;}
+.mypage.advertiser .cont-area .count-wrap span {flex: 3;}
+.board-list .txt-area .tit {font-size:1.5rem;}
+.mypage .flag-area .stat {font-size: 1.4rem; background-size:2rem !important;}
+.mypage.advertiser .cont-area .count-wrap span {font-size: 1.4rem;}
 }
 
+@media all and (min-width:1280px) and (max-width:1500px) {
+	 .mypage.advertiser .board-list .th span {font-size: 12px !important;}
+}
 /* 최소 1024 이상 (pc)*/
 @media all  and (min-width:1024px) {
 	/*스크롤바*/
@@ -4755,6 +4925,7 @@ h2.tit {
 	.sub .contants.join .select-box a:hover {
 		padding-top: 24rem;
 	}
+	
 	
 }
 
@@ -4813,6 +4984,13 @@ h2.tit {
 
 	/*서비스소개*/
 	.introduce .section1 .inner {padding:5.5rem 13rem;}
+
+
+	/*마이페이지*/
+	.mypage.advertiser .board-list .th span {font-size: 11px !important;}
+
+	.upload-area .left {width: inherit; flex: 1;}
+	.upload-area .right .preview img{ width: 100%;}
 }
 
 /* =======================================************************=================================================================
@@ -5286,6 +5464,7 @@ h2.tit {
 		background-size: 7.4rem 6.9rem;
 	}
 
+	
 
 	.layer-pop.full {
 		width: 100%;
@@ -5299,6 +5478,7 @@ h2.tit {
 		right: 1.3rem;
 		top: 1.5rem;
 	}
+	.layer-pop.full .inner.pd0 {padding:4rem 0 5rem 0;}
 	.layer-pop.full .inner .title p {
 		font-size: 2.7rem;
 	}
@@ -6218,6 +6398,21 @@ h2.tit {
 .layer-pop .only .preview .txt-wrap p + span {font-size: 11px; padding-top: 0 !important;}
 .layer-pop .only .preview + label {font-size: 1.3rem;}
 
+.layer-pop.full .movie-modify .bg-gray {padding: 12px;}
+.upload-area .left {padding-right: 0;}
+.upload-list {margin-top: 1.2rem;}
+.upload-list + .pc-hide {margin-bottom: 4rem;}
+.upload-list + .pc-hide .tit {font-size: 1.6rem; color:#888;margin-top: 3rem;}
+.upload-list + .pc-hide  .btn-square {margin-top: 1rem; width: 100%; height: 4.5rem;line-height: 4.5rem;}
+
+.layer-pop.full .movie-modify .group + .group .bg-gray {padding: 4rem 12px;}
+.layer-pop.full .movie-modify .info-area .form-list > li {padding:0.5rem 0}
+.layer-pop.full .info-area .form-list .cont > span {font-size: 12px; margin-top: 0.5rem;}
+.layer-pop.full .info-area .form-list select {font-size: 12px;}
+/* .layer-pop.full .cont .group + .group {padding-bottom:7rem;} */
+
+.layer-pop.full .movie-modify.cont {padding-top: 0;}
+.layer-pop.full .movie-modify.cont .group {margin-top: 5rem;}
 /* --------------------------------------------
 	서비스소개
 ----------------------------------------------*/

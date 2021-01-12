@@ -329,7 +329,7 @@
 															
 						</div>
 					</li>
-					<li><a href="#" class="btn-movie"><span>영상업로드</span></a></li>
+					<li><a href="#" class="btn-movie btn-layer" layer="03"><span>영상업로드</span></a></li>
 					<li><a href="#" class="btn-profile"><img src="../../resources/images/temp/temp_lank1.jpg"></a>
 						<div class="h-layer">
 							<a href="#">내 정보</a>
@@ -387,6 +387,170 @@
 	<div class="bottom">
 		<button type="button" class="pop-close-today">24시간 이 창 열지 않기</button>
 		<button type="button" class="pop-close">닫기</button>
+	</div>
+</div>
+
+<!-- 영상업로드 팝업 -->
+<div class="layer-pop full layer03 mo-hide">
+	<button type="button" class="pop-close"><span>닫기</span></button>
+	<div class="inner">	
+		<div class="title">
+			<p>영상업로드</p>		
+		</div>
+		<div class="cont pdt">
+			<div class="group">
+				<p class="sub-tit">동영상 업로드 <span class="red">*동영상이 등록된 이후에는 수정이 어려울수 있으니 정확히 입력하시기 바랍니다.</span></p>
+				<div class="bg-gray">
+					<div class="upload-area">
+						<div class="left">
+							<p class="tit">동영상</p>
+							<span class="btn-upload">
+								<input type="file"><span>동영상 업로드<em>동영상 파일을 드래그 앤 드롭하여 업로드</em></span>
+							</span>
+							<ul class="list-style1">
+								<li>MP4 동영상 파일만 가능합니다. (최대 2,000MB)</li>
+								<li>동영상을 업로드하면 크리에이터링 이용약관에 동의하게 됩니다.</li>
+								<li>타인의 저작권 또는 개인정보 보호 권한을 침해해서는 안됩니다.</li>
+							</ul>
+						</div>
+						<div class="right">
+							<p class="tit">미리보기 이미지</p>
+							<div class="preview">
+								<ul>
+									<li>										
+										<span class="btn-upload">
+											<input type="file"><span>이미지 업로드</span>
+										</span>
+									</li>
+									<li class="img on"><img src="../../resources/images/temp/temp_img_upload2.png"></li>
+									<li class="img"><img src="../../resources/images/temp/temp_img_upload2.png"></li>
+									<li class="img"><img src="../../resources/images/temp/temp_img_upload2.png"></li>
+									<li class="img"><img src="../../resources/images/temp/temp_img_upload1.png"></li>
+									<li class="img process">
+										<span class="txt">처리중...</span>
+										<div class="progress-bar">
+											<div class="myBar" data="60"></div>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<ul class="list-style1">
+								<li>동영상의 내용을 알려주는 사진을 선택하거나 업로드 하세요. </li>
+								<li>눈에 띄고 시청자의 관심을 끄는 이미지가 바람직한 이미지입니다.</li>
+								<li>1280 X 720 사이즈의 jpg, png이미지를 업로드를 권장합니다.</li>
+							</ul>
+						</div>
+					</div>
+					<div class="upload-status">
+						<ul>
+							<li>
+								<span class="tit">업로드 상태</span>
+								<div class="progress-bar">
+									<div class="myBar" data="100"></div>
+								</div>
+								<span class="percent"><em>100</em>%</span>
+								<button type="button" class="btn-cancel">업로드 취소</button>
+							</li>
+							<li>
+								<span class="tit">동영상 정보 추출중</span>
+								<div class="progress-bar">
+									<div class="myBar" data="40"></div>
+								</div>
+								<span class="percent"><em>45</em>%</span>
+								<button type="button" class="btn-cancel">업로드 취소</button>
+							</li>
+						</ul>
+					</div>
+					<ul class="upload-list">
+						<li>
+							파일이름 : <span>20201224_캠페인참가최종동영상파일.mp4</span>
+							<button type="button" class="btn-cancel txt_none">업로드 취소</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="group">
+				<p class="sub-tit">세부 정보</p>
+				<div class="bg-gray">
+					<div class="info-area">
+						<ul class="form-list">
+							<li>
+								<label class="tit" for="text01">제목</label>
+								<div class="cont">
+									<input type="text" id="text01">
+									<span>※ 최대 60자 이내로 작성해 주세요.</span>
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="text02">설명</label>
+								<div class="cont">
+									<textarea id="text02">환상의 섬, 네버랜드의 첫번째 손님 배꼽빌라. 동심으로 돌아가 진정한 나를 찾는 여행의 시작!!</textarea>
+									<span>※ 최대 1000자 이내로 작성해 주세요.</span>
+								</div>
+							</li>
+							<li>
+								<label class="tit" for="text03">태그</label>
+								<div class="cont">
+									<input type="text" id="text03">
+									<span>※ 값을 쉼표로 구분하여 입력하세요. 최대 10개 까지 입력 가능합니다.</span>
+								</div>
+							</li>
+							<li>
+								<label class="tit">카테고리</label>
+								<div class="cont">
+									<select>
+										<option>장르를 선택해 주세요.</option>
+										<option>영화/애니메이션</option>
+										<option>자동차/교통</option>
+										<option>음악</option>
+										<option>애완동물/동물</option>
+										<option>스포츠</option>
+										<option>여행/이벤트</option>
+										<option>게임</option>
+										<option>인물/블로그</option>
+										<option>코미디</option>
+										<option>엔터테인먼트</option>
+										<option>뉴스/정치</option>
+										<option>노하우/스타일</option>
+										<option>교육</option>
+										<option>과학기술</option>
+										<option>라이프/브이로그</option>
+									</select>
+									<span>※ 장르 선택 시 신중하게 선택해 주시기 바랍니다.</span>
+								</div>
+							</li>						
+						</ul>
+						
+					</div>
+					
+				</div>
+				<p class="red center btm_txt">*제목, 썸네일 이미지, 동영상이 모두 등록되어있는지 확인해주세요.</p>
+				<div class="btn-area center">
+					<a href="#" class="btn-square lg blue btn-layer" layer="05">영상 업로드</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- 영상업로드 완료 팝업 -->
+<div class="layer-pop layer05">
+	<div class="title">
+		<p>영상 업로드 완료</p>		
+		<button type="button" class="pop-close"><span>닫기</span></button>
+	</div>
+	<div class="cont">
+		<div class="txt type3">
+			<p>영상 업로드를 완료 하였습니다.</p>
+			<span>
+				담당자가 참가 동영상과 내용을 확인후 등록될 예정입니다.	
+				<a href="#">마이 페이지 &gt; 캠페인 관리 이동하기</a>
+				<em>감사합니다.</em>
+			</span>
+		</div>
+		<div class="btn-area center">
+				<a href="#" class="btn-square blue">확인</a>
+		</div>
 	</div>
 </div>
 
