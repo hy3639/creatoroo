@@ -229,7 +229,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="contants advertiser">
+	<div class="contants advertiser_pub">
 		
 		<div class="bg-area">
 			<h2 class="tit">
@@ -362,7 +362,7 @@
 <!-- 캠페인 문의하기 팝업 -->
 <div class="layer-pop full layer01">
 	<button type="button" class="pop-close"><span>닫기</span></button>
-	<div class="inner advertiser">	
+	<div class="inner advertiser_pub">	
 		<div class="title">
 			<p>캠페인 문의하기 <span>궁금하신 내용에 신속히 답변해 드리도록 하겠습니다.</span></p>		
 		</div>
@@ -487,7 +487,7 @@ $(".step-area").on('afterChange', function(event, slick, currentSlide, nextSlide
 
 	//프로그레스
 	var curIdx = $(".slick-current").attr("data-slick-index");
-	var itemW = $('.advertiser .slick-dots li').outerWidth();
+	var itemW = $('.advertiser_pub .slick-dots li').outerWidth();
 	var itemP = itemW /2;
 	$(".progress-wrap").css({'padding-left':itemP,'padding-right':itemP});	
 	$(".pro-bar").animate({

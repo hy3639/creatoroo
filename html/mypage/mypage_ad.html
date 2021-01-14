@@ -229,12 +229,12 @@
 			</div>
 		</div>
 	</div>
-	<div class="contants mypage advertiser">
+	<div class="contants mypage advertiser_pub">
 		<div class="menu-area">
 			<div class="user-info">
 				<div class="user">
 					<span class="img-area"><img src="../../resources/images/temp/temp_lank1.jpg"></span>
-					<span class="name advertiser">CJ제일제당<em>광고주 회원</em></span>
+					<span class="name advertiser_pub">CJ제일제당<em>광고주 회원</em></span>
 				</div>
 			</div>
 			<div class="menu"> 
@@ -252,7 +252,7 @@
 				</div>
 				
 				<div class="right">
-					<button type="button" class="btn-square blue mo-hide plus">캠페인 등록하기</button>
+					<button type="button" class="btn-square blue mo-hide plus btn-layer" layer="03">캠페인 등록하기</button>
 					<button type="button" class="btn-square purple">참가자 심사</button>
 					<button type="button" class="btn-square purple">심사표 제출</button>
 					<button type="button" class="btn-order on">정렬</button> <!-- 버튼클릭시 on클래스 추가 및 하단 btn-layer-list에 on 추가 -->
@@ -454,6 +454,276 @@
 		</div>
 	</div>
 </div>
+
+<!-- 캠페인 등록하기 팝업 -->
+<div class="layer-pop full layer03 campaign-resist" style="display: block;">
+	<button type="button" class="pop-close"><span>닫기</span></button>
+	<div class="inner">	
+		<div class="title">
+			<p>캠페인 등록하기</p>
+			<div class="step-area">
+				<span class="on">1단계</span>
+				<span class="on">2단계</span>
+				<span>3단계</span>
+				<span>4단계</span>
+			</div>
+		</div>
+		<!-- step1 -->
+		<!--
+		<div class="cont pdt step1">
+			<div class="group">
+				<p class="sub-tit">
+					캠페인등록을 위한 기초정보
+					<span>기초정보를 입력해 주세요.</span>
+				</p>
+				<div class="bg-gray">
+					<div class="info-area">
+						<ul class="form-list">
+							<li>
+								<label class="tit important" for="text01">캠페인 제목</label>
+								<div class="cont">
+									<input type="text" id="text01" placeholder="예)신세계푸드 임실치즈 돈까스 홍보 영상제작">									
+								</div>
+							</li>
+							<li>
+								<label class="tit important" for="text02">캠페인 목적</label>
+								<div class="cont">
+									<textarea id="text02" placeholder="
+									예) 금번 신세계 푸드에서 신상품으로 출시 예정인 임실치즈 돈까스에 대한 홍보영상제작을 목표로 하고 있으며,
+									풍부한 치즈와 칠레산 돼지고기 육질에 대한 소개 및 저렴한 가격정책이 홍보의 주요 포인트가 되기를 바랍니다. 
+									되도록 재미있고 실행 시간이 짧은 영상이 많이 나오길 바랍니다."></textarea>
+								
+								</div>
+							</li>
+							<li>
+								<label class="tit important" for="text03">예산총액</label>
+								<div class="cont">
+									<div class="range-area">
+										<div class="range-wrap">
+											<input type="number" id="text03">
+											<button type="button" class="btn-up">up</button>
+											<button type="button" class="btn-down">down</button>
+										</div>										
+										<span>~</span>
+										<div class="range-wrap">
+											<input type="number">
+											<button type="button" class="btn-up">up</button>
+											<button type="button" class="btn-down">down</button>
+										</div>
+									</div>							
+									<span>단위:만원 (최소 500만원 이상)</span>
+								</div>
+							</li>
+							<li>
+								<label class="tit important" for="text04">희망영상 키워드</label>
+								<div class="cont">
+									<input type="text" id="text04" placeholder="예)#사랑 #의리 #맛 #초저가 #재미">									
+								</div>
+							</li>
+							<li>
+								<label class="tit important" for="text05">최종완료 희망일</label>
+								<div class="cont">
+									<div class="calendar">								
+										<div class="date-field">
+											<input type="text"  value="2020-01-05">
+											<button class="btn-date">달력</button>
+										</div>										
+									</div>
+									<ul class="bullet-list st1">
+										<li>캠페인 종료 및 결과영상물이 필요하신 시점</li>
+									</ul>										
+							</li>
+							<li>
+								<label class="tit important" for="text06">캠페인 기간</label>
+								<div class="cont">
+									<select>
+										<option>2개월</option>										
+									</select>
+									<div class="calendar">								
+										<div class="date-field">
+											<input type="text"  value="2020-01-05">
+											<button class="btn-date">달력</button>
+										</div>
+										<span>~</span>
+										<div class="date-field">
+											<input type="text"  value="2020-01-05">
+											<button class="btn-date">달력</button>
+										</div>										
+									</div>
+									<ul class="bullet-list st1">
+										<li>캠페인 기간은 향후 변경될 수 있습니다.</li>
+										<li>캠페인 시작일은 캠페인 등록일로부터 최소 1주일 이후부터 지정 가능합니다.</li>
+									</ul>												
+								</div>
+							</li>						
+						</ul>
+						<div class="tbl-lst">
+							<table class="mo-hide">
+								<colgroup>
+									<col style="width:20%">
+									<col >
+									<col style="width:20%">								
+									<col style="width:20%">																						
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col">진행순서</th>
+										<th scope="col">상세내용</th>
+										<th scope="col">예상 기간(영업일 기준)</th>
+										<th scope="col">유의사항</th>																		
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="center">캠페인 등록</td>
+										<td>광고주 캠페인정보 등록</td>										
+										<td class="center">1일</td>
+										<td>캠페인 기간내 미포함</td>												
+									</tr>
+									<tr>
+										<td class="center">캠페인 협의</td>
+										<td>당사 담당자와 광고주 상세 협의</td>										
+										<td class="center">1일~5일</td>
+										<td>캠페인 기간내 미포함</td>												
+									</tr>
+									<tr>
+										<td class="center">캠페인 승인/결제</td>
+										<td>최종 캠페인 승인 및 광고주 결제</td>										
+										<td class="center">1일~2일</td>
+										<td>캠페인 기간내 미포함</td>												
+									</tr>
+									<tr>
+										<td class="center">캠페인 기간</td>
+										<td>광고주가 희망하는 캠페인 일정</td>										
+										<td class="center">1개월~6개월</td>
+										<td></td>												
+									</tr>
+									<tr>
+										<td class="center">평가/수상작선정</td>
+										<td>캠페인 결과 평가 및 수상작 선정</td>										
+										<td class="center">1일~5일</td>
+										<td>캠페인 기간내 미포함</td>												
+									</tr>
+									<tr>
+										<td class="center">수상작 발표</td>
+										<td>홈페이지 수상작 발표</td>										
+										<td class="center">1일</td>
+										<td>캠페인 기간내 미포함</td>												
+									</tr>								
+								</tbody>
+							</table>									
+						</div>
+					</div>
+				</div>
+				<div class="btn-area center">
+					<a href="#" class="btn-square lg blue">다음</a>
+				</div>
+			</div>
+		</div>
+		-->
+		<div class="cont pdt step2">
+			<div class="group">
+				<p class="sub-tit">
+					제작에 필요한 소스정보
+					<span>영상 제작에 필요한 소스입니다.</span>
+				</p>
+				<div class="bg-gray">
+					<div class="info-area">
+						<ul class="form-list">
+							<li>
+								<label class="tit important" for="text01">파일 업로드</label>
+								<div class="cont">									
+									<div class="input-wrap">
+										<input type="text" id="text01" placeholder="최대 2,000MB">
+										<button type="button" class="btn-square dark-gray">파일첨부</button>
+										<button type="button" class="btn-square dark-gray">삭제</button>
+										<button type="button" class="btn-square dark-gray">추가</button>
+									</div>
+									
+									<ul class="bullet-list st1">
+										<li>영상 제작을 위한 필수자료를 등록해주세요.(로고,사진,텍스트 등)</li>
+										<li>ZIP형태로 압축해서 업로드해주세요.</li>
+									</ul>								
+								</div>
+							</li>							
+						</ul>
+						
+					</div>
+				</div>				
+			</div>
+			<div class="group">
+				<p class="sub-tit">
+					제작 참조 홈페이지 주소
+					<span>광고주의 홈페이지 / 선호영상 / 참고 URL 을 등록하세요. (최대 10개 항목 등록 가능)</span>
+				</p>
+				<div class="bg-gray">
+					<div class="info-area">
+						<ul class="form-list">
+							<li>
+								<label class="tit important" for="text02">홈페이지 주소</label>
+								<div class="cont">									
+									<div class="input-wrap">
+										<input type="text" id="text01">
+										<button type="button" class="btn-square dark-gray">파일첨부</button>
+										<button type="button" class="btn-square dark-gray">삭제</button>
+										<button type="button" class="btn-square dark-gray">추가</button>
+									</div>
+									<div class="input-wrap">
+										<input type="text" id="text01">
+										<button type="button" class="btn-square dark-gray">파일첨부</button>
+										<button type="button" class="btn-square dark-gray">삭제</button>
+										<button type="button" class="btn-square dark-gray">추가</button>
+									</div>
+									<div class="input-wrap">
+										<input type="text" id="text01">
+										<button type="button" class="btn-square dark-gray">파일첨부</button>
+										<button type="button" class="btn-square dark-gray">삭제</button>
+										<button type="button" class="btn-square dark-gray">추가</button>
+									</div>																
+								</div>
+							</li>							
+						</ul>
+						
+					</div>
+				</div>				
+			</div>
+			<div class="group">
+				<p class="sub-tit">
+					캠페인 유형 선택
+					<span>(수수료 15%., 부가세 별도)</span>
+				</p>
+				<div class="bg-gray">
+					<div class="campaign-select">
+						<div class="btn-campaign on">
+							<p class="tit">오디션형 캠페인</p>
+							<span>모든 크리에이터 누구나 참여 가능한 캠페인입니다.</span>
+							<span class="prize">상금 500만원 이상</span>
+							<ul class="icon-lst">
+								<li>다수 영상물</li>
+								<li>중급 품질</li>
+							</ul>
+						</div>
+						<div class="btn-campaign">
+							<p class="tit">인비테이션형 캠페인</p>
+							<span>초대받은 크리에이터만 참여 가능한 캠페인입니다.</span>
+							<span class="prize">상금 5000만원 이상</span>
+							<ul class="icon-lst">
+								<li>제한된 영상물</li>
+								<li>최고급 품질</li>
+							</ul>
+						</div>
+					</div>
+				</div>				
+			</div>
+			<div class="btn-area center">
+				<button type="button" class="btn-square lg light-gray">이전</button>
+				<button type="button" class="btn-square lg blue">다음</button>
+			</div>
+		</div>
+	</div>
+	
+</div>
+
 
 <script src="../../resources/js/jquery-2.0.3.min.js"></script>	
 <script src="../../resources/js/perfect-scrollbar.min.js"></script>
