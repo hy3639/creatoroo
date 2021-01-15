@@ -337,6 +337,17 @@ function progress(){
 		}).on('circle-animation-progress', function(event, progress, stepValue) {
 			$(this).find('strong').html(Math.round(100 * stepValue) + '<i>%</i>');
 		});
+		$(this).find('.type4').circleProgress({
+			startAngle: -Math.PI / 4 * 2,
+			size:58,
+			  value: val,
+			  thickness:3,
+			  lineCap: 'round',
+			  fill: {color: '#de930f'},
+			  emptyFill: "rgba(44,45,51,1)"
+		}).on('circle-animation-progress', function(event, progress, stepValue) {
+			$(this).find('strong').html(Math.round(100 * stepValue) + '<i>%</i>');
+		});
 	  });
  }
 

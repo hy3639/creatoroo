@@ -793,6 +793,7 @@ body {background-color:#0e0f16}
 .blue-txt {color:#1d98e3 !important}
 .blue-txt2 {color:#4289bc !important}
 .pink-txt {color:#e73594 !important}
+.orange-txt {color:#de930f !important}
 /* --------------------------------------------
 	정렬
 ----------------------------------------------*/
@@ -2638,7 +2639,8 @@ h2.tit {
 /*progress*/
 .counting > span.counter{font-size: 16px; font-weight: 700; color:#888}
 .counting .counter.blue-txt,
-.counting .counter.pink-txt {font-size: 2.2rem !important;}
+.counting .counter.pink-txt,
+.counting .counter.orange-txt {font-size: 2.2rem !important;}
 .circles {
 	margin-bottom: -10px;
   }  
@@ -4708,8 +4710,9 @@ h2.tit {
     font-size: 1.4rem;
 }
 
-
-
+.contants.mypage .group-area .list-area .btn-more {padding-right: 1.5rem; float: right;}
+.contants.mypage .group-area .list-area {overflow: hidden;}
+.contants.mypage .group-area .list-area ul {margin-bottom: 3rem;}
 .mypage.advertiser_pub .cont-area .count-wrap span {flex: 2;}
 
 /*캠페인 등록팝업*/
@@ -4897,13 +4900,11 @@ h2.tit {
 
 .layer-pop.campaign-resist .step3 .range-wrap {width: 100%;}
 .layer-pop.campaign-resist .step3 .range-wrap .btn-up {top: 0; right: 0;}
-.layer-pop.campaign-resist .step3 .range-wrap .btn-down {bottom: 0;right: 0;}
-.layer-pop.campaign-resist .step3 .range-wrap input {    padding: 0.5rem 3rem 0.5rem 0; text-align: right;}
+.layer-pop.campaign-resist .step3 .range-wrap .btn-down {bottom: 0;right: -1px;}
+.layer-pop.campaign-resist .step3 .range-wrap input {    padding: 0.5rem 3rem 0.5rem 0 !important; text-align: right;}
 .layer-pop.campaign-resist .step3 .cont-area .box + .box {margin-top: 4rem;}
-.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(4),
-.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(5) {text-align: right;  color:#fff}
-.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(4) input,
-.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(5) input  {text-align: right; padding-right: 15px; font-weight: 700;}
+.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(3){text-align: right;  color:#fff}
+.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(3) input{text-align: right; padding-right: 15px; font-weight: 700;}
 .layer-pop.campaign-resist .step3 tfoot input {text-align: right; padding-right: 15px; font-weight: 700;}
 
 /*step3-2*/
@@ -4916,6 +4917,19 @@ h2.tit {
 .evaluation-lst li .range-wrap input {text-align: left !important; color:#888}
 .evaluation-lst li .unit {float: right; line-height: 4rem; font-weight: 700;}
 
+.step3 .tbl-lst td .btn-plus {
+	width: 3.4rem;
+	height: 3.4rem;
+	background: url(../images/btn/btn-plus.png) no-repeat 0 0; background-size:3.4rem 3.4rem;
+}
+.step3 .tbl-lst td .btn-minus {
+	width: 3.4rem;
+	height: 3.4rem;
+	background: url(../images/btn/btn-minus.png) no-repeat 0 0; background-size:3.4rem 3.4rem;
+	margin-left: 0.5rem;
+}
+.step3 .tbl-lst td button span {font-size: 0;}
+.step3 .tbl-lst td.right input {text-align: right; padding-right:1.5rem}
 /*step3-3*/
 .layer-pop.campaign-resist .step3 .flex-box {display: flex; align-items: center;}
 .layer-pop.campaign-resist .step3 .flex-box label {padding-right: 1.3rem;}
@@ -5008,6 +5022,99 @@ h2.tit {
 .step4 .payment-area  .box .pay-way li.phone .cont .input-wrap.bar:before {left: 1rem;}
 .step4 .payment-area  .box .pay-way li.phone .cont .input-wrap.bar:after {right: 1rem;}
 .step4 .payment-area  .box + span {display: block; font-size: 1.4rem; color:#888; margin-top:1rem; margin-left: 21.5rem;}
+
+
+/*캠페인 리포트*/
+.mypage.report .box {margin-top: 8rem;}
+.mypage.report .box h3 {font-size: 2.4rem;}
+.mypage.report .box:first-child {margin-top: 0;}
+
+.mypage.report .tit-area .t-right select {
+	width: 16rem;
+	height: 3.4rem;
+}
+.mypage.report .tit-area .t-right .btn-square {
+	width: 15rem;
+	height: 3.4rem;
+	font-size: 14px;
+	line-height: inherit;
+	
+}
+
+.mypage.report .revenue-area .form-list li.tit {width: 100%; padding-right: 0;}
+.mypage.report .revenue-area .form-list li:nth-child(even) {padding-right: 2rem; padding-left: 0;}
+.mypage.report .revenue-area .form-list > li:nth-child(odd) {padding-right: 0;}
+.mypage.report .revenue-area > div + div {margin-top: 0; border-top: 0;}
+.mypage.report .revenue-area .form-list > li .cont .btn-square { margin-left: 1rem; min-width: 18.8rem;}
+
+.mypage.report .tab-list { border-bottom: 0;}
+.mypage.report .tab-list li {
+	height: 9.8rem;
+	line-height: inherit;
+	border-left: 1px solid #3b3c43;
+	border-bottom: 1px solid #3b3c43;
+	text-align: center;
+
+}
+.mypage.report .tab-list li:first-child {border-left: 0;}
+.mypage.report .tab-list li .text {
+	border:0; border-top: 1px solid #87878b;font-size: 1.4rem;
+	color:#888; padding: 2rem 0 2.5rem;	box-sizing: border-box;
+	height: 100%; background-color:#0e0f16
+}
+.mypage.report .tab-list li.on .text {background-color:#1d1e24; }
+.mypage.report .tab-list li span em {
+	display: block;
+	font-size: 2.3rem;
+	color:#fff;
+	/* line-height: 0; */
+}
+
+.mypage.report .tab-wrap .tab-content {
+	margin-top: 0;
+	background-color:#1d1e24;
+	padding: 7rem 6rem;
+	min-height: 40rem;
+}
+
+.btn-square .btn-excel {background: url(../images/btn/btn_excel.png) no-repeat left center; padding-left: 3rem; background-size: 1.8rem 1.7rem;}
+
+.mypage.report .tbl-lst {border: 0;border-bottom: 1px solid #494a50;}
+.mypage.report .tbl-lst th {background-color: transparent;font-size: 1.4rem; color:#888;border-left: 0; border-top: 1px solid #87878b;}
+.mypage.report .tbl-lst a {color:#ddd}
+
+.mypage.report .tbl-lst td {font-size: 1.6rem;color:#ddd; border-left: 0; padding: 2.5rem 0; text-align: center;}
+.mypage.report .tbl-lst tbody td:first-child {text-align: left; padding-left: 4rem;}
+.mypage.report .tbl-lst th {}
+.mypage.report .rank-area {margin-top: 4rem;}
+.mypage.report .rank-area .sub-tit {text-align: left; padding-bottom: 3rem; font-size: 1.8rem;}
+.mypage.report .rank-area .ranking-list {padding: 4rem 3rem;}
+
+.mypage.report .rank-area .ranking-list li {height: 7.5rem;}
+.mypage.report .rank-area .ranking-list li > .user .name{font-size: 1.4rem !important;}
+
+.mypage.report .box:last-child .bg-gray {
+	background-color:#1d1e24;
+	padding: 3rem;
+	height:100%
+}
+.mypage.report .box:last-child .bg-gray .graph-area {
+	min-height: 15.5rem;
+	text-align: left;
+}
+.mypage.report .box:last-child .bg-gray .tbl-lst {
+	margin-top: 5rem;
+	border-left: 1px solid #494a50;
+	border-right: 1px solid #494a50;
+}
+.mypage.report .box:last-child .bg-gray .tbl-lst thead th {border-top-color:#87878b;} 
+.mypage.report .box:last-child .bg-gray .tbl-lst th {border-top-color:#494a50}
+.mypage.report .box:last-child .bg-gray .tbl-lst td {padding: 1.2rem 0;}
+.mypage.report .box:last-child .bg-gray .tbl-lst td,
+.mypage.report .box:last-child .bg-gray .tbl-lst th {border-left: 1px solid #494a50;}
+.mypage.report .box:last-child .bg-gray .tbl-lst td:first-child,
+.mypage.report .box:last-child .bg-gray .tbl-lst th:first-child{border-left: 0;}
+/* .mypage.report .box:last-child .bg-gray .tbl-lst th {border-bottom:1px solid #494a50} */
 /* --------------------------------------------
 	서비스소개
 ----------------------------------------------*/
@@ -6087,7 +6194,8 @@ h2.tit {
 .rank-area .ranking-list li > .user .name{font-size: 1.4rem;}
 .counting > span.counter {font-size: 12px;}
 .counting .counter.blue-txt, .counting .counter.pink-txt,
-.counting .counter.blue-txt, .counting .counter.blue-txt {font-size: 1.7rem !important }
+.counting .counter.blue-txt, .counting .counter.blue-txt,
+.counting .counter.blue-txt, .counting .counter.orange-txt {font-size: 1.7rem !important }
 .rank-area .ranking-list .circle {margin-left: 0.5rem; width: 48px; height: 48px;}
 .rank-area .ranking-list .circle canvas {width: 48px !important; height: 48px !important;}
 .graph-wrap .left {margin-right: 2rem; width: 96px;}

@@ -411,7 +411,7 @@
 </div>
 
 <!-- 영상 다운로드 -->
-<div class="layer-pop sm layer01" style="display: block;">
+<div class="layer-pop sm layer01">
 	<div class="title">
 		<p>다운로드</p>		
 		<button type="button" class="pop-close"><span>닫기</span></button>
@@ -428,7 +428,7 @@
 </div>
 
 <!-- 삭제 -->
-<div class="layer-pop sm layer02" style="display: block;">
+<div class="layer-pop sm layer02">
 	<div class="title">
 		<p>삭제</p>		
 		<button type="button" class="pop-close"><span>닫기</span></button>
@@ -469,7 +469,7 @@
 			</div>
 		</div>
 		<!-- step1 -->
-		
+		<!--
 		<div class="cont pdt step1">
 			<div class="group">
 				<p class="sub-tit">
@@ -625,10 +625,10 @@
 				</div>
 			</div>
 		</div>
-		
+		-->
 
 		<!-- step2 -->
-		
+		<!--
 		<div class="cont pdt step2">
 			<div class="group">
 				<p class="sub-tit">
@@ -728,10 +728,10 @@
 				<button type="button" class="btn-square lg blue">다음</button>
 			</div>
 		</div>
-	
+		-->
 	
 		<!-- step3 -->
-		
+	
 		<div class="cont pdt step3">
 			<div class="group">
 				<p class="sub-tit">
@@ -813,85 +813,43 @@
 										<table class="mo-hide">
 											<colgroup>
 												<col style="width:15%">
-												<col >
 												<col style="width:10%">
-												<col style="width:20%">
-												<col style="width:20%">
-												<col style="width:20%">																	
+												<col >
+												<col >																								
 											</colgroup>
 											<thead>
 												<tr>
-													<th scope="col">구분</th>
-													<th scope="col">순위</th>
-													<th scope="col">팀</th>
-													<th scope="col">금액(원)</th>
-													<th scope="col">합계(원)</th>		
+													<th scope="col">명칭</th>
+													<th scope="col">순위</th>													
+													<th scope="col">금액(원)</th>													
 													<th scope="col">비고</th>																						
 												</tr>
 											</thead>
 											<tfoot>
 												<tr>
-													<th scope="row" class="center" colspan="3">상금지급총액</th>
-													<td class="red right" colspan="2"><input type="text" value="5,500,000" readonly></td>												
+													<th scope="row" class="center" colspan="2">상금지급총액</th>
+													<td class="red right"><input type="text" value="5,500,000" readonly></td>												
 													<td><span class="txt"></span></td>												
 												</tr>
 											</tfoot>
 											<tbody>
 												<tr>
-													<td><input type="text" value="랭킹상 1위"></td>
-													<td class="center">1위</td>	
-													<td>
-														<div class="range-wrap">
-															<input type="number" id="text03" value="1">
-															<button type="button" class="btn-up">up</button>
-															<button type="button" class="btn-down">down</button>
-														</div>	
-													</td>												
-													<td><input type="text" value="1,500,000"></td>
-													<td><input type="text" value="1,500,000" readonly></td>
-													<td><span class="txt">조회수(시청순위)</span></td>												
+													<td class="center">랭킹상</td>
+													<td class="center">1위</td>																									
+													<td><input type="text" value="1,500,000"></td>												
+													<td><span class="txt">투표수</span></td>												
 												</tr>
 												<tr>
-													<td><input type="text" value="랭킹상 2위"></td>
-													<td class="center">2위</td>	
-													<td>
-														<div class="range-wrap">
-															<input type="number" id="text03" value="1">
-															<button type="button" class="btn-up">up</button>
-															<button type="button" class="btn-down">down</button>
-														</div>	
-													</td>												
-													<td><input type="text" value="1,500,000"></td>
-													<td><input type="text" value="1,500,000" readonly></td>
-													<td><span class="txt">조회수(시청순위)</span></td>												
+													<td class="center">랭킹상</td>
+													<td class="center">2위</td>																									
+													<td><input type="text" value="1,500,000"></td>												
+													<td><span class="txt">투표수</span></td>												
 												</tr>
 												<tr>
-													<td><input type="text" value="랭킹상 3위"></td>
-													<td class="center">3위</td>	
-													<td>
-														<div class="range-wrap">
-															<input type="number" id="text03" value="1">
-															<button type="button" class="btn-up">up</button>
-															<button type="button" class="btn-down">down</button>
-														</div>	
-													</td>												
-													<td><input type="text" value="1,500,000"></td>
-													<td><input type="text" value="1,500,000" readonly></td>
-													<td><span class="txt">조회수(시청순위)</span></td>												
-												</tr>
-												<tr>
-													<td><input type="text" value="특별상"></td>
-													<td class="center"></td>	
-													<td>
-														<div class="range-wrap">
-															<input type="number" id="text03" value="1">
-															<button type="button" class="btn-up">up</button>
-															<button type="button" class="btn-down">down</button>
-														</div>	
-													</td>												
-													<td><input type="text" value="0"></td>
-													<td><input type="text" value="0" readonly></td>
-													<td><span class="txt red">광고주 선택 시상</span></td>												
+													<td class="center">랭킹상</td>
+													<td class="center">3위</td>																									
+													<td><input type="text" value="1,500,000"></td>												
+													<td><span class="txt">투표수</span></td>												
 												</tr>
 											</tbody>
 											
@@ -968,11 +926,11 @@
 										<table class="mo-hide">
 											<colgroup>
 												<col style="width:15%">
-												<col >
+												<col style="width:15%">
 												<col style="width:10%">
-												<col style="width:20%">
-												<col style="width:20%">
-												<col style="width:20%">																	
+												<col>
+												<col>
+												<col style="width:10%">																	
 											</colgroup>
 											<thead>
 												<tr>
@@ -981,7 +939,7 @@
 													<th scope="col">팀</th>
 													<th scope="col">금액(원)</th>
 													<th scope="col">합계(원)</th>		
-													<th scope="col">비고</th>																						
+													<th scope="col">추가/삭제</th>																						
 												</tr>
 											</thead>
 											<tfoot>
@@ -1002,9 +960,12 @@
 															<button type="button" class="btn-down">down</button>
 														</div>	
 													</td>												
-													<td><input type="text" value="1,500,000"></td>
-													<td><input type="text" value="1,500,000" readonly></td>
-													<td><span class="txt">조회수(시청순위)</span></td>												
+													<td class="right"><input type="text" value="1,500,000"></td>
+													<td class="right"><input type="text" value="1,500,000" readonly></td>
+													<td class="center">
+														<button type="button" class="btn-plus"><span>추가</span></button>
+														<button type="button" class="btn-minus"><span>삭제</span></button>
+													</td>												
 												</tr>
 												<tr>
 													<td><input type="text" value="랭킹상 2위"></td>
@@ -1016,9 +977,12 @@
 															<button type="button" class="btn-down">down</button>
 														</div>	
 													</td>												
-													<td><input type="text" value="1,500,000"></td>
-													<td><input type="text" value="1,500,000" readonly></td>
-													<td><span class="txt">조회수(시청순위)</span></td>												
+													<td class="right"><input type="text" value="1,500,000"></td>
+													<td class="right"><input type="text" value="1,500,000" readonly></td>
+													<td class="center">
+														<button type="button" class="btn-plus"><span>추가</span></button>
+														<button type="button" class="btn-minus"><span>삭제</span></button>
+													</td>												
 												</tr>
 												<tr>
 													<td><input type="text" value="랭킹상 3위"></td>
@@ -1030,9 +994,12 @@
 															<button type="button" class="btn-down">down</button>
 														</div>	
 													</td>												
-													<td><input type="text" value="1,500,000"></td>
-													<td><input type="text" value="1,500,000" readonly></td>
-													<td><span class="txt">조회수(시청순위)</span></td>												
+													<td class="right"><input type="text" value="1,500,000"></td>
+													<td class="right"><input type="text" value="1,500,000" readonly></td>
+													<td class="center">
+														<button type="button" class="btn-plus"><span>추가</span></button>
+														<button type="button" class="btn-minus"><span>삭제</span></button>
+													</td>												
 												</tr>
 												<tr>
 													<td><input type="text" value="특별상"></td>
@@ -1044,9 +1011,12 @@
 															<button type="button" class="btn-down">down</button>
 														</div>	
 													</td>												
-													<td><input type="text" value="0"></td>
-													<td><input type="text" value="0" readonly></td>
-													<td><span class="txt red">광고주 선택 시상</span></td>												
+													<td class="right"><input type="text" value="0"></td>
+													<td class="right"><input type="text" value="0" readonly></td>
+													<td class="center">
+														<button type="button" class="btn-plus"><span>추가</span></button>
+														<button type="button" class="btn-minus"><span>삭제</span></button>
+													</td>												
 												</tr>
 											</tbody>											
 										</table>									
@@ -1191,8 +1161,8 @@
 															</div>
 														</div>															
 													</td>												
-													<td><input type="text" value="1,500,000"></td>
-													<td><input type="text" value="1,500,000" readonly></td>
+													<td class="right"><input type="text" value="1,500,000"></td>
+													<td class="right"><input type="text" value="1,500,000" readonly></td>
 													<td><span class="txt">기본제작비</span></td>												
 												</tr>
 												<tr>
@@ -1208,13 +1178,13 @@
 															</div>	
 														</div>														
 													</td>												
-													<td>
+													<td class="right">
 														<div class="flex-box">
 															<label for="flex1">클릭당</label>
 															<input type="text" value="10" id="flex1">
 														</div>														
 													</td>
-													<td><input type="text" value="1,500,000" readonly></td>
+													<td class="right"><input type="text" value="1,500,000" readonly></td>
 													<td><span class="txt">상금 소진시까지</span></td>												
 												</tr>												
 											</tbody>											
@@ -1235,6 +1205,7 @@
 
 
 		<!-- step4 -->
+		<!--
 		<div class="cont pdt step4">
 			<div class="group">
 				<p class="sub-tit">
@@ -1356,13 +1327,14 @@
 				<button type="button" class="btn-square lg blue btn-layer" layer="04">등록완료</button>
 			</div>
 		</div>
+-->
 	</div>
 	
 </div>
 
 
 <!-- 캠페인 등록 완료 -->
-<div class="layer-pop layer04" style="display: block;">
+<div class="layer-pop layer04">
 	<div class="title">
 		<p>캠페인 등록 완료</p>		
 		<button type="button" class="pop-close"><span>닫기</span></button>
@@ -1387,6 +1359,8 @@
 <script src="../../resources/js/perfect-scrollbar.min.js"></script>
 <script src="../../resources/js/slick.js"></script>
 <script src="../../resources/js/common.js"></script>
+
+
 
 </body>
 </html>
