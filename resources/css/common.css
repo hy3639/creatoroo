@@ -125,13 +125,15 @@ input[type=tel][readonly],
 input[type=text][readonly],
 input[type=password][readonly],
 input[type=email][readonly], 
-input[type=search][readonly]{background:#17181f; border-color:#17181f; color:#888; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
+input[type=search][readonly],
+input[type=number][readonly]{background:#17181f; border-color:#17181f; color:#888; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
 
 input[type=tel][disabled],
 input[type=text][disabled],
 input[type=password][disabled],
 input[type=search][disabled],
-input[type=email][disabled]{background:#17181f; border-color:#17181f; color:#888; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
+input[type=email][disabled],
+input[type=number][disabled]{background:#17181f; border-color:#17181f; color:#888; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
 textarea[readonly],
 textarea[disabled]{padding:11px; font-size:1.6rem; color:#666; font-weight:normal; line-height:140%; height:78px; background:#eaeaea;border:1px solid #c0c0c0;}
 input[type="number"]::-webkit-outer-spin-button,
@@ -1007,6 +1009,7 @@ input[type=radio] {
 	width:21px;
 	height:21px;
 	vertical-align:middle;
+	margin-top: -2px;
 }
 .chkBox input + .chk {
 	overflow:hidden;
@@ -1326,6 +1329,12 @@ input[type=radio] {
 	padding-top: 12rem;
 	background:url(../images/img/bg_movie_modify.png) no-repeat center top;	
 	background-size:11.6rem 6.9rem;
+}
+.layer-pop:not(.full) .title + .cont .type4{
+	padding-top: 13.5rem;
+	background:url(../images/img/bg_campaign_complate.png) no-repeat center top;	
+	background-size:9rem 9rem;
+	
 }
 .layer-pop:not(.full, .sm) .title + .cont span{
 	display: block;
@@ -4861,6 +4870,144 @@ h2.tit {
 	background-size:7.3rem 7.3rem;
 }
 
+/*step3-1*/
+.layer-pop.campaign-resist .step3 .tab-list li {width: 21.5rem; flex: inherit; text-align: center;}
+.layer-pop.campaign-resist .step3 .tit-area select {width: 20rem;}
+.layer-pop.campaign-resist .step3 .tit-area p {font-size: 1.8rem; color:#ddd}
+
+.layer-pop.campaign-resist .step3 .cont-area .tit {font-size: 1.6rem; font-weight: 700; color:#888; position: relative; display: inline-block;}
+.layer-pop.campaign-resist .step3 .cont-area .tit.important:before {
+	content: '*';
+    color: #fc5358;
+    position: absolute;
+    right: -1rem;
+    top: 0;
+}
+.layer-pop.campaign-resist .step3 .cont-area .tbl-lst {margin-top: 2rem;}
+.layer-pop.campaign-resist .step3 th,
+.layer-pop.campaign-resist .step3 td {padding: 0 1rem;}
+.layer-pop.campaign-resist .step3 td .txt {padding-left: 1rem;}
+.layer-pop.campaign-resist .step3 .cont-area .box:first-child td:nth-child(2) {text-align: right;  color:#fff}
+.layer-pop.campaign-resist .step3 .cont-area .box:first-child td:nth-child(2) input {text-align: right; padding-right: 15px; font-weight: 700;}
+.layer-pop.campaign-resist .step3 tbody th,
+.layer-pop.campaign-resist .step3 tfoot th {border-top:1px solid #3b3c43; color:#ddd}
+.layer-pop.campaign-resist .step3 td input {height: 3.4rem; color:#fff; font-size: 1.4rem;text-indent: 12px;}
+.layer-pop.campaign-resist .step3 td.red  input {color:#fc5358}
+/* .layer-pop.campaign-resist .step3 tfoot td  {color:#fc5358} */
+
+.layer-pop.campaign-resist .step3 .range-wrap {width: 100%;}
+.layer-pop.campaign-resist .step3 .range-wrap .btn-up {top: 0; right: 0;}
+.layer-pop.campaign-resist .step3 .range-wrap .btn-down {bottom: 0;right: 0;}
+.layer-pop.campaign-resist .step3 .range-wrap input {    padding: 0.5rem 3rem 0.5rem 0; text-align: right;}
+.layer-pop.campaign-resist .step3 .cont-area .box + .box {margin-top: 4rem;}
+.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(4),
+.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(5) {text-align: right;  color:#fff}
+.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(4) input,
+.layer-pop.campaign-resist .step3 .cont-area .box:nth-child(2) td:nth-child(5) input  {text-align: right; padding-right: 15px; font-weight: 700;}
+.layer-pop.campaign-resist .step3 tfoot input {text-align: right; padding-right: 15px; font-weight: 700;}
+
+/*step3-2*/
+.evaluation-lst {display: flex; margin-top: 3rem;}
+.evaluation-lst li {width: 16rem; margin-left: 3rem; color: #777; }
+.evaluation-lst li label {margin-bottom: 2rem;display: block;}
+.evaluation-lst li label .chkBox {margin-top: -2px; margin-right: 0.5rem;}
+.evaluation-lst li:first-child {margin-left: 0; }
+.evaluation-lst li .range-wrap {width: calc(100% - 3rem) !important; display: inline-block;}
+.evaluation-lst li .range-wrap input {text-align: left !important; color:#888}
+.evaluation-lst li .unit {float: right; line-height: 4rem; font-weight: 700;}
+
+/*step3-3*/
+.layer-pop.campaign-resist .step3 .flex-box {display: flex; align-items: center;}
+.layer-pop.campaign-resist .step3 .flex-box label {padding-right: 1.3rem;}
+
+/*step4*/
+
+.step4 .payment-area  p.tit {font-size: 2.1rem;}
+.step4 .payment-area .top {display: flex;border-bottom: 1px solid #3b3c43; padding-bottom: 4rem; margin-bottom: 2rem; }
+.step4 .payment-area .top .box {flex: 1;}
+.step4 .payment-area .top .box + .box {margin-left: 6rem;}
+.step4 .payment-area .pay-lst li {display: flex; align-items: center;}
+.step4 .payment-area .pay-lst li input {color:#fff; text-align: right; padding-right: 1.5rem; font-weight: 700; height: 5rem;}
+.step4 .payment-area .pay-lst li:first-child {margin: 2rem 0;}
+.step4 .payment-area .pay-lst li:not(:first-child) {margin-bottom: 1rem;}
+.step4 .payment-area .pay-lst li span {display: inline-block;}
+.step4 .payment-area .pay-lst li .tit {width: 10rem; font-size: 1.6rem; color:#888; font-weight: 700;}
+.step4 .payment-area .pay-lst li .unit {width: 3.3rem; text-align: right; font-size: 1.6rem; color:#888; font-weight: 700;}
+
+.step4 .payment-area .pay-lst li .cont {width: calc(100% - 13.3rem);text-align: right; font-size: 1.6rem; font-weight:700; padding-right: 1.5rem;}
+
+.step4 .payment-area .pay-lst li.total {border-top: 1px solid #3b3c43; padding-top: 2.2rem; margin-top: 2.2rem;}
+
+.step4 .payment-area  .box:nth-child(2) {display: flex;}
+.step4 .payment-area  .box .pay-way {margin-left: 3rem; flex: 1;}
+.step4 .payment-area  .box .pay-way li {display: flex;align-items: center; margin-top: 1.2rem;}
+.step4 .payment-area  .box .pay-way li:first-child {margin-bottom: 2.5rem; margin-top: 0.5rem;}
+
+.step4 .payment-area  .box .pay-way li:first-child  label {margin-right: 1.8rem;}
+.step4 .payment-area  .box .pay-way li .tit {width: 10rem; display: inline-block; font-size: 1.6rem; color:#888; font-weight: 700;}
+.step4 .payment-area  .box .pay-way li .tit span {position:relative;}
+.step4 .payment-area  .box .pay-way li .tit.important span:before {
+	content: "*";
+    color: #fc5358;
+    position: absolute;
+    right: -1rem;
+    top: 0;
+}
+
+.step4 .payment-area  .box .pay-way li .cont {width: calc(100% - 10rem)}
+.step4 .payment-area  .box .pay-way li .cont input {color:#fff;  padding-right: 1.5rem; font-weight: 700; height: 5rem;  width:100%}
+
+
+.step4 .payment-area .bottom {margin-top: 8rem;}
+.step4 .payment-area .bottom .box {display: flex;}
+
+.step4 .payment-area .bottom .box .pay-way {flex: 1; margin-left: 3rem;}
+.step4 .payment-area .bottom .box .pay-way .tit {width: 11rem;}
+
+.step4 .payment-area  .box .pay-way li.email .cont {display: flex;}
+.step4 .payment-area  .box .pay-way li.email .cont .mo,
+.step4 .payment-area  .box .pay-way li.phone .cont .mo {display: flex;width: 100%;}
+.step4 .payment-area  .box .pay-way li.email .cont .mo{ width: 100%;}
+.step4 .payment-area  .box .pay-way li.email  .input-wrap {flex: 2;}
+
+.step4 .payment-area  .box .pay-way li.email  .input-wrap:first-child {position:relative;padding-right:4rem ;}
+.step4 .payment-area  .box .pay-way li.email  .input-wrap:first-child:after {
+	content: '@';
+    display: block; 
+	position: absolute;
+	right: 1.2rem;
+	top: 50%;
+	margin-top: -1.3rem;
+	color:#777;
+	font-size: 18px;
+}
+.step4 .payment-area  .box .pay-way li.email  select {
+	width: 25rem; 
+	height: 5rem;
+	margin-left: 2rem; 
+	background-position: 93% center;
+	font-size: 16px;
+	color:#888;
+	font-weight: normal;
+}
+.step4 .payment-area  .box .pay-way li.phone .cont {display: flex;}
+.step4 .payment-area  .box .pay-way li.phone .cont button {width: 19.8rem;margin-left: 1rem;}
+.step4 .payment-area  .box .pay-way li.phone .cont select {width: 19.8rem; margin-right: 2rem; background-position: 93% center;}
+.step4 .payment-area  .box .pay-way li.phone .cont .input-wrap {flex:1}
+.step4 .payment-area  .box .pay-way li.phone .cont .input-wrap.bar{padding: 0 3rem; position:relative}
+.step4 .payment-area  .box .pay-way li.phone .cont .input-wrap.bar:before,
+.step4 .payment-area  .box .pay-way li.phone .cont .input-wrap.bar:after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 1px;
+	background-color:#777;
+	position: absolute;
+	top: 50%;
+}
+.step4 .payment-area  .box .pay-way li.phone .cont .input-wrap.bar:before {left: 1rem;}
+.step4 .payment-area  .box .pay-way li.phone .cont .input-wrap.bar:after {right: 1rem;}
+.step4 .payment-area  .box + span {display: block; font-size: 1.4rem; color:#888; margin-top:1rem; margin-left: 21.5rem;}
 /* --------------------------------------------
 	서비스소개
 ----------------------------------------------*/
@@ -5233,18 +5380,20 @@ h2.tit {
 
 	input::-webkit-input-placeholder{font-size:12px;} 
 	.search-area input::-webkit-input-placeholder{color:#888; font-size: 12px;} 
-	input[type=tel], input[type=time], input[type=text], input[type=password], input[type=search], input[type=email], input[type=file], input[type=url], i input[type=number], input[type=date], textarea {text-indent: 1rem; font-size: 12px;}
+	input[type=tel], input[type=time], input[type=text], input[type=password], input[type=search], input[type=email], input[type=file], input[type=url], input[type=number], input[type=date], textarea {text-indent: 1rem; font-size: 12px;}
 	input[type=tel][readonly],
 	input[type=text][readonly],
 	input[type=password][readonly],
 	input[type=email][readonly], 
-	input[type=search][readonly]{font-size: 12px;}
+	input[type=search][readonly],
+	input[type=number][readonly]{font-size: 12px;}
 
 	input[type=tel][disabled],
 	input[type=text][disabled],
 	input[type=password][disabled],
 	input[type=search][disabled],
-	input[type=email][disabled]{background:#17181f; border-color:#17181f; color:#888; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
+	input[type=email][disabled],
+	input[type=number][disabled]{background:#17181f; border-color:#17181f; color:#888; -webkit-appearance:none;font-size:1.6rem; box-sizing: border-box;}
 	textarea[readonly],
 	textarea[disabled]{font-size: 12px;}
 
